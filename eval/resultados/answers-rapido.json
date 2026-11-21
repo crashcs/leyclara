@@ -1,20 +1,20 @@
 {
-  "fecha": "2026-11-21T05:03:36.263Z",
+  "fecha": "2026-11-21T05:33:05.483Z",
   "metricas": {
     "modelo": "rapido",
     "n_en_alcance": 57,
     "n_fuera_de_alcance": 10,
     "exactitud_citas": 100,
-    "citas_emitidas": 166,
+    "citas_emitidas": 168,
     "respuestas_con_cita_esperada": 94.7,
     "respuestas_con_cita_esperada_si_recuperado": 98.2,
     "respuestas_con_cita_valida": 96.5,
     "abstencion_correcta": 90,
     "abstencion_indebida": 3.5,
-    "primer_intento_ok": 80.6,
-    "tokens_entrada": 455430,
-    "tokens_salida": 41316,
-    "latencia_mediana_ms": 2802
+    "primer_intento_ok": 82.1,
+    "tokens_entrada": 444991,
+    "tokens_salida": 33683,
+    "latencia_mediana_ms": 2467
   },
   "filas": [
     {
@@ -27,8 +27,6 @@
       "abstencion": false,
       "citas": [
         "67",
-        "67",
-        "68",
         "68",
         "70"
       ],
@@ -38,12 +36,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Si tienes más de un año de servicio, tienes derecho a un feriado anual de quince días hábiles, con remuneración íntegra [Art. 67]. Si trabajas en Magallanes, la Antártica Chilena, Aysén o la Provincia de Palena, el feriado es de veinte días hábiles [Art. 67]. Si tienes diez años de trabajo para uno o más empleadores, tienes un día adicional de feriado por cada tres nuevos años trabajados, y ese exceso puede negociarse individual o colectivamente [Art. 68]. Solo se pueden hacer valer hasta diez años de trabajo prestados a empleadores anteriores [Art. 68]. El feriado debe ser continuo, pero el exceso sobre diez días hábiles puede fraccionarse de común acuerdo [Art. 70].",
+      "respuesta": "Si tienes más de un año de servicio, tienes derecho a un feriado anual de quince días hábiles, con remuneración íntegra [Art. 67]. Si trabajas en la Duodécima Región de Magallanes y de la Antártica Chilena, en la Undécima Región de Aysén o en la Provincia de Palena, son veinte días hábiles [Art. 67]. Si tienes diez años de trabajo para uno o más empleadores, tienes un día adicional por cada tres nuevos años trabajados, y ese exceso puede negociarse individual o colectivamente. Solo se pueden hacer valer hasta diez años de trabajo prestados a empleadores anteriores [Art. 68]. El feriado debe ser continuo, pero el exceso sobre diez días hábiles puede fraccionarse de común acuerdo [Art. 70]. Eso es lo que dice la ley sobre los días de vacaciones.",
       "uso": {
-        "input_tokens": 6681,
-        "output_tokens": 594
+        "input_tokens": 6906,
+        "output_tokens": 505
       },
-      "ms": 3547
+      "ms": 3478
     },
     {
       "id": "q02",
@@ -54,8 +52,8 @@
       ],
       "abstencion": false,
       "citas": [
-        "67",
-        "68"
+        "68",
+        "67"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -63,12 +61,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Sí, según el Código del Trabajo tienes derecho a un feriado anual de quince días hábiles con remuneración íntegra si tienes más de un año de servicio [Art. 67]. Además, con diez años de trabajo para uno o más empleadores, tienes derecho a un día adicional de feriado por cada tres nuevos años trabajados, y solo se pueden contar hasta diez años de trabajo prestados a empleadores anteriores [Art. 68]. Con 12 años de trabajo, ese día adicional es parte de lo que la ley reconoce, pero el texto entregado no indica cuántos días adicionales te corresponden exactamente en tu caso. Esta parte no está cubierta por los artículos disponibles. Tampoco se indica en el texto si el día adicional es automático o depende de negociación, aunque el Código señala que este exceso es susceptible de negociación individual o colectiva [Art. 68].",
+      "respuesta": "Sí, según el Código del Trabajo tienes derecho a días adicionales de feriado. Todo trabajador, con diez años de trabajo, tiene derecho a un día adicional de feriado por cada tres nuevos años trabajados [Art. 68]. Además, el feriado anual base es de quince días hábiles con remuneración íntegra si tienes más de un año de servicio [Art. 67]. Solo se pueden hacer valer hasta diez años de trabajo prestados a empleadores anteriores [Art. 68]. El Código no dice cuántos días adicionales te tocan exactamente con 12 años; esa cifra depende de cómo se cuenten tus años de trabajo.",
       "uso": {
-        "input_tokens": 6082,
-        "output_tokens": 461
+        "input_tokens": 6307,
+        "output_tokens": 410
       },
-      "ms": 3070
+      "ms": 2215
     },
     {
       "id": "q03",
@@ -80,7 +78,6 @@
       "abstencion": false,
       "citas": [
         "70",
-        "70",
         "67"
       ],
       "citas_invalidas": [],
@@ -89,12 +86,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Sí, pero con límites. El feriado debe ser continuo, pero el exceso sobre diez días hábiles puede fraccionarse de común acuerdo [Art. 70]. El feriado puede acumularse por acuerdo de las partes, pero solo hasta por dos períodos consecutivos [Art. 70]. Si tienes dos períodos acumulados, el empleador debe otorgar al menos el primero antes de completar el año que te da derecho a un nuevo período [Art. 70]. El derecho base es de quince días hábiles al año para quienes tienen más de un año de servicio [Art. 67].",
+      "respuesta": "Sí, pero con límites. El feriado debe ser continuo, pero el exceso sobre diez días hábiles puede fraccionarse de común acuerdo [Art. 70]. El feriado puede acumularse por acuerdo de las partes, pero solo hasta por dos períodos consecutivos [Art. 70]. Si tienes dos períodos acumulados, el empleador debe otorgar al menos el primero antes de completar el año que le da derecho a un nuevo período [Art. 70]. El Código también dice que el feriado anual es de quince días hábiles para quienes tienen más de un año de servicio [Art. 67].",
       "uso": {
-        "input_tokens": 6604,
-        "output_tokens": 452
+        "input_tokens": 6829,
+        "output_tokens": 350
       },
-      "ms": 2573
+      "ms": 2014
     },
     {
       "id": "q04",
@@ -114,12 +111,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Sí, en parte. El Código del Trabajo dice que el feriado no puede compensarse en dinero, salvo si dejas la empresa teniendo los requisitos para usarlo: en ese caso el empleador debe compensarte el tiempo de feriado que te habría correspondido [Art. 73]. Si tu contrato termina antes de completar el año de servicio que da derecho a feriado, recibes una indemnización por ese beneficio, equivalente a la remuneración íntegra calculada en forma proporcional al tiempo trabajado desde tu contratación o la última anualidad hasta el término [Art. 73]. Estas sumas no pueden ser menores a las que resulten de aplicar el artículo 71 [Art. 73]. No encontré en los artículos revisados el detalle de cuántos días te corresponden ni cómo se calcula exactamente el artículo 71, así que esa parte no está cubierta aquí.",
+      "respuesta": "Sí, en parte. El Código del Trabajo dice que el feriado no se puede compensar en dinero, salvo si dejas la empresa sin haber podido usarlo. En ese caso, el empleador debe compensarte el tiempo que te habría correspondido [Art. 73]. Si terminas tu contrato antes de completar el año de servicio que da derecho a feriado, recibes una indemnización por ese beneficio, equivalente a tu remuneración íntegra proporcional al tiempo trabajado [Art. 73]. Esta compensación no puede ser menor a lo que resulte de aplicar el artículo 71, que no fue entregado, así que no puedo explicar cómo se calcula el monto exacto.",
       "uso": {
-        "input_tokens": 9441,
-        "output_tokens": 552
+        "input_tokens": 9666,
+        "output_tokens": 482
       },
-      "ms": 2718
+      "ms": 2468
     },
     {
       "id": "q05",
@@ -136,12 +133,12 @@
       "primer_intento_ok": false,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Los artículos entregados no regulan la división del feriado anual en partes. El artículo 76 bis trata de modificar transitoriamente turnos o jornada durante las vacaciones escolares, lo que no responde si puedes dividir tus vacaciones. No encontré base legal en el Código del Trabajo para responder esta pregunta.",
+      "respuesta": "No encontré base legal en el Código del Trabajo para responder si puedes dividir tus vacaciones en partes. Los artículos disponibles tratan de otros temas, como la jornada, la colación y los turnos.",
       "uso": {
-        "input_tokens": 6778,
-        "output_tokens": 139
+        "input_tokens": 7003,
+        "output_tokens": 324
       },
-      "ms": 1381
+      "ms": 2169
     },
     {
       "id": "q06",
@@ -154,7 +151,8 @@
       "citas": [
         "163",
         "172",
-        "152-quinquies-g"
+        "152-quinquies-g",
+        "40-bis-d"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -162,12 +160,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Si tu contrato estuvo vigente un año o más y te despiden por necesidades de la empresa (artículo 161), tienes derecho a una indemnización por años de servicio. Si no hay un pacto mejor, equivale a 30 días de tu última remuneración mensual por cada año de servicio y por cada fracción superior a seis meses [Art. 163]. El tope es de 330 días de remuneración [Art. 163]. La remuneración mensual incluye lo que recibes por tus servicios, pero no la asignación familiar, el sobretiempo ni gratificaciones y aguinaldos de navidad, y no puede superar 90 unidades de fomento [Art. 172]. Si tu remuneración es variable, se calcula con el promedio de los últimos tres meses calendario [Art. 172]. Para contratos por obra o faena determinada de un mes o más, se paga dos y medio días por cada mes trabajado y fracción superior a quince días [Art. 163]. Si tus remuneraciones son variables o tienes más de un año, el Código también fija un promedio de último año trabajado para ciertas indemnizaciones [Art. 152 quinquies G]. No encontré en los artículos entregados las reglas para el caso de quien tiene menos de un año de contrato.",
+      "respuesta": "Si tu contrato duró un año o más y te despiden por necesidades de la empresa (artículo 161), tienes derecho a una indemnización por años de servicio. Se calcula así: 30 días de la última remuneración mensual por cada año de servicio, y también por la fracción superior a seis meses. Tiene un tope de 330 días de remuneración [Art. 163]. Para calcular la última remuneración, se suma lo que recibes por tu trabajo, incluidas tus cotizaciones de previsión, pero no la asignación familiar, las horas extra ni las gratificaciones anuales. Esa base tiene un tope de 90 unidades de fomento al mes [Art. 172]. Si tu contrato fue por obra o faena determinada, la ley aplica otra regla de dos días y medio por mes trabajado [Art. 163]. Si el contrato duró a lo menos un año, la ley también permite que la indemnización se calcule con el promedio del último año trabajado, cuando sea más alta [Art. 152 quinquies G]. Además, la indemnización de la ley no se puede reducir: si lo que pactaron ustedes es menor, se aplica la ley [Art. 40 bis D].",
       "uso": {
         "input_tokens": 6128,
-        "output_tokens": 657
+        "output_tokens": 700
       },
-      "ms": 3406
+      "ms": 3659
     },
     {
       "id": "q07",
@@ -184,15 +182,15 @@
       "citas_invalidas": [],
       "recuperado_esperado": true,
       "cita_esperada": true,
-      "primer_intento_ok": true,
-      "intentos": 1,
+      "primer_intento_ok": false,
+      "intentos": 2,
       "advertencia": null,
-      "respuesta": "No, en general no. El Código del Trabajo dice que las causales de necesidades de la empresa y el desahucio no pueden usarse contra un trabajador que esté con licencia por enfermedad común, accidente del trabajo o enfermedad profesional otorgada según la ley [Art. 161]. Si tienes licencia, el empleador debe conservarte el cargo: por hasta treinta días sin remuneración si llevas más de doce meses trabajando, quince días si llevas más de seis meses y menos de un año, u ocho días si llevas menos de seis meses [Art. 152]. Esta norma está escrita para trabajadores de casa particular, así que no cubre todos los casos. No encontré en los artículos disponibles una regla completa sobre todas las causales de despido mientras tienes licencia, por lo que esa parte no está cubierta.",
+      "respuesta": "No, en general no. El Código del Trabajo dice que las causales de necesidades de la empresa y el desahucio no pueden usarse contra quien tiene licencia por enfermedad común, accidente del trabajo o enfermedad profesional, otorgada según las normas vigentes [Art. 161]. Además, si tienes licencia por enfermedad, el empleador debe conservarte el cargo sin remuneración por ocho días si llevas menos de seis meses, quince días si llevas más de un semestre y menos de un año, y hasta treinta días si llevas más de doce meses [Art. 152]. No encontré en los artículos revisados una regla que responda si puedes ser despedido por otras causales mientras tienes licencia.",
       "uso": {
-        "input_tokens": 7636,
-        "output_tokens": 510
+        "input_tokens": 15833,
+        "output_tokens": 1446
       },
-      "ms": 3475
+      "ms": 6349
     },
     {
       "id": "q08",
@@ -205,21 +203,21 @@
       "citas": [
         "161",
         "162",
-        "169",
+        "168",
         "168"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
       "cita_esperada": true,
-      "primer_intento_ok": false,
-      "intentos": 2,
+      "primer_intento_ok": true,
+      "intentos": 1,
       "advertencia": null,
-      "respuesta": "Significa que tu empleador te puso fin al contrato porque la empresa lo necesitaba, por ejemplo por racionalización o modernización, bajas en la productividad o cambios en el mercado o la economía [Art. 161]. Para esta causal, el aviso debe darse con 30 días de anticipación, con copia a la Inspección del Trabajo. Si no se dio ese aviso, debes recibir en dinero una indemnización equivalente a la última remuneración mensual [Art. 162]. La indemnización por años de servicio se paga en un solo acto al extender el finiquito [Art. 169]. Tienes 60 días hábiles desde la separación para ir al juzgado si crees que la causal fue improcedente, y en ese caso la indemnización puede aumentar en un 30% [Art. 168]. Los artículos revisados no indican el monto de la indemnización por años de servicio.",
+      "respuesta": "Significa que el empleador puede terminar tu contrato alegando razones de la empresa, como racionalizar o modernizar procesos, bajar la productividad o cambios en el mercado o la economía, que hagan necesaria la separación de uno o más trabajadores [Art. 161]. Si el despido es con esta causal, debe avisarte por escrito, con copia a la Inspección del Trabajo, con al menos 30 días de anticipación, o pagarte en dinero efectivo una indemnización equivalente a tu última remuneración mensual [Art. 162]. Además, no puede invocar esta causal si tienes licencia por enfermedad común, accidente del trabajo o enfermedad profesional [Art. 161]. Si consideras que el despido es injustificado o improcedente, puedes recurrir al juzgado dentro de 60 días hábiles desde la separación, o 90 días hábiles como máximo [Art. 168]. Si el juez declara improcedente la aplicación de esta causal, la indemnización aumenta en un 30% [Art. 168]. No puedo decirte si tu caso concreto está bien hecho.",
       "uso": {
-        "input_tokens": 18668,
-        "output_tokens": 2690
+        "input_tokens": 8966,
+        "output_tokens": 651
       },
-      "ms": 11293
+      "ms": 3930
     },
     {
       "id": "q09",
@@ -232,6 +230,7 @@
       "abstencion": false,
       "citas": [
         "162",
+        "162",
         "152-quinquies-a"
       ],
       "citas_invalidas": [],
@@ -240,12 +239,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Depende de la causal de despido. Si el empleador invoca la causal del inciso primero del artículo 161 (necesidades de la empresa), debe avisarte por escrito con al menos 30 días de anticipación, con copia a la Inspección del Trabajo [Art. 162]. Si no da ese aviso, puede pagarte una indemnización en dinero equivalente a la última remuneración mensual devengada, sustitutiva del aviso previo [Art. 162]. Si la empresa es una plataforma digital y tú prestaste servicios continuos por seis meses o más, también debe comunicarte por escrito con al menos 30 días de anticipación, salvo incumplimiento grave de tu parte [Art. 152 quinquies A]. Para despidos por otras causales, el Código entregado no establece un plazo de anticipación: solo fija que la comunicación por escrito debe entregarse dentro de tres días hábiles desde la separación, o seis días hábiles si se trata de la causal del número 6 del artículo 159 [Art. 162].",
+      "respuesta": "Si te despiden por necesidades de la empresa (art. 161), el empleador debe avisarte por escrito con al menos 30 días de anticipación. Puede evitar esa espera pagándote en dinero una indemnización equivalente a la última remuneración mensual [Art. 162]. Si el despido es por una causal del artículo 160, el aviso escrito debe darse dentro de los tres días hábiles siguientes a la separación, no con anticipación [Art. 162]. Si trabajas en una plataforma digital como independiente con más de seis meses de servicios continuos, también se exige aviso de 30 días, salvo incumplimiento grave [Art. 152 quinquies A]. La ley no indica en estos artículos el aviso previo para otros casos.",
       "uso": {
         "input_tokens": 10037,
-        "output_tokens": 577
+        "output_tokens": 560
       },
-      "ms": 3699
+      "ms": 2947
     },
     {
       "id": "q10",
@@ -261,23 +260,20 @@
         "162",
         "162",
         "162",
-        "162",
-        "162",
-        "162",
         "162"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
       "cita_esperada": true,
-      "primer_intento_ok": false,
-      "intentos": 2,
+      "primer_intento_ok": true,
+      "intentos": 1,
       "advertencia": null,
-      "respuesta": "La carta de despido debe ser escrita. El empleador debe entregarla personalmente o enviarla por carta certificada al domicilio del contrato, indicando la causal invocada y los hechos en que se funda [Art. 162]. Debe entregarse o enviarse dentro de tres días hábiles desde la separación, o seis días hábiles si es la causal del número 6 del artículo 159 [Art. 162]. Se debe enviar copia a la Inspección del Trabajo en el mismo plazo [Art. 162]. Si el despido es por necesidades de la empresa, el aviso debe darse con a lo menos treinta días de anticipación, con copia a la Inspección del Trabajo, salvo que se pague una indemnización en dinero equivalente a la última remuneración mensual devengada [Art. 162]. En ese caso, la carta debe indicar el monto total a pagar [Art. 162]. También debe informar el estado de pago de las cotizaciones previsionales hasta el último día del mes anterior al despido, adjuntando comprobantes [Art. 162]. El aviso debe indicar si el finiquito será presencial o electrónico [Art. 162]. Los errores u omisiones que no tengan relación con el pago de cotizaciones no invalidan la terminación del contrato [Art. 162].",
+      "respuesta": "Cuando te despiden por necesidades de la empresa u otras causales del artículo 160, el empleador debe comunicarlo por escrito, personalmente o por carta certificada a tu domicilio del contrato, indicando la causal y los hechos en que se funda [Art. 162]. Debe enviarse dentro de tres días hábiles desde la separación, o seis días hábiles si la causal es la del número 6 del artículo 159 [Art. 162]. Además, debe enviarse copia a la Inspección del Trabajo en el mismo plazo [Art. 162]. Si el despido es por necesidades de la empresa, el aviso debe darse con treinta días de anticipación, salvo que se pague una indemnización equivalente a la última remuneración mensual devengada [Art. 162]. La comunicación también debe indicar el monto total a pagar en ese caso [Art. 162]. La carta debe informar si el finiquito será presencial o electrónico, y que aceptar el electrónico es voluntario [Art. 162]. Los errores u omisiones que no tengan relación con el pago de cotizaciones no invalidan el término del contrato [Art. 162]. No encontré base legal para explicar otros contenidos específicos de la carta.",
       "uso": {
-        "input_tokens": 26535,
-        "output_tokens": 3210
+        "input_tokens": 12651,
+        "output_tokens": 854
       },
-      "ms": 11874
+      "ms": 3634
     },
     {
       "id": "q11",
@@ -289,7 +285,6 @@
       "abstencion": false,
       "citas": [
         "168",
-        "168",
         "489",
         "510"
       ],
@@ -299,12 +294,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Tienes 60 días hábiles desde la separación para acudir al juzgado competente si crees que el despido fue injustificado, indebido o improcedente [Art. 168]. Ese plazo se suspende si, dentro de él, presentas un reclamo ante la Inspección del Trabajo, y sigue corriendo al terminar ese trámite [Art. 168]. En ningún caso puedes recurrir al tribunal después de 90 días hábiles desde la separación [Art. 168]. Para la denuncia de tutela laboral por despido con vulneración de derechos fundamentales, el plazo también es de 60 días desde la separación, con la misma suspensión [Art. 489]. Las acciones laborales prescriben en seis meses desde el término de los servicios [Art. 510]. No encontré en los artículos revisados el detalle de cómo se cuentan algunos de estos plazos en todos los casos.",
+      "respuesta": "Tienes 60 días hábiles desde la separación para ir al juzgado, según el artículo 168. Ese plazo se suspende si presentas un reclamo ante la Inspección del Trabajo, y sigue corriendo después de ese trámite. En ningún caso puedes recurrir al tribunal después de 90 días hábiles desde la separación [Art. 168]. Además, el artículo 489 indica que, si el despido se relaciona con una vulneración de derechos fundamentales, la denuncia debe presentarse dentro de 60 días contados desde la separación [Art. 489]. El artículo 510 fija una prescripción de seis meses para acciones de los actos y contratos del Código, contados desde la terminación de los servicios [Art. 510].",
       "uso": {
         "input_tokens": 7680,
-        "output_tokens": 569
+        "output_tokens": 456
       },
-      "ms": 3255
+      "ms": 2388
     },
     {
       "id": "q12",
@@ -316,8 +311,6 @@
       "abstencion": false,
       "citas": [
         "168",
-        "168",
-        "168",
         "173"
       ],
       "citas_invalidas": [],
@@ -326,12 +319,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Depende de la causal con que te despidieron. Si fue por una causal del artículo 159 (aplicación injustificada), la indemnización por años de servicio sube en un cincuenta por ciento [Art. 168]. Si fue por aplicación improcedente del artículo 161 (necesidades de la empresa), sube en un treinta por ciento [Art. 168]. Si fue por aplicación indebida de una causal del artículo 160, sube en un ochenta por ciento [Art. 168]. Si no se invocó ninguna causal legal, también sube en un cincuenta por ciento [Art. 168]. Además, la indemnización se reajusta según el Índice de Precios al Consumidor y devenga interés desde el término del contrato [Art. 173]. El plazo para recurrir al juzgado es de sesenta días hábiles desde la separación [Art. 168]. Esta respuesta no cubre si el despido fue por otras causales ni cómo se calcula el monto base.",
+      "respuesta": "Si el juez declara que el despido fue injustificado, la indemnización por años de servicio aumenta en un 50%, cuando el término fue por una causal del artículo 159 aplicada injustificadamente [Art. 168]. Si el término fue por aplicación improcedente del artículo 161, el aumento es de un 30% [Art. 168]. Si fue por aplicación indebida de las causales del artículo 160, el aumento es de un 80% [Art. 168]. Estas indemnizaciones se reajustan según el Índice de Precios al Consumidor [Art. 173]. No tengo base legal en estos artículos para explicar si hay un aumento específico para el caso de despido injustificado distinto de esos porcentajes, ni para el plazo de reclamo fuera de lo indicado.",
       "uso": {
         "input_tokens": 8446,
-        "output_tokens": 610
+        "output_tokens": 461
       },
-      "ms": 2879
+      "ms": 2484
     },
     {
       "id": "q13",
@@ -352,12 +345,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Según el Código del Trabajo, el empleador puede ponerte término sin indemnización si invoca alguna de estas causales graves: falta de probidad, acoso sexual, vías de hecho contra el empleador o compañeros, injurias contra el empleador, conducta inmoral que afecte a la empresa y acoso laboral [Art. 160]. También sin indemnización si haces negociaciones dentro del giro del negocio que el contrato prohibía por escrito [Art. 160]. Además, si no asistes sin causa justificada dos días seguidos, dos lunes en el mes o tres días en el mismo período [Art. 160]. También si abandonas el trabajo, es decir, sales sin permiso durante la jornada o te niegas a trabajar sin causa justificada [Art. 160]. Otras causales son actos imprudentes que afecten la seguridad, el perjuicio material intencional a instalaciones o herramientas, y el incumplimiento grave de las obligaciones del contrato [Art. 160]. Si el despido se basa en estas causales, debe comunicarse por escrito, expresando la causal y los hechos, dentro de tres días hábiles [Art. 162]. Si consideras que la causal fue indebida, puedes recurrir al juzgado dentro de sesenta días hábiles desde la separación [Art. 168]. Esta respuesta explica solo lo que dice la ley; no evalúa tu caso particular.",
+      "respuesta": "Según el Código del Trabajo, el empleador puede ponerte término sin indemnización alguna si invoca una o más de estas causales de conducta grave: falta de probidad, acoso sexual, vías de hecho contra el empleador o compañeros, injurias contra el empleador, conducta inmoral que afecte a la empresa y acoso laboral [Art. 160]. También sirven: negociar dentro del giro del negocio lo que el contrato prohibía por escrito [Art. 160]; no asistir sin causa justificada dos días seguidos, dos lunes en el mes o tres días en igual período [Art. 160]; abandono del trabajo [Art. 160]; actos o imprudencias temerarias que afecten la seguridad [Art. 160]; perjuicio material causado intencionalmente en instalaciones o herramientas [Art. 160]; e incumplimiento grave de las obligaciones del contrato [Art. 160]. El empleador debe comunicarlo por escrito, con las causales y los hechos, dentro de tres días hábiles desde la separación [Art. 162]. Si consideras que la causal fue mal aplicada, puedes recurrir al tribunal dentro de sesenta días hábiles desde la separación [Art. 168].",
       "uso": {
         "input_tokens": 7506,
-        "output_tokens": 739
+        "output_tokens": 641
       },
-      "ms": 3552
+      "ms": 2969
     },
     {
       "id": "q14",
@@ -377,12 +370,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Si renuncias, por regla general no cobras indemnización por años de servicio: esa indemnización se paga cuando el empleador te pone término. Pero el Código del Trabajo dice que si el empleador no paga íntegramente tus cotizaciones previsionales, el despido no produce efecto y el contrato no termina [Art. 162]. Además, si tú pones término por causales graves del empleador, como no pagar cotizaciones o tratos indebidos, la ley te permite reclamar en el tribunal la indemnización, con un aumento de hasta 80% o 50% según el caso [Art. 171]. Debes presentar ese reclamo dentro de sesenta días hábiles desde la terminación [Art. 171]. Esta respuesta solo explica lo que dice la ley, no evalúa tu caso particular.",
+      "respuesta": "Si renuncias, en general no cobras indemnización por años de servicio, porque es el empleador quien debe pagarla cuando te despide. Los artículos entregados no dicen que la renuncia dé derecho a esa indemnización. Sí explican que, si tu jefe no paga las cotizaciones previsionales al momento del despido, ese despido no pone término al contrato. [Art. 162] Además, si el empleador incurre en ciertas causales graves (como no pagar cotizaciones u otras faltas indicadas en el artículo 160), tú puedes poner término al contrato y recurrir al juzgado dentro de sesenta días hábiles para pedir el pago de indemnizaciones, que pueden aumentar hasta en un cincuenta u ochenta por ciento según la causal. [Art. 171] Los artículos entregados no detallan cuándo procede la renuncia con indemnización por malos tratos ni cómo se calcula en ese caso, así que esa parte no queda cubierta.",
       "uso": {
         "input_tokens": 8247,
-        "output_tokens": 497
+        "output_tokens": 517
       },
-      "ms": 2792
+      "ms": 3007
     },
     {
       "id": "q15",
@@ -399,12 +392,12 @@
       "primer_intento_ok": false,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Ninguno de los artículos entregados regula el aviso que debe dar un trabajador que renuncia. Los artículos tratan de la comunicación del empleador al despedir, de reglamentos internos, permisos, plataformas digitales y procedimiento judicial. No encontré base legal en el Código del Trabajo para responder tu pregunta.",
+      "respuesta": "No encontré base legal en el Código del Trabajo para responder cuánto tiempo de aviso debes dar al renunciar. Los artículos disponibles tratan del término del contrato por decisión del empleador o del trabajador de plataformas digitales, pero no de la renuncia voluntaria.",
       "uso": {
         "input_tokens": 7367,
-        "output_tokens": 142
+        "output_tokens": 125
       },
-      "ms": 2164
+      "ms": 1391
     },
     {
       "id": "q16",
@@ -416,6 +409,7 @@
       "abstencion": false,
       "citas": [
         "159",
+        "159",
         "159"
       ],
       "citas_invalidas": [],
@@ -424,12 +418,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Según el Código del Trabajo, un contrato a plazo fijo no puede durar más de un año [Art. 159]. Si el contrato es para gerentes o para personas con título profesional o técnico de una institución de educación superior del Estado o reconocida por éste, el máximo es de dos años [Art. 159]. Si trabajas de forma discontinua con más de dos contratos a plazo, durante doce meses o más en un período de quince meses, la ley presume que tu contrato es de duración indefinida [Art. 159]. También se vuelve indefinido si sigues trabajando con conocimiento del empleador después de vencido el plazo, o con la segunda renovación de un contrato a plazo fijo [Art. 159].",
+      "respuesta": "Según el Código del Trabajo, un contrato a plazo fijo no puede durar más de un año [Art. 159]. Si eres gerente o tienes un título profesional o técnico de una institución de educación superior, el máximo es de dos años [Art. 159]. Si sigues trabajando con conocimiento del empleador después de vencido el plazo, el contrato se convierte en uno de duración indefinida [Art. 159].",
       "uso": {
         "input_tokens": 3185,
-        "output_tokens": 399
+        "output_tokens": 374
       },
-      "ms": 2671
+      "ms": 2138
     },
     {
       "id": "q17",
@@ -443,7 +437,10 @@
         "177",
         "177",
         "177",
-        "177"
+        "177",
+        "177",
+        "177",
+        "163-bis"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -451,12 +448,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Según el Código del Trabajo, el finiquito, la renuncia y el mutuo acuerdo deben constar por escrito [Art. 177]. Si no los firma el interesado y el presidente del sindicato o el delegado sindical respectivos, o si el trabajador no lo ratifica ante el inspector del trabajo, el empleador no puede invocarlo [Art. 177]. El finiquito debe otorgarlo el empleador y poner su pago a disposición del trabajador dentro de diez días hábiles desde la separación [Art. 177]. Puede ser firmado ante un notario, el oficial del registro civil o el secretario municipal [Art. 177]. Si el trabajador firma un finiquito ante un ministro de fe, el poder liberatorio se limita a lo que las partes acuerdan expresamente [Art. 177]. Esta respuesta no cubre todos los requisitos de forma del finiquito.",
+      "respuesta": "El finiquito debe constar por escrito [Art. 177]. Debe ser otorgado por el empleador y su pago debe quedar a disposición del trabajador dentro de diez días hábiles desde la separación [Art. 177]. Puede firmarse ante un notario, el oficial del registro civil o el secretario municipal, y también puede ratificarse ante el inspector del trabajo [Art. 177]. Si se firma en el sitio electrónico de la Dirección del Trabajo, debe dar cuenta de la causal de término, los pagos hechos, las sumas pendientes y la reserva de derechos del trabajador [Art. 177]. Si el finiquito es de un despido por las causales del inciso quinto del artículo 162, los ministros de fe deben exigir al empleador acreditar el pago íntegro de cotizaciones previsionales hasta el último día del mes anterior al despido [Art. 177]. Si el trabajador firma con error, fuerza o dolo, puede reclamarlo judicialmente [Art. 177]. Además, el finiquito suscrito por el trabajador en un procedimiento concursal de liquidación debe ser autorizado por un Ministro de Fe [Art. 163 bis].",
       "uso": {
         "input_tokens": 9969,
-        "output_tokens": 654
+        "output_tokens": 1002
       },
-      "ms": 3105
+      "ms": 3986
     },
     {
       "id": "q18",
@@ -476,12 +473,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "El finiquito debe quedar a tu disposición dentro de diez días hábiles contados desde la separación del trabajador. [Art. 177] Las partes pueden pactar que el pago sea en cuotas. [Art. 177] Si el término es por liquidación de la empresa, el liquidador debe ponerlo a disposición a lo menos diez días antes de que venza el período de verificación de créditos. [Art. 163 bis] No encontré en los artículos entregados un plazo general para pagar las remuneraciones adeudadas aparte del finiquito.",
+      "respuesta": "El finiquito debe ser otorgado por el empleador y su pago puesto a disposición del trabajador dentro de diez días hábiles, contados desde la separación del trabajador [Art. 177]. Si el término es por liquidación concursal del empleador, el liquidador debe poner el finiquito a disposición del trabajador a lo menos diez días antes de la expiración del período de verificación de créditos [Art. 163 bis]. No encontré en los artículos entregados otro plazo que aplique a tu caso.",
       "uso": {
         "input_tokens": 8689,
-        "output_tokens": 370
+        "output_tokens": 355
       },
-      "ms": 2802
+      "ms": 2467
     },
     {
       "id": "q19",
@@ -494,10 +491,9 @@
       "abstencion": false,
       "citas": [
         "201",
-        "174",
         "201",
-        "194",
-        "202"
+        "174",
+        "194"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -505,12 +501,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "No, en general no pueden despedirte mientras estás embarazada. Durante el embarazo y hasta un año después de terminar el descanso de maternidad tienes fuero laboral. Eso significa que el empleador no puede poner término a tu contrato sin autorización previa del juez [Art. 201][Art. 174]. Si por ignorancia del embarazo te despidieron igual, el despido queda sin efecto y puedes volver a tu trabajo presentando un certificado médico o de matrona, y tienes derecho a tu remuneración por el tiempo que estuviste fuera. Debes reclamarlo dentro de 60 días hábiles desde el despido [Art. 201]. Además, el empleador no puede condicionar la contratación ni la permanencia a la ausencia o existencia de embarazo [Art. 194]. Durante el embarazo, si tu trabajo es perjudicial para la salud, debes ser trasladada a otro sin reducción de remuneraciones [Art. 202]. Mi respuesta no cubre si el juez puede autorizar el término en las causales del artículo 159 números 4 y 5 o en las del artículo 160.",
+      "respuesta": "No, mientras estás embarazada tienes fuero laboral: tu empleador no puede ponerte término al contrato sin autorización previa del juez. Ese fuero dura durante el embarazo y hasta un año después de terminar el descanso de maternidad [Art. 201]. Además, si el despido fue por ignorancia de tu embarazo, la medida queda sin efecto y puedes volver a tu trabajo presentando un certificado médico o de matrona [Art. 201]. Tienes 60 días hábiles desde el despido para reclamar la remuneración por el tiempo fuera del trabajo [Art. 201]. El juez puede autorizar el término solo en las causales de los números 4 y 5 del artículo 159 y en las del artículo 160 [Art. 174]. Tampoco pueden condicionar la contratación ni la permanencia a la ausencia o existencia de embarazo [Art. 194].",
       "uso": {
         "input_tokens": 5626,
-        "output_tokens": 834
+        "output_tokens": 768
       },
-      "ms": 3643
+      "ms": 3337
     },
     {
       "id": "q20",
@@ -523,7 +519,6 @@
       "citas": [
         "195",
         "196",
-        "196",
         "197-bis"
       ],
       "citas_invalidas": [],
@@ -532,12 +527,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "El descanso de maternidad dura seis semanas antes del parto y doce semanas después de él. [Art. 195] Si el bebé nace antes de la semana 33 de gestación, o pesa menos de 1.500 gramos, el postnatal sube a dieciocho semanas. [Art. 196] Si hay dos o más niños, el postnatal aumenta siete días corridos por cada niño nacido a partir del segundo. [Art. 196] Además, después del postnatal existe un permiso postnatal parental de doce semanas. [Art. 197 bis] Si el parto se atrasa más de seis semanas después de iniciar el descanso, el prenatal se alarga hasta el parto. [Art. 196]",
+      "respuesta": "Por ley, tienes derecho a descanso de maternidad de seis semanas antes del parto y doce semanas después de él [Art. 195]. Si el bebé nace antes de la semana 33 de embarazo, o pesa menos de 1.500 gramos, el postnatal sube a dieciocho semanas [Art. 196]. Si hay mellizos o más niños, el postnatal aumenta siete días corridos por cada niño nacido desde el segundo [Art. 196]. Si durante el embarazo hay una enfermedad causada por él, con certificado médico, tienes derecho a un prenatal suplementario [Art. 196]. Además, después del postnatal existe un permiso postnatal parental de doce semanas con subsidio [Art. 197 bis]. El padre tiene un permiso pagado de cinco días por nacimiento de un hijo [Art. 195]. La ley no indica en estos artículos el monto exacto del subsidio.",
       "uso": {
-        "input_tokens": 8636,
-        "output_tokens": 500
+        "input_tokens": 8861,
+        "output_tokens": 596
       },
-      "ms": 2918
+      "ms": 3393
     },
     {
       "id": "q21",
@@ -559,12 +554,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "El postnatal parental es un permiso que viene después del postnatal. Las trabajadoras tienen derecho a doce semanas de permiso con subsidio [Art. 197 bis]. Si la madre vuelve a trabajar por la mitad de su jornada, el permiso se extiende a dieciocho semanas, y recibe el cincuenta por ciento del subsidio y al menos el cincuenta por ciento de los pagos fijos [Art. 197 bis]. Para usarlo, debes avisar a tu empleador por carta certificada con al menos treinta días de anticipación al término del postnatal, con copia a la Inspección del Trabajo [Art. 197 bis]. Si ambos padres trabajan, la madre puede elegir que el padre use parte del permiso, a partir de la séptima semana [Art. 197 bis]. El subsidio se calcula igual que el del descanso de maternidad [Art. 197 bis]. El Código no dice nada sobre cambios de cifras en otras fechas.",
+      "respuesta": "El postnatal parental es un permiso que puedes usar después del postnatal. Según el Código del Trabajo, las trabajadoras tienen derecho a doce semanas de permiso postnatal parental, con un subsidio. [Art. 197 bis] Si vuelves a trabajar por la mitad de tu jornada, el permiso se extiende a dieciocho semanas, y recibes el cincuenta por ciento del subsidio. [Art. 197 bis] Para usarlo con jornada parcial debes avisar a tu empleador por carta certificada, con al menos treinta días de anticipación al término del postnatal, con copia a la Inspección del Trabajo. [Art. 197 bis] Si ambos padres son trabajadores, la madre puede elegir que el padre use parte del permiso, desde la séptima semana. [Art. 197 bis]",
       "uso": {
-        "input_tokens": 8209,
-        "output_tokens": 656
+        "input_tokens": 8434,
+        "output_tokens": 621
       },
-      "ms": 3168
+      "ms": 3382
     },
     {
       "id": "q22",
@@ -576,7 +571,7 @@
       "abstencion": false,
       "citas": [
         "195",
-        "197-bis"
+        "195"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -584,12 +579,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Como padre, tienes derecho a un permiso pagado de cinco días por el nacimiento de tu hijo [Art. 195]. Puedes usarlo desde el momento del parto, de forma continua y sin contar el descanso semanal, o repartirlo dentro del primer mes desde el nacimiento [Art. 195]. Este derecho no se puede renunciar [Art. 195]. Además, tienes derecho a un permiso postnatal parental de doce semanas solo si la madre falleciera o si tienes el cuidado personal del menor por sentencia judicial [Art. 197 bis].",
+      "respuesta": "Como papá tienes un permiso pagado de cinco días por el nacimiento de tu hijo [Art. 195]. Puedes usarlo desde el momento del parto, de forma continua y sin contar el descanso semanal. También puedes repartirlo dentro del primer mes desde el nacimiento [Art. 195]. Este derecho no se puede renunciar [Art. 195]. Además, si la madre muere en el parto o durante el permiso posterior, el resto del permiso destinado al cuidado del hijo te corresponde a ti [Art. 195]. Esto no cubre el permiso postnatal parental, que es otro beneficio distinto.",
       "uso": {
-        "input_tokens": 8899,
-        "output_tokens": 406
+        "input_tokens": 9124,
+        "output_tokens": 407
       },
-      "ms": 2521
+      "ms": 2190
     },
     {
       "id": "q23",
@@ -601,6 +596,8 @@
       "abstencion": false,
       "citas": [
         "203",
+        "203",
+        "203",
         "205"
       ],
       "citas_invalidas": [],
@@ -609,12 +606,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Sí, en ciertos casos. Las empresas que ocupan veinte o más trabajadoras de cualquier edad o estado civil deben tener salas anexas e independientes del local de trabajo, donde las mujeres puedan dar alimento a sus hijos menores de dos años y dejarlos mientras trabajan [Art. 203]. Esta obligación también corresponde a centros o complejos comerciales, industriales o de servicios administrados bajo una misma razón social o personalidad jurídica, cuyos establecimientos ocupen entre todos veinte o más trabajadoras [Art. 203]. La empresa puede cumplir pagando los gastos de sala cuna directamente al establecimiento que elija la trabajadora, y debe elegir una sala cuna con autorización o reconocimiento oficial del Ministerio de Educación [Art. 203]. El mantenimiento de las salas cuna es de costo exclusivo del empleador [Art. 205]. No encontré base legal para explicar si la empresa debe pagar los pasajes en otros casos no cubiertos por esta regla.",
+      "respuesta": "Sí, en parte. Las empresas que ocupan veinte o más trabajadoras de cualquier edad o estado civil deben tener salas cuna anexas e independientes del local de trabajo, donde las mujeres puedan dar alimento a sus hijos menores de dos años y dejarlos mientras trabajan [Art. 203]. Las salas cuna deben tener autorización de funcionamiento o reconocimiento oficial del Ministerio de Educación [Art. 203]. El empleador puede cumplir pagando los gastos de sala cuna directamente al establecimiento que elija la trabajadora, entre los autorizados [Art. 203]. El mantenimiento de las salas cuna es de costo exclusivo del empleador [Art. 205]. Las empresas con menos de veinte trabajadoras no tienen esta obligación según este artículo. Esta explicación no cubre cuántas trabajadoras cuenta tu empresa ni cómo se calcula el número en casos de varios establecimientos.",
       "uso": {
         "input_tokens": 5961,
-        "output_tokens": 517
+        "output_tokens": 677
       },
-      "ms": 2817
+      "ms": 2969
     },
     {
       "id": "q24",
@@ -626,8 +623,8 @@
       "abstencion": false,
       "citas": [
         "206",
-        "206",
-        "206"
+        "27",
+        "l21561-t-primero"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -635,12 +632,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Sí. El Código del Trabajo dice que las trabajadoras tienen derecho a disponer de al menos una hora al día para dar alimento a sus hijos menores de dos años [Art. 206]. Esta hora se puede usar en cualquier momento de la jornada, o dividirla en dos porciones a tu solicitud [Art. 206]. También puedes postergar o adelantar en media hora, o en una hora, el inicio o el término de la jornada [Art. 206]. Este derecho se puede ejercer preferentemente en la sala cuna o donde esté el menor [Art. 206]. El tiempo utilizado se considera trabajado [Art. 206]. Este derecho no se puede renunciar [Art. 206]. Si el padre y la madre son trabajadores, ambos pueden acordar que lo ejerza el padre [Art. 206].",
+      "respuesta": "Sí. Como madre trabajadora, tienes derecho a disponer de al menos una hora al día para dar alimento a tus hijos menores de dos años [Art. 206]. Puedes usarla de una de estas formas, acordadas con tu empleador: en cualquier momento de la jornada, dividida en dos porciones a tu solicitud, o postergando o adelantando en media hora o una hora el inicio o término de la jornada [Art. 206]. Este derecho no se puede renunciar [Art. 206]. El tiempo utilizado se considera trabajado, es decir, se paga como tal [Art. 206]. Si tu empleador tiene la obligación de sala cuna, el tiempo se amplía al necesario para el viaje de ida y vuelta, y él paga los pasajes [Art. 206]. Además, si tu jornada empieza o termina de forma flexible, la ley permite anticipar o retrasar hasta una hora el inicio de tus labores para cuidar a niños de hasta doce años [Art. 27]. Esto no reemplaza el derecho de alimentación. Hoy el límite semanal de la jornada ordinaria es de 42 horas, y bajará a 40 horas desde el 26-04-2028 [Art. primero transitorio, Ley 21.561].",
       "uso": {
-        "input_tokens": 6475,
-        "output_tokens": 488
+        "input_tokens": 6700,
+        "output_tokens": 680
       },
-      "ms": 2434
+      "ms": 3437
     },
     {
       "id": "q25",
@@ -652,7 +649,7 @@
       "abstencion": false,
       "citas": [
         "199",
-        "199"
+        "199-bis"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -660,12 +657,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Sí, en parte. Si la salud de un niño menor de un año requiere atención en el hogar por enfermedad grave, la madre trabajadora tiene derecho a permiso y subsidio [Art. 199]. Si ambos padres trabajan, cualquiera de ellos puede usarlo, a elección de la madre. Para esto debes presentar un certificado médico otorgado o ratificado por los servicios que atienden al menor, y el permiso dura el período que ese servicio determine. Si la madre falleció o el padre tiene la tuición por sentencia judicial, lo puede gozar el padre [Art. 199]. Los artículos entregados no detallan el monto del subsidio ni el procedimiento de solicitud, así que esa parte no está cubierta.",
+      "respuesta": "Sí, el Código del Trabajo da permiso con subsidio para cuidar a un niño menor de un año con enfermedad grave en el hogar. Debe acreditarse con certificado médico otorgado o ratificado por los servicios que atienden al menor, y el período lo determina ese servicio [Art. 199]. Si ambos padres trabajan, puede usarlo cualquiera de ellos, a elección de la madre. El padre lo tendrá si la madre falleció o él tiene la tuición por sentencia judicial [Art. 199]. Además, si tu hijo tiene entre un año y menos de dieciocho años, el permiso es distinto: son diez jornadas al año, con certificado del médico tratante [Art. 199 bis]. Como tu hijo tiene 8 meses, aplica la regla del primer caso. No encontré en los artículos entregados el monto exacto del subsidio ni su duración máxima, por lo que esa parte no está cubierta.",
       "uso": {
         "input_tokens": 6490,
-        "output_tokens": 423
+        "output_tokens": 569
       },
-      "ms": 2465
+      "ms": 2981
     },
     {
       "id": "q26",
@@ -677,6 +674,7 @@
       "abstencion": false,
       "citas": [
         "66",
+        "66",
         "66"
       ],
       "citas_invalidas": [],
@@ -685,12 +683,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Si muere tu hijo, tienes derecho a diez días corridos de permiso pagado. Si muere tu papá, el Código da cuatro días hábiles de permiso [Art. 66]. Este permiso es adicional al feriado anual y no depende de tus años de servicio [Art. 66]. Además, tienes fuero laboral por un mes desde el fallecimiento, es decir, no pueden despedirte en ese periodo [Art. 66]. Estos días no se pueden pagar en dinero [Art. 66]. El Código también dice que si el hijo murió en gestación, el permiso es de siete días hábiles [Art. 66].",
+      "respuesta": "Si muere tu hijo, el Código del Trabajo te da diez días corridos de permiso pagado, adicionales al feriado anual [Art. 66]. Si muere tu padre, el permiso es de cuatro días hábiles [Art. 66]. Este permiso se cuenta desde el día del fallecimiento [Art. 66]. Además, tienes fuero laboral por un mes desde el fallecimiento, y si tu contrato es a plazo fijo o por obra, el fuero dura lo mismo o hasta el término del contrato [Art. 66]. Los días de permiso no se pueden cambiar por dinero [Art. 66].",
       "uso": {
         "input_tokens": 8131,
-        "output_tokens": 369
+        "output_tokens": 422
       },
-      "ms": 2205
+      "ms": 2179
     },
     {
       "id": "q27",
@@ -711,12 +709,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Sí. Tienes derecho a cinco días hábiles continuos de permiso pagado por matrimonio o acuerdo de unión civil, además de tu feriado anual, sin importar cuánto tiempo llevas en el trabajo [Art. 207 bis]. Puedes usarlos el día de la boda o en los días inmediatamente anteriores o posteriores, según elijas [Art. 207 bis]. Debes avisar a tu empleador con treinta días de anticipación [Art. 207 bis]. Después de la celebración, tienes treinta días para presentar tu certificado de matrimonio o de acuerdo de unión civil del Registro Civil [Art. 207 bis].",
+      "respuesta": "Sí. Tienes derecho a cinco días hábiles continuos de permiso pagado por matrimonio o acuerdo de unión civil, adicional a tus vacaciones y sin importar cuánto tiempo llevas trabajando [Art. 207 bis]. Puedes usarlos el día de la celebración y los días inmediatamente anteriores o posteriores, según elijas [Art. 207 bis]. Debes avisar a tu empleador con treinta días de anticipación [Art. 207 bis]. Además, debes presentar el certificado del Registro Civil dentro de los treinta días siguientes a la celebración [Art. 207 bis].",
       "uso": {
-        "input_tokens": 5214,
-        "output_tokens": 499
+        "input_tokens": 5439,
+        "output_tokens": 495
       },
-      "ms": 2372
+      "ms": 2335
     },
     {
       "id": "q28",
@@ -737,12 +735,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Hoy, la jornada ordinaria no puede superar las 42 horas semanales [Art. primero transitorio, Ley 21.561]. Esto viene de una reducción gradual: 44 horas al primer año, 42 al tercer año y 40 al quinto año, contados desde la publicación de la ley en el Diario Oficial, el 26 de abril de 2023 [Art. primero transitorio, Ley 21.561]. El tercer año se cumplió el 26 de abril de 2026. El tope de 40 horas semanales regirá desde el 26 de abril de 2028 [Art. primero transitorio, Ley 21.561]. Ese tope queda escrito en el Código del Trabajo [Art. 22]. Además, en ningún caso la jornada ordinaria puede exceder de diez horas por día [Art. 28].",
+      "respuesta": "Hoy, el máximo de la jornada ordinaria es de 42 horas semanales. Esto viene del primer transitorio de la Ley 21.561, que hace bajar la jornada por etapas [Art. primero transitorio, Ley 21.561]. El Código del Trabajo dice que la jornada ordinaria no excederá de cuarenta horas semanales, pero esa cifra rige recién desde el 26 de abril de 2028 [Art. 22]. Hasta entonces, la jornada máxima sigue siendo de 42 horas semanales [Art. primero transitorio, Ley 21.561]. Además, la jornada no puede superar las diez horas por día [Art. 28].",
       "uso": {
-        "input_tokens": 7016,
-        "output_tokens": 2697
+        "input_tokens": 7241,
+        "output_tokens": 427
       },
-      "ms": 11385
+      "ms": 2264
     },
     {
       "id": "q29",
@@ -763,12 +761,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Según el Código del Trabajo, en faenas que no perjudiquen la salud del trabajador se pueden pactar horas extraordinarias hasta un máximo de dos por día [Art. 31]. Estas horas se pagan con un recargo del cincuenta por ciento sobre el sueldo convenido para la jornada ordinaria [Art. 32]. Además, solo se pueden pactar para atender necesidades temporales de la empresa, por escrito y con una vigencia no superior a tres meses [Art. 32].",
+      "respuesta": "Según el Código del Trabajo, en las faenas que no perjudiquen la salud del trabajador se pueden pactar horas extraordinarias hasta un máximo de dos por día [Art. 31]. Esas horas se pagan con un recargo del cincuenta por ciento sobre el sueldo convenido para la jornada ordinaria [Art. 32]. Los pactos de horas extraordinarias deben constar por escrito y tener una vigencia no superior a tres meses, renovable por acuerdo de las partes [Art. 32]. Lo que no cubre este artículo es si el máximo diario cambia con la reducción de jornada a 42 horas que rige hoy.",
       "uso": {
-        "input_tokens": 6511,
-        "output_tokens": 417
+        "input_tokens": 6736,
+        "output_tokens": 469
       },
-      "ms": 2752
+      "ms": 2398
     },
     {
       "id": "q30",
@@ -780,8 +778,8 @@
       "abstencion": false,
       "citas": [
         "32",
-        "137",
-        "106"
+        "106",
+        "137"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -789,12 +787,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Las horas extraordinarias se pagan con un recargo del 50% sobre el sueldo convenido para la jornada ordinaria [Art. 32]. Si no hay sueldo convenido, o es inferior al ingreso mínimo mensual, el ingreso mínimo sirve de base para calcular el recargo [Art. 32]. Además, deben liquidarse y pagarse junto con las remuneraciones ordinarias del respectivo período [Art. 32]. En los trabajos de carga y descarga portuaria, el recargo también es del 50% sobre la remuneración convenida [Art. 137]. La gente de mar paga con ese mismo recargo el exceso de cuarenta horas semanales [Art. 106].",
+      "respuesta": "Las horas extraordinarias se pagan con un recargo del cincuenta por ciento sobre el sueldo convenido para la jornada ordinaria [Art. 32]. Además, deben liquidarse y pagarse junto con las remuneraciones ordinarias del respectivo período [Art. 32]. En la gente de mar, el exceso de cuarenta horas semanales se paga con ese mismo recargo [Art. 106]. En los portuarios eventuales, las horas trabajadas en exceso de la jornada pactada se pagan también con un recargo del cincuenta por ciento [Art. 137].",
       "uso": {
-        "input_tokens": 7667,
-        "output_tokens": 451
+        "input_tokens": 7892,
+        "output_tokens": 411
       },
-      "ms": 2277
+      "ms": 2056
     },
     {
       "id": "q31",
@@ -814,12 +812,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Sí, en parte. La jornada se divide en dos partes y debe quedar, al menos, media hora para la colación [Art. 34]. Ese tiempo no se considera trabajado para calcular la duración de la jornada diaria [Art. 34]. Hay una excepción: los trabajos de proceso continuo no tienen esta pausa, y si hay duda, decide la Dirección del Trabajo [Art. 34]. Los teleoperadores, en cambio, tienen además descansos que sí se consideran trabajados [Art. 152 quáter C]. Lo que no está cubierto aquí es la situación de cada persona, por ejemplo si su rubro es de proceso continuo.",
+      "respuesta": "Sí, tienes derecho a un tiempo para comer. La jornada se divide en dos partes y entre ellas debe haber, como mínimo, media hora para la colación [Art. 34]. Ese tiempo no se cuenta como trabajado para calcular la duración de tu jornada diaria [Art. 34]. Hay excepciones: los trabajos de proceso continuo no tienen esta separación [Art. 34]. Si eres teleoperador en un centro de contacto o llamadas, tu derecho a colación se mantiene, y los descansos que te corresponden sí se consideran trabajados [Art. 152 quáter C]. No encontré en los artículos entregados una regla sobre si la colación se considera trabajada en otros casos específicos, por lo que esa parte no está cubierta.",
       "uso": {
-        "input_tokens": 7364,
-        "output_tokens": 392
+        "input_tokens": 7589,
+        "output_tokens": 448
       },
-      "ms": 3113
+      "ms": 2467
     },
     {
       "id": "q32",
@@ -832,12 +830,8 @@
       "abstencion": false,
       "citas": [
         "35",
-        "37",
-        "37",
         "38",
-        "38",
-        "38",
-        "110"
+        "37"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -845,12 +839,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "En general no. El Código del Trabajo dice que los domingos y festivos son de descanso [Art. 35]. Hay excepciones: las empresas o faenas no exceptuadas no pueden distribuir la jornada ordinaria incluyendo domingo o festivo, salvo fuerza mayor [Art. 37]. Si no hubo fuerza mayor, la Dirección del Trabajo puede exigir pagar esas horas como extraordinarias y aplicar una multa [Art. 37]. Algunos trabajadores sí pueden trabajar domingos, como los del comercio que atienden directamente al público, las faenas portuarias, los de naves y los deportistas profesionales [Art. 38]. En esos casos, las horas ordinarias en domingo deben pagarse con un recargo de al menos 30% [Art. 38]. Además, deben tener un día de descanso a la semana en compensación por los domingos trabajados [Art. 38]. Para el personal embarcado, en domingos y festivos solo se exigen trabajos que no puedan postergarse e indispensables para la nave [Art. 110].",
+      "respuesta": "En general, no. El Código del Trabajo dice que los días domingo y los festivos son de descanso [Art. 35]. Hay excepciones: la ley permite trabajar esos días solo en actividades autorizadas por ley, como las que aparecen en el artículo 38 [Art. 38]. Las empresas no exceptuadas no pueden distribuir la jornada normal en domingo o festivo, salvo fuerza mayor [Art. 37]. Si no hubo fuerza mayor, la Dirección del Trabajo puede ordenar pagar esas horas como extraordinarias y aplicar una multa [Art. 37]. No encontré en estos artículos el detalle del pago de las horas trabajadas en domingo para cada caso particular, así que esa parte no está cubierta.",
       "uso": {
-        "input_tokens": 5788,
-        "output_tokens": 913
+        "input_tokens": 6013,
+        "output_tokens": 492
       },
-      "ms": 3817
+      "ms": 2632
     },
     {
       "id": "q33",
@@ -863,6 +857,7 @@
       "citas": [
         "40-bis",
         "40-bis-b",
+        "40-bis-c",
         "40-bis-a"
       ],
       "citas_invalidas": [],
@@ -871,12 +866,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Un contrato de jornada parcial es aquel en que se acuerda trabajar no más de treinta horas por semana. [Art. 40 bis] Los trabajadores a tiempo parcial tienen los mismos derechos que los de jornada completa, aunque el límite de gratificación legal puede reducirse en proporción a sus horas. [Art. 40 bis B] Además, se pueden pactar horas extraordinarias, y su base de cálculo no puede ser inferior al ingreso mínimo mensual proporcional a las horas pactadas. [Art. 40 bis A] La jornada ordinaria diaria debe ser continua, no puede exceder de 10 horas y puede interrumpirse para colación entre media hora y una hora. [Art. 40 bis A]",
+      "respuesta": "Un contrato de jornada parcial es aquel en que se pacta una jornada de trabajo no superior a treinta horas semanales [Art. 40 bis]. Quienes tienen este contrato tienen todos los demás derechos que el Código del Trabajo da a quienes trabajan jornada completa [Art. 40 bis B]. Además, las partes pueden acordar alternativas de distribución de la jornada, y el empleador, con al menos una semana de antelación, elige cuál de ellas rige en la semana o período siguiente [Art. 40 bis C]. El Código también permite pactar horas extraordinarias en estos contratos [Art. 40 bis A].",
       "uso": {
-        "input_tokens": 6114,
-        "output_tokens": 509
+        "input_tokens": 6339,
+        "output_tokens": 592
       },
-      "ms": 2976
+      "ms": 2734
     },
     {
       "id": "q34",
@@ -889,8 +884,7 @@
       "citas": [
         "9",
         "94",
-        "145-b",
-        "146-ter"
+        "145-b"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -898,12 +892,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Como regla general, el empleador tiene quince días desde que empiezas a trabajar para que el contrato conste por escrito y lo firmen ambas partes en dos ejemplares [Art. 9]. Si el contrato es por obra, trabajo o servicio determinado, o dura menos de treinta días, el plazo baja a cinco días [Art. 9]. Si no lo hace a tiempo, el empleador puede ser multado de una a cinco unidades tributarias mensuales [Art. 9]. En los trabajos agrícolas de temporada el plazo es de cinco días y el contrato se escritura en cuatro ejemplares [Art. 94]. En artes y espectáculos, si el contrato dura menos de treinta días, el plazo es de tres días [Art. 145 B]. Para trabajadores de casa particular, el Código no fija aquí un plazo de escrituración, pero sí exige entregarte una copia firmada [Art. 146 ter].",
+      "respuesta": "Según el Código del Trabajo, el contrato debe constar por escrito y firmarse por ambas partes en dos ejemplares, uno para cada uno [Art. 9]. El plazo es de quince días desde que empiezas a trabajar [Art. 9]. Si el contrato es por obra, trabajo o servicio determinado, o dura menos de treinta días, el plazo baja a cinco días [Art. 9]. Si el empleador no cumple el plazo, puede recibir una multa de una a cinco unidades tributarias mensuales [Art. 9]. Si el contrato es de trabajadores agrícolas de temporada, el plazo es de cinco días [Art. 94]. Si es de artes y espectáculos por una o más funciones, por obra, temporada o proyecto de menos de treinta días, el plazo es de tres días [Art. 145 B].",
       "uso": {
         "input_tokens": 6585,
-        "output_tokens": 667
+        "output_tokens": 509
       },
-      "ms": 3109
+      "ms": 2516
     },
     {
       "id": "q35",
@@ -915,8 +909,10 @@
       "abstencion": false,
       "citas": [
         "10",
-        "9",
-        "9-bis"
+        "10",
+        "146-ter",
+        "146-ter",
+        "152-quater-s"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -924,12 +920,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Tu contrato de trabajo debe tener, como mínimo, estos datos: lugar y fecha del contrato; nombre, nacionalidad, domicilio y correo electrónico de ambas partes, y fechas de nacimiento e ingreso del trabajador; la naturaleza de los servicios y el lugar o ciudad donde se prestan; el monto, forma y período de pago del sueldo; la duración y distribución de la jornada; el plazo del contrato; y los demás acuerdos que hagan las partes [Art. 10]. Si el empleador da beneficios extra, como casa, luz, combustible o alimento, también deben indicarse [Art. 10]. El contrato debe hacerse por escrito y firmarse por ambas partes en dos ejemplares, uno para cada uno. Si no se hace por escrito dentro de 15 días desde que empiezas a trabajar (5 días en contratos por obra o de menos de 30 días), el empleador puede ser multado de 1 a 5 unidades tributarias mensuales [Art. 9]. Además, el empleador debe registrar el contrato en el sitio de la Dirección del Trabajo dentro de 15 días desde su firma [Art. 9 bis].",
+      "respuesta": "Tu contrato de trabajo debe tener, como mínimo, estos datos: lugar y fecha del contrato; nombre, nacionalidad, domicilio y correo electrónico de ambas partes, si lo tienen, y fechas de nacimiento e ingreso del trabajador [Art. 10]. También la naturaleza de tus servicios y el lugar o ciudad donde se prestan, pudiendo indicar dos o más funciones [Art. 10]. Debe indicar el monto, la forma y el período de pago de tu remuneración [Art. 10]. Además, la duración y distribución de tu jornada, salvo que la empresa tenga turnos, caso en que se aplica el reglamento interno [Art. 10]. Debe incluir el plazo del contrato y los demás pactos que acuerden las partes [Art. 10]. Si el empleador te da casa, luz, combustible, alimento u otras prestaciones, deben señalarse [Art. 10]. Si eres trabajador de casa particular, el empleador debe entregarte una copia firmada y registrar el contrato en la Inspección del Trabajo dentro de los quince días siguientes a su firma [Art. 146 ter]. Para trabajadores de plataformas digitales dependientes, el contrato debe incluir además otras indicaciones, como el método de cálculo de la remuneración y un canal oficial para reclamos [Art. 152 quáter S].",
       "uso": {
         "input_tokens": 5702,
-        "output_tokens": 620
+        "output_tokens": 756
       },
-      "ms": 3520
+      "ms": 3342
     },
     {
       "id": "q36",
@@ -948,12 +944,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Sí, en parte. El Código del Trabajo permite al empleador cambiar la naturaleza de tus servicios o el sitio o recinto donde trabajas, siempre que las labores sean similares, el nuevo lugar quede dentro del mismo lugar o ciudad, y no te cause menoscabo [Art. 12]. El Código no dice que tengas que dar tu permiso para estos cambios, pero sí exige que se cumplan esas condiciones. Además, el empleador puede mover tu hora de ingreso hasta 60 minutos, avisándote con 30 días de anticipación como mínimo [Art. 12]. Si crees que no se cumplen las condiciones, tienes 30 días hábiles desde el hecho o desde el aviso para reclamar ante la Inspección del Trabajo [Art. 12]. No encontré en los artículos entregados reglas sobre otros tipos de cambios de funciones o lugar, por lo que esa parte no está cubierta.",
+      "respuesta": "Sí, en parte. El empleador puede cambiar la naturaleza de tus servicios o el sitio o recinto donde trabajas, pero solo si las labores son similares, el nuevo lugar queda dentro del mismo lugar o ciudad, y no te causa menoscabo [Art. 12]. La ley no dice que necesite tu permiso para ello, pero sí pone estas condiciones. Si el cambio te perjudica, puedes reclamar ante la Inspección del Trabajo dentro de treinta días hábiles desde que ocurrió el hecho [Art. 12]. No encontré en los artículos revisados una regla específica sobre cambios de funciones fuera de estos casos.",
       "uso": {
         "input_tokens": 5285,
-        "output_tokens": 481
+        "output_tokens": 385
       },
-      "ms": 2649
+      "ms": 2197
     },
     {
       "id": "q37",
@@ -965,7 +961,6 @@
       "abstencion": false,
       "citas": [
         "41",
-        "53",
         "42"
       ],
       "citas_invalidas": [],
@@ -974,12 +969,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Remuneración es el pago en dinero, y los beneficios en especie que se pueden valorar en dinero, que recibes de tu empleador por tu contrato [Art. 41]. Las asignaciones de movilización y de colación no son remuneración [Art. 41]. Tampoco lo son los viáticos, las prestaciones familiares, las indemnizaciones del artículo 163 ni las devoluciones de gastos hechos por causa del trabajo [Art. 41]. Si el empleador te cambió de residencia para trabajar, los gastos razonables de ida y vuelta, incluidos los de tu familia que vive contigo, tampoco son remuneración [Art. 53]. Además, el sueldo base es el pago fijo en dinero por períodos iguales, y no puede ser inferior a un ingreso mínimo mensual [Art. 42].",
+      "respuesta": "Remuneración es el pago en dinero, o en especies valorables en dinero, que recibes de tu empleador por tu contrato de trabajo [Art. 41]. El sueldo base, el sobresueldo por horas extra, la comisión, la participación y la gratificación son ejemplos de remuneración [Art. 42]. No son remuneración las asignaciones de movilización, de colación, de pérdida de caja y de desgaste de herramientas, además de los viáticos [Art. 41]. Tampoco lo son las devoluciones de gastos que tengas por causa del trabajo [Art. 41]. Así, la colación y la movilización no se consideran remuneración [Art. 41].",
       "uso": {
         "input_tokens": 4053,
-        "output_tokens": 490
+        "output_tokens": 387
       },
-      "ms": 2527
+      "ms": 2205
     },
     {
       "id": "q38",
@@ -992,8 +987,8 @@
       "citas": [
         "42",
         "44",
-        "152-quater-v",
-        "58"
+        "44",
+        "152-quater-v"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -1001,12 +996,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "No, en general no. El sueldo no puede ser inferior a un ingreso mínimo mensual [Art. 42]. El monto mensual del sueldo tampoco puede ser inferior al ingreso mínimo mensual [Art. 44]. Si la jornada es parcial, el sueldo no puede ser menor al mínimo proporcional a esa jornada [Art. 44]. En el caso de plataformas digitales, la remuneración por hora trabajada no puede ser inferior a la proporción del ingreso mínimo mensual aumentada en un veinte por ciento [Art. 152 quáter V]. Esta regla no cubre trabajadores exentos de jornada, según el Código del Trabajo [Art. 42]. Además, los descuentos de tu remuneración tienen límites: en conjunto no pueden superar el 45% de tu remuneración total [Art. 58].",
+      "respuesta": "No, en general no. El Código del Trabajo dice que el sueldo no puede ser inferior a un ingreso mínimo mensual [Art. 42]. Si la remuneración se fija por unidad de tiempo, el monto mensual del sueldo tampoco puede ser inferior al ingreso mínimo mensual [Art. 44]. Si tu jornada es parcial, el sueldo no puede ser menor al mínimo proporcional a tu jornada [Art. 44]. Si trabajas por plataformas digitales, la hora trabajada no puede pagarse menos que la proporción del ingreso mínimo mensual aumentada en un veinte por ciento [Art. 152 quáter V].",
       "uso": {
         "input_tokens": 5266,
-        "output_tokens": 566
+        "output_tokens": 536
       },
-      "ms": 2931
+      "ms": 2376
     },
     {
       "id": "q39",
@@ -1018,9 +1013,8 @@
       "abstencion": false,
       "citas": [
         "55",
-        "44",
         "56",
-        "139"
+        "44"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -1028,12 +1022,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Tu sueldo se paga con la periodicidad que diga tu contrato, pero esos períodos no pueden ser mayores a un mes [Art. 55]. Si el contrato no dice otra cosa, la remuneración puede fijarse por día, semana, quincena o mes, y en ningún caso la unidad de tiempo puede exceder de un mes [Art. 44]. Además, el pago debe hacerse en día de trabajo, entre lunes y viernes, y dentro de la hora siguiente al término de la jornada, salvo que las partes acuerden otros días u horas [Art. 56]. Si el pago se hace después del turno, debe realizarse dentro de las veinticuatro horas siguientes al término de la jornada, sin contar domingos y festivos [Art. 139]. No encontré en el Código del Trabajo una regla general sobre cada cuánto pagar en el caso de los deportistas profesionales, por lo que esa parte no queda cubierta aquí.",
+      "respuesta": "Tu sueldo se paga con la periodicidad que diga tu contrato, pero esos períodos no pueden ser mayores a un mes [Art. 55]. Las remuneraciones deben pagarse en día de trabajo, entre lunes y viernes, en el lugar donde trabajas y dentro de la hora siguiente al término de tu jornada, salvo que las partes acuerden otros días u horas [Art. 56]. Si la remuneración es por unidad de tiempo, la unidad de tiempo tampoco puede exceder de un mes [Art. 44]. No encontré base legal para explicar si hay un plazo fijo distinto en tu caso particular.",
       "uso": {
         "input_tokens": 4439,
-        "output_tokens": 666
+        "output_tokens": 457
       },
-      "ms": 3002
+      "ms": 2454
     },
     {
       "id": "q40",
@@ -1046,6 +1040,9 @@
       "citas": [
         "58",
         "58",
+        "58",
+        "58",
+        "58",
         "57"
       ],
       "citas_invalidas": [],
@@ -1054,12 +1051,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Tu empleador puede descontar de tu sueldo los impuestos, las cotizaciones de seguridad social, las cuotas sindicales y las obligaciones con instituciones de previsión u organismos públicos [Art. 58]. Con tu acuerdo escrito, también puede descontar cuotas para la compra de una vivienda, ahorro para la vivienda y sumas para educación tuya, de tu cónyuge, conviviente civil o hijos [Art. 58]. Estos descuentos no pueden superar el 30% de tu remuneración mensual [Art. 58]. Con acuerdo escrito, también pueden descontarse sumas para otros pagos, pero no más del 15% de tu remuneración total [Art. 58]. En total, todos los descuentos juntos no pueden superar el 45% de tu remuneración total [Art. 58]. El empleador no puede descontarte por arriendo, luz, agua, herramientas, medicinas, atención médica ni otras prestaciones en especie, ni por multas no autorizadas en el reglamento interno [Art. 58]. Tampoco puede descontarte lo robado, hurtado, perdido o dañado por terceros, si no hubo responsabilidad tuya [Art. 58]. Tus sueldos también son inembargables, salvo la parte que exceda de 56 unidades de fomento [Art. 57].",
+      "respuesta": "Tu empleador puede descontar de tu sueldo los impuestos, las cotizaciones de seguridad social, las cuotas sindicales y las obligaciones con instituciones de previsión u organismos públicos. [Art. 58] Con tu acuerdo por escrito, también puede descontar cuotas de una vivienda, ahorros para la vivienda o gastos de educación tuyos, de tu cónyuge, conviviente civil o hijos. [Art. 58] Con acuerdo por escrito, puede descontar sumas o porcentajes para pagos de cualquier naturaleza, pero no más del 15% de tu remuneración total. [Art. 58] Sumando todos los descuentos, nunca pueden superar el 45% de tu remuneración total. [Art. 58] No pueden descontarte por arriendo de habitación, luz, agua, herramientas, medicinas, atención médica ni por multas no autorizadas en el reglamento interno. [Art. 58] Tampoco pueden descontarte lo robado, hurtado, perdido o dañado por terceros sin tu responsabilidad. [Art. 58] Si lo hacen, deben devolverte la cifra descontada, reajustada. [Art. 58] Tus remuneraciones son inembargables, salvo la parte que exceda de 56 unidades de fomento. [Art. 57]",
       "uso": {
         "input_tokens": 4620,
-        "output_tokens": 691
+        "output_tokens": 938
       },
-      "ms": 3143
+      "ms": 3908
     },
     {
       "id": "q41",
@@ -1072,9 +1069,9 @@
       "abstencion": false,
       "citas": [
         "47",
-        "52",
+        "46",
         "50",
-        "40-bis-b"
+        "52"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -1082,12 +1079,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Depende de si tu empleador obtiene utilidades y de tu tiempo de servicio. La ley dice que los establecimientos con fines de lucro que llevan libros de contabilidad y obtienen utilidades deben gratificar a sus trabajadores en una proporción no inferior al treinta por ciento de esas utilidades [Art. 47]. Si no completaste un año de servicios, tienes derecho a la gratificación en proporción a los meses trabajados [Art. 52]. Un empleador puede pagar en cambio el veinticinco por ciento de lo devengado en el ejercicio como remuneraciones mensuales, y así queda eximido de la obligación del artículo 47; en ese caso la gratificación de cada trabajador no excede de cuatro y tres cuartos ingresos mínimos mensuales [Art. 50]. Si trabajas a tiempo parcial, ese límite puede reducirse en proporción a tus horas [Art. 40 bis B]. No encontré en los artículos disponibles la parte que indica cómo se calcula tu monto exacto según tu sueldo.",
+      "respuesta": "Según el Código del Trabajo, la gratificación depende de que tu empleador obtenga utilidades o excedentes líquidos en su giro, y de que esté obligado a llevar libros de contabilidad. Si cumple eso, debe gratificarte cada año en una proporción no inferior al 30% de esas utilidades [Art. 47]. Si tu contrato establece un sistema de gratificaciones, no puede ser inferior a lo que resulte de estas normas [Art. 46]. Si el empleador paga a sus trabajadores el 25% de lo devengado en el ejercicio comercial por remuneraciones mensuales, queda eximido de esa obligación, y la gratificación de cada trabajador no excede de 4,75 ingresos mínimos mensuales [Art. 50]. Si no completaste un año de servicios, tienes derecho a la gratificación en proporción a los meses trabajados [Art. 52]. No encontré en los artículos entregados la forma exacta de calcular tu monto, por lo que no puedo confirmar cuánto te corresponde.",
       "uso": {
         "input_tokens": 2601,
-        "output_tokens": 637
+        "output_tokens": 663
       },
-      "ms": 3334
+      "ms": 3698
     },
     {
       "id": "q42",
@@ -1098,6 +1095,8 @@
       ],
       "abstencion": false,
       "citas": [
+        "62-bis",
+        "62-bis",
         "62-bis"
       ],
       "citas_invalidas": [],
@@ -1106,12 +1105,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "No, en general no es legal. El Código del Trabajo obliga al empleador a cumplir el principio de igualdad de remuneraciones entre hombres y mujeres que presten un mismo trabajo [Art. 62 bis]. Sí se permiten diferencias objetivas, por ejemplo basadas en capacidades, calificaciones, idoneidad, responsabilidad o productividad [Art. 62 bis]. Estas diferencias no se consideran arbitrarias. Las denuncias por este tema se tramitan una vez concluido el procedimiento de reclamación del reglamento interno de la empresa [Art. 62 bis]. El Código no indica en estos artículos cuánto debe reclamarse ni qué plazo aplica en ese procedimiento interno.",
+      "respuesta": "No, en principio no es legal. El empleador debe cumplir el principio de igualdad de remuneraciones entre hombres y mujeres que presten un mismo trabajo [Art. 62 bis]. Sí se permiten diferencias objetivas, por ejemplo basadas en capacidades, calificaciones, idoneidad, responsabilidad o productividad [Art. 62 bis]. Las denuncias por este motivo se tramitan según el procedimiento del Libro V, pero solo después de terminar el procedimiento de reclamación previsto en el reglamento interno de la empresa [Art. 62 bis]. Esta respuesta no cubre cuánto se puede reclamar ni los plazos de ese procedimiento.",
       "uso": {
         "input_tokens": 4356,
-        "output_tokens": 359
+        "output_tokens": 511
       },
-      "ms": 2236
+      "ms": 2938
     },
     {
       "id": "q43",
@@ -1122,6 +1121,7 @@
       ],
       "abstencion": false,
       "citas": [
+        "152-quater-l",
         "152-quater-l"
       ],
       "citas_invalidas": [],
@@ -1130,12 +1130,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Si trabajas a distancia o teletrabajo, el empleador debe darte los equipos, herramientas y materiales necesarios, incluidos los elementos de protección personal [Art. 152 quáter L]. No puede obligarte a usar equipos de tu propiedad, y los costos de operación, funcionamiento, mantenimiento y reparación de esos equipos son siempre de cargo del empleador [Art. 152 quáter L]. El Código del Trabajo que tengo a la vista no menciona expresamente el pago de internet, así que esa parte no está cubierta.",
+      "respuesta": "Según el Código del Trabajo, los equipos, herramientas y materiales para el teletrabajo deben ser proporcionados por el empleador, y no puedes ser obligado a usar elementos de tu propiedad [Art. 152 quáter L]. Los costos de operación, funcionamiento, mantenimiento y reparación de esos equipos también son siempre del empleador [Art. 152 quáter L]. La ley citada no menciona expresamente el pago del servicio de internet, por lo que no puedo confirmar quién lo paga.",
       "uso": {
-        "input_tokens": 6483,
-        "output_tokens": 340
+        "input_tokens": 6708,
+        "output_tokens": 366
       },
-      "ms": 2004
+      "ms": 2051
     },
     {
       "id": "q44",
@@ -1146,6 +1146,7 @@
       ],
       "abstencion": false,
       "citas": [
+        "152-quater-j",
         "152-quater-j"
       ],
       "citas_invalidas": [],
@@ -1154,12 +1155,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Sí, la ley te da ese derecho si trabajas a distancia o teletrabajas. Tu empleador debe respetar tu derecho a desconexión: tienes que tener al menos doce horas continuas en un periodo de veinticuatro horas en las que no estás obligado a responder comunicaciones, órdenes u otros requerimientos. Además, tu empleador no puede enviarte comunicaciones ni órdenes en días de descanso, permisos o feriado anual. Esto aplica a quienes distribuyen libremente su horario o a teletrabajadores excluidos de la limitación de jornada [Art. 152 quáter J]. No encontré en los artículos revisados el detalle de cómo se aplica este derecho en cada caso concreto.",
+      "respuesta": "Sí, la ley reconoce ese derecho. Se llama derecho a desconexión. Si distribuyes libremente tu jornada, o estás excluido de la limitación de jornada, tu empleador debe respetar un tiempo en que no estás obligado a responder comunicaciones, órdenes u otros requerimientos. Ese tiempo debe ser de al menos doce horas continuas en un periodo de veinticuatro horas [Art. 152 quáter J]. Además, tu empleador no puede enviarte comunicaciones ni órdenes en días de descanso, permisos o feriado anual [Art. 152 quáter J]. La ley no dice más sobre cómo se aplica esto en tu caso particular.",
       "uso": {
-        "input_tokens": 7622,
-        "output_tokens": 345
+        "input_tokens": 7847,
+        "output_tokens": 418
       },
-      "ms": 2863
+      "ms": 2263
     },
     {
       "id": "q45",
@@ -1172,8 +1173,6 @@
       "abstencion": false,
       "citas": [
         "211-b-bis",
-        "211-b-bis",
-        "211-c",
         "211-c",
         "211-e"
       ],
@@ -1183,12 +1182,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Cuando denuncias acoso sexual o laboral, la empresa debe adoptar de inmediato medidas de resguardo para los involucrados, como separar espacios físicos, redistribuir la jornada y darte atención psicológica temprana [Art. 211-B bis]. Tu denuncia puede hacerse por escrito o de forma verbal, a la empresa o a la Inspección del Trabajo; si es verbal, quien la reciba debe levantar un acta que firmas y de la que debe entregarte una copia [Art. 211-B bis]. La empresa debe investigar internamente o, en tres días, enviar los antecedentes a la Inspección del Trabajo [Art. 211-C]. La investigación debe concluirse en treinta días y debe ser en estricta reserva, oyendo a ambas partes [Art. 211-C]. Luego, el empleador debe aplicar las medidas o sanciones dentro de los quince días siguientes a recibir el informe, e informarlas a ambas partes en ese mismo plazo [Art. 211-E]. El Código no indica qué pasa en el caso particular de tu empresa, y los artículos entregados no detallan el procedimiento completo ni las sanciones posibles fuera de lo señalado.",
+      "respuesta": "Cuando denuncias acoso sexual o laboral, la empresa debe adoptar de inmediato medidas de resguardo, como separar los espacios físicos, redistribuir la jornada y darte atención psicológica temprana [Art. 211-B bis]. Si la denuncia se hace dentro de la empresa, el empleador debe investigar internamente o enviar los antecedentes a la Inspección del Trabajo en tres días [Art. 211 C]. La investigación debe terminar en treinta días y debe ser en estricta reserva, oyendo a ambas partes [Art. 211 C]. Luego, el empleador tiene quince días desde que recibe el informe para aplicar medidas o sanciones y debe informarlas tanto a ti como a la persona denunciada [Art. 211 E]. La ley no dice en este texto qué pasa si la empresa incumple estos plazos.",
       "uso": {
         "input_tokens": 6396,
-        "output_tokens": 795
+        "output_tokens": 543
       },
-      "ms": 3645
+      "ms": 2817
     },
     {
       "id": "q46",
@@ -1202,8 +1201,7 @@
       "citas": [
         "211-h",
         "211-j",
-        "211-i",
-        "202"
+        "211-i"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -1211,12 +1209,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Para la mayoría de los trabajadores, el Código del Trabajo fija 25 kilos como tope. Solo se puede cargar más si no es posible usar ayudas mecánicas y el trabajo es inevitable a mano [Art. 211 H]. Si hay otros factores que agravan el esfuerzo, el límite baja y rige el reglamento de carga humana y su guía técnica [Art. 211 H]. Si eres menor de 18 años o mujer, el tope es de 20 kilos sin ayuda mecánica, y el empleador debe aplicar medidas como rotar trabajadores o bajar la altura de levantamiento [Art. 211 J]. Si estás embarazada, la ley prohíbe las operaciones de carga y descarga manual [Art. 211 I]. Además, durante el embarazo, si tu trabajo obliga a levantar o empujar grandes pesos, debes ser trasladada a otro trabajo sin reducción de remuneraciones [Art. 202]. El Código no dice qué pasa con personas de otra categoría que superen los 25 kilos, más allá de lo señalado arriba.",
+      "respuesta": "Según el Código del Trabajo, si la manipulación manual es inevitable y no se pueden usar ayudas mecánicas, no se puede operar con cargas superiores a 25 kilogramos [Art. 211 H]. Si hay otros factores agravantes, la carga debe ajustarse según el decreto supremo Nº 63 de 2005 y la Guía Técnica que menciona esa norma [Art. 211 H]. Los menores de 18 años y las mujeres no pueden llevar, transportar, cargar, arrastrar ni empujar manualmente, sin ayuda mecánica, cargas superiores a 20 kilogramos [Art. 211 J]. Además, se prohíbe la carga y descarga manual para la mujer embarazada [Art. 211 I].",
       "uso": {
-        "input_tokens": 4915,
-        "output_tokens": 1409
+        "input_tokens": 5140,
+        "output_tokens": 466
       },
-      "ms": 6913
+      "ms": 2823
     },
     {
       "id": "q47",
@@ -1228,8 +1226,7 @@
       "abstencion": false,
       "citas": [
         "13",
-        "14",
-        "16"
+        "14"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -1237,12 +1234,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Un adolescente puede ser contratado desde los 15 años y hasta cumplir los 18 [Art. 13]. Antes de los 18, debe cumplir requisitos: autorización por escrito de quien tenga su cuidado o representación legal, haber terminado la Educación Media o estar cursando la Educación Básica o Media, y su jornada no puede superar 30 horas semanales [Art. 14]. Los menores de 15 años, en cambio, no pueden ser contratados, salvo excepciones en espectáculos con autorización del Tribunal de Familia [Art. 13] [Art. 16].",
+      "respuesta": "Un adolescente puede ser contratado desde los 15 años y hasta cumplir 18. Antes de esa edad no puede ser contratado. Para trabajar entre los 15 y los 17 años debe cumplir requisitos, como la autorización por escrito de quien tenga su cuidado personal y acreditar que terminó la Educación Media o que estudia. [Art. 13] [Art. 14]",
       "uso": {
         "input_tokens": 5173,
-        "output_tokens": 448
+        "output_tokens": 313
       },
-      "ms": 3444
+      "ms": 3569
     },
     {
       "id": "q48",
@@ -1254,8 +1251,8 @@
       "abstencion": false,
       "citas": [
         "227",
-        "228",
-        "221"
+        "227",
+        "228"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -1263,12 +1260,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Depende del tamaño de la empresa. Si la empresa tiene más de cincuenta trabajadores, se necesitan al menos veinticinco trabajadores que representen, a lo menos, el diez por ciento del total [Art. 227]. Si la empresa tiene cincuenta trabajadores o menos, pueden constituir sindicato ocho trabajadores, siempre que representen como mínimo el 50% del total [Art. 227]. Si la empresa tiene más de un establecimiento, los trabajadores de cada uno pueden formar sindicato con un mínimo de veinticinco trabajadores que representen al menos el treinta por ciento de ese establecimiento [Art. 227]. Para un sindicato interempresa, se requiere el concurso de un mínimo de veinticinco trabajadores [Art. 228]. Además, la constitución se hace en una asamblea ante un ministro de fe [Art. 221].",
+      "respuesta": "Depende del tamaño de la empresa. Si la empresa tiene más de cincuenta trabajadores, se necesitan al menos veinticinco trabajadores que representen, a lo menos, el diez por ciento del total [Art. 227]. Si la empresa tiene cincuenta trabajadores o menos, pueden constituir sindicato ocho trabajadores, siempre que representen como mínimo el 50% del total [Art. 227]. Si la empresa tiene más de un establecimiento, los trabajadores de cada uno pueden formar sindicato con un mínimo de veinticinco trabajadores que representen al menos el treinta por ciento de ese establecimiento [Art. 227]. Para un sindicato interempresa, que reúne trabajadores de dos o más empleadores, se requiere el concurso de un mínimo de veinticinco trabajadores [Art. 228].",
       "uso": {
         "input_tokens": 4561,
-        "output_tokens": 606
+        "output_tokens": 503
       },
-      "ms": 2781
+      "ms": 2350
     },
     {
       "id": "q49",
@@ -1290,12 +1287,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Sí. Los directores de un sindicato tienen fuero laboral desde su elección y hasta seis meses después de dejar el cargo [Art. 243]. Ese fuero no termina si dejan el cargo por censura de la asamblea, por sanción del tribunal, por renuncia al sindicato o por término de la empresa [Art. 243]. En sindicatos de empresa que afilian a menos de veinticinco trabajadores, el director único es el que tiene fuero [Art. 235]. En los demás sindicatos, solo gozan de fuero las mayorías relativas que se indican por tamaño del sindicato: tres directores si tiene entre veinticinco y doscientos cuarenta y nueve trabajadores, cinco si tiene entre doscientos cincuenta y novecientos noventa y nueve, siete si tiene entre mil y mil novecientos noventa y nueve... (la ley dice dos mil novecientos noventa y nueve) y nueve si tiene tres mil o más [Art. 235]. Los directores de federaciones y confederaciones mantienen su fuero por todo el mandato y hasta seis meses después [Art. 274]. Los de centrales sindicales también, con el mismo plazo de seis meses [Art. 283].",
+      "respuesta": "Sí. Los directores de un sindicato tienen fuero laboral, es decir, protección contra el despido, desde su elección y hasta seis meses después de dejar el cargo [Art. 243]. Ese fuero no aplica si dejan el cargo por censura de la asamblea, por sanción del tribunal, por renuncia al sindicato o por término de la empresa [Art. 243]. En sindicatos de empresa con menos de veinticinco trabajadores, el director único también tiene fuero [Art. 235]. Los directores de federaciones y confederaciones mantienen el fuero por todo su mandato y hasta seis meses después de terminado [Art. 274]. Los directores de centrales sindicales tienen el mismo beneficio por su mandato y hasta seis meses después [Art. 283]. No encontré en los artículos entregados las cifras del fuero de los directores de sindicatos de empresa de mayor tamaño, ni otras reglas de su duración.",
       "uso": {
         "input_tokens": 5232,
-        "output_tokens": 828
+        "output_tokens": 731
       },
-      "ms": 3636
+      "ms": 3307
     },
     {
       "id": "q50",
@@ -1315,12 +1312,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "No. El Código del Trabajo prohíbe reemplazar a los trabajadores en huelga [Art. 345]. Si el empleador igual los reemplaza, la Inspección del Trabajo puede pedir el retiro inmediato de los reemplazantes, y si el empleador se niega, puede denunciarlo al Juzgado de Letras del Trabajo [Art. 345]. Además, la huelga no afecta la libertad de trabajo de los trabajadores que no participan en ella [Art. 345].",
+      "respuesta": "No. La ley prohíbe reemplazar a los trabajadores en huelga [Art. 345]. Si el empleador lo hace, es una práctica desleal grave. La Inspección del Trabajo puede pedir el retiro inmediato de los reemplazantes, y si el empleador se niega, puede denunciarlo al Juzgado de Letras del Trabajo, que ordena el retiro [Art. 345].",
       "uso": {
         "input_tokens": 4822,
-        "output_tokens": 298
+        "output_tokens": 305
       },
-      "ms": 1743
+      "ms": 1916
     },
     {
       "id": "q51",
@@ -1332,7 +1329,9 @@
       "abstencion": false,
       "citas": [
         "289",
-        "292"
+        "289",
+        "289",
+        "291"
       ],
       "citas_invalidas": [],
       "recuperado_esperado": true,
@@ -1340,12 +1339,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Según el Código del Trabajo, son prácticas antisindicales del empleador las acciones que atentan contra la libertad sindical. Por ejemplo: amenazar con despedir o cerrar la empresa si se acuerda formar un sindicato [Art. 289]; despedir a trabajadores por decir que quieren sindicalizarse [Art. 289]; negarse a dar a los dirigentes la información que la ley exige [Art. 289]; ofrecer beneficios especiales para desestimular un sindicato [Art. 289]; intervenir activamente en la organización de un sindicato [Art. 289]; condicionar la contratación a firmar una afiliación sindical [Art. 289]; y no descontar ni entregar al sindicato las cuotas que corresponden [Art. 289]. Las sanciones son multas en unidades tributarias mensuales, según el tamaño de la empresa [Art. 292].",
+      "respuesta": "Según el Código del Trabajo, son prácticas antisindicales del empleador las acciones que atentan contra la libertad sindical. Entre otras, la ley menciona: obstaculizar la formación de un sindicato, despedir a trabajadores por querer sindicalizarse, negarse a dar información a los dirigentes sindicales, ofrecer beneficios especiales para desestimular un sindicato, y no descontar ni entregar las cuotas sindicales de los afiliados [Art. 289]. También son prácticas antisindicales ejecutar actos de injerencia sindical, como intervenir activamente en la organización de un sindicato o condicionar la contratación a firmar una solicitud de afiliación [Art. 289]. Además, el Código sanciona con multa a quien ejerza fuerza física o moral para obtener la afiliación o desafiliación de un trabajador [Art. 291].",
       "uso": {
         "input_tokens": 5418,
-        "output_tokens": 440
+        "output_tokens": 559
       },
-      "ms": 2126
+      "ms": 2668
     },
     {
       "id": "q52",
@@ -1357,6 +1356,9 @@
       "abstencion": false,
       "citas": [
         "510",
+        "510",
+        "510",
+        "510",
         "510"
       ],
       "citas_invalidas": [],
@@ -1365,12 +1367,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Según el Código del Trabajo, en general tienes dos años para reclamar derechos laborales, contados desde que el derecho se hizo exigible [Art. 510]. Las acciones que nacen de un contrato de trabajo prescriben en seis meses, contados desde el término de tus servicios [Art. 510]. Hay plazos especiales de seis meses para cobrar horas extraordinarias, contados desde la fecha en que debieron pagarse [Art. 510], y de seis meses para reclamar la nulidad del despido, contados desde la suspensión de los servicios [Art. 510]. Los plazos no se suspenden, pero sí se interrumpen en los casos que indica la ley [Art. 510]. Un reclamo administrativo notificado ante la Inspección del Trabajo puede suspender la prescripción, pero nunca por más de un año desde el término de los servicios [Art. 510]. No se indica en los artículos revisados cómo se aplica cada plazo a un caso concreto.",
+      "respuesta": "En general, tienes dos años para reclamar derechos laborales, contados desde que el derecho se hizo exigible [Art. 510]. Pero las acciones que nacen de un contrato o de la prestación de servicios prescriben en seis meses, contados desde el término de los servicios [Art. 510]. El cobro de horas extraordinarias prescribe en seis meses, contados desde la fecha en que debieron pagarse [Art. 510]. Si presentas un reclamo administrativo ante la Inspección del Trabajo dentro de esos plazos, la prescripción se suspende mientras dura ese trámite, pero nunca puede exceder de un año desde el término de los servicios [Art. 510]. Para reclamar la nulidad de un despido, el plazo es de seis meses desde la suspensión de los servicios [Art. 510]. Los plazos no se suspenden, pero sí se interrumpen según las reglas del Código Civil [Art. 510].",
       "uso": {
         "input_tokens": 7018,
-        "output_tokens": 493
+        "output_tokens": 676
       },
-      "ms": 2722
+      "ms": 3134
     },
     {
       "id": "q53",
@@ -1391,12 +1393,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Sí, en parte. Según el Código del Trabajo, la empresa principal es solidariamente responsable de las obligaciones laborales y previsionales de dar que afecten al contratista en favor de sus trabajadores, incluidas las indemnizaciones por término de la relación laboral [Art. 183 B]. Esa responsabilidad dura solo el tiempo en que trabajaste para la empresa principal en régimen de subcontratación [Art. 183 B]. Solidaria significa que puedes exigir el pago a la empresa principal. Además, la empresa principal puede pedir al contratista que acredite que está al día y, si no lo hace, puede retener de sus pagos el monto de que es responsable [Art. 183 C]. Si la principal hace efectivo ese derecho de retención, responde subsidiariamente [Art. 183 D]. Para demandar, puedes hacerlo contra la empresa principal junto con tu empleador directo [Art. 183 B]. No encontré en los artículos disponibles el detalle de los plazos para demandar ni la forma exacta de cobrar.",
+      "respuesta": "Sí, en parte. Según el Código del Trabajo, la empresa principal es solidariamente responsable de las obligaciones laborales y previsionales de dar que afecten a los contratistas en favor de sus trabajadores, incluidas las indemnizaciones por término de la relación laboral [Art. 183 B]. Esa responsabilidad dura solo el tiempo en que los trabajadores prestaron servicios en régimen de subcontratación para la empresa principal [Art. 183 B]. Además, la empresa principal puede pedir que el contratista le informe sobre el cumplimiento de sus obligaciones laborales y previsionales [Art. 183 C]. Si el contratista no acredita oportunamente ese cumplimiento, la empresa principal puede retener, de lo que le debe al contratista, el monto del que es responsable, y debe usarlo para pagar al trabajador o a la institución previsional [Art. 183 C]. Si esa retención se hace efectiva, la empresa principal responde subsidiariamente, es decir, después del contratista [Art. 183 D]. No encontré en los textos disponibles el plazo exacto ni el procedimiento para cobrar esta deuda.",
       "uso": {
         "input_tokens": 5074,
-        "output_tokens": 629
+        "output_tokens": 665
       },
-      "ms": 2945
+      "ms": 3233
     },
     {
       "id": "q54",
@@ -1416,12 +1418,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Sí. El Código del Trabajo dice que en almacenes, tiendas, bazares, bodegas y otros establecimientos comerciales semejantes, el empleador debe mantener el número suficiente de asientos o sillas a disposición de los dependientes o trabajadores [Art. 193]. La misma regla se aplica a establecimientos industriales y a trabajadores del comercio, cuando sus funciones lo permitan [Art. 193]. La forma en que se ejerce este derecho debe constar en el reglamento interno [Art. 193]. Cada infracción se castiga con multa de una a dos unidades tributarias mensuales [Art. 193].",
+      "respuesta": "Sí. El Código del Trabajo dice que en almacenes, tiendas, bazares, bodegas y otros establecimientos comerciales semejantes, el empleador debe mantener el número suficiente de asientos o sillas a disposición de los dependientes o trabajadores [Art. 193]. La misma obligación aplica a establecimientos industriales y a trabajadores del comercio cuando sus funciones lo permitan [Art. 193]. La forma y condiciones deben constar en el reglamento interno [Art. 193]. Cada infracción se castiga con multa de una a dos unidades tributarias mensuales [Art. 193].",
       "uso": {
         "input_tokens": 4708,
-        "output_tokens": 365
+        "output_tokens": 358
       },
-      "ms": 1958
+      "ms": 2017
     },
     {
       "id": "q55",
@@ -1441,12 +1443,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Hoy, la jornada máxima de una trabajadora de casa particular que no vive en la casa del empleador es de 42 horas semanales. [Art. 149] [Art. primero transitorio, Ley 21.561] Desde el 26 de abril de 2028, el máximo baja a 40 horas semanales. [Art. primero transitorio, Ley 21.561] Además, el período entre el inicio y el término de sus labores no puede superar las 12 horas continuas, contando jornada y descanso dentro de ella. [Art. 149]",
+      "respuesta": "Hoy la jornada máxima de una trabajadora de casa particular que no vive en la casa del empleador es de 42 horas semanales [Art. primero transitorio, Ley 21.561]. Esa cifra baja por etapas. Desde el 26 de abril de 2028 el máximo será de 40 horas semanales [Art. primero transitorio, Ley 21.561]. Si su jornada llega hasta 30 horas semanales, ambas partes pueden acordar por escrito hasta 12 horas adicionales por semana, pagadas con recargo. Esas horas no se pueden acumular a otras semanas [Art. 149]. No encontré en los artículos de esta consulta reglas sobre el pago de esas horas más allá del recargo.",
       "uso": {
-        "input_tokens": 6659,
-        "output_tokens": 2254
+        "input_tokens": 6884,
+        "output_tokens": 2583
       },
-      "ms": 10117
+      "ms": 11994
     },
     {
       "id": "q56",
@@ -1465,12 +1467,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Según el Código del Trabajo, las empresas, establecimientos, faenas o unidades económicas que ocupen normalmente diez o más trabajadores permanentes deben confeccionar un reglamento interno de orden, higiene y seguridad [Art. 153]. Para contar, se incluyen todos los que presten servicios en las distintas fábricas o secciones, aunque estén en localidades diferentes [Art. 153].",
+      "respuesta": "Según el Código del Trabajo, las empresas, establecimientos, faenas o unidades económicas que ocupen normalmente diez o más trabajadores permanentes deben confeccionar un reglamento interno de orden, higiene y seguridad [Art. 153]. Para contar, se suman todos los que prestan servicios en las distintas fábricas o secciones, aunque estén en localidades diferentes [Art. 153].",
       "uso": {
         "input_tokens": 4590,
-        "output_tokens": 252
+        "output_tokens": 251
       },
-      "ms": 2174
+      "ms": 2252
     },
     {
       "id": "q57",
@@ -1491,12 +1493,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Hoy, el máximo es de 42 horas semanales. La reducción es gradual: desde el 26 de abril de 2024 el máximo fue de 44 horas, y desde el 26 de abril de 2026 es de 42 horas [Art. primero transitorio, Ley 21.561]. Desde el 26 de abril de 2028 el máximo será de 40 horas semanales [Art. primero transitorio, Ley 21.561]. Esa cifra final de 40 horas está en el Código del Trabajo [Art. 22]. No encontré base legal para decir cómo se cuentan las horas en cada semana específica.",
+      "respuesta": "Hoy el máximo semanal de la jornada ordinaria es de 42 horas [Art. primero transitorio, Ley 21.561]. Desde el 26-04-2028 baja a 40 horas, según el mismo transitorio y el artículo 22 del Código del Trabajo [Art. 22]. Esta respuesta se basa en el calendario de la ley de reducción de jornada, sin considerar casos especiales como los de artes y espectáculos, deportistas o pescadores.",
       "uso": {
-        "input_tokens": 5333,
-        "output_tokens": 1356
+        "input_tokens": 5558,
+        "output_tokens": 315
       },
-      "ms": 6370
+      "ms": 1884
     },
     {
       "id": "x01",
@@ -1511,12 +1513,12 @@
       "primer_intento_ok": false,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "No encontré base legal en el Código del Trabajo para responder sobre el alza del arriendo. Los artículos revisados tratan de remuneraciones, descuentos y propinas, pero no regulan el arriendo de viviendas.",
+      "respuesta": "No encontré base legal en el Código del Trabajo para responder sobre el aumento del arriendo. Los artículos revisados tratan de descuentos de remuneraciones, pero no fijan cuánto puede subir un arriendo al año.",
       "uso": {
         "input_tokens": 5085,
-        "output_tokens": 104
+        "output_tokens": 106
       },
-      "ms": 2020
+      "ms": 1256
     },
     {
       "id": "x02",
@@ -1531,12 +1533,12 @@
       "primer_intento_ok": false,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "No encontré base legal en el Código del Trabajo para responder esa pregunta. Los artículos disponibles tratan de multas laborales, no de tránsito.",
+      "respuesta": "No encontré base legal en el Código del Trabajo para responder esta pregunta. Los artículos disponibles tratan de multas laborales, no de tránsito.",
       "uso": {
         "input_tokens": 5213,
         "output_tokens": 80
       },
-      "ms": 1121
+      "ms": 1106
     },
     {
       "id": "x03",
@@ -1551,12 +1553,12 @@
       "primer_intento_ok": false,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "No encontré base legal en el Código del Trabajo para responder cómo se tramita un divorcio de mutuo acuerdo. Ninguno de los artículos disponibles trata de divorcios.",
+      "respuesta": "No encontré base legal en el Código del Trabajo para responder esta pregunta. El divorcio de mutuo acuerdo no es materia laboral, y los artículos revisados no tratan de él.",
       "uso": {
         "input_tokens": 8629,
         "output_tokens": 92
       },
-      "ms": 1179
+      "ms": 1787
     },
     {
       "id": "x04",
@@ -1571,12 +1573,12 @@
       "primer_intento_ok": false,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "No encontré base legal en el Código del Trabajo para responder cuánto impuesto a la renta pagas. Los artículos disponibles tratan de otros temas, como gratificaciones, descuentos de remuneraciones y multas.",
+      "respuesta": "No encontré base legal en el Código del Trabajo para responder cuánto impuesto a la renta pagas. Los artículos que tengo se refieren a otros temas, como gratificaciones, descuentos de remuneraciones y multas, y no fijan tramos ni montos de impuestos personales.",
       "uso": {
         "input_tokens": 4810,
-        "output_tokens": 104
+        "output_tokens": 125
       },
-      "ms": 1187
+      "ms": 1311
     },
     {
       "id": "x05",
@@ -1591,12 +1593,12 @@
       "primer_intento_ok": false,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Los artículos que tengo no tratan sobre garantía de productos como celulares. Esas normas están en la Ley del Consumidor, no en el Código del Trabajo. No encontré base legal en el Código del Trabajo para responder tu pregunta.",
+      "respuesta": "No encontré base legal en el Código del Trabajo para responder tu pregunta. Esa consulta trata de compras de productos de consumo, no de derecho laboral.",
       "uso": {
         "input_tokens": 5309,
-        "output_tokens": 111
+        "output_tokens": 82
       },
-      "ms": 1318
+      "ms": 1106
     },
     {
       "id": "x06",
@@ -1611,12 +1613,12 @@
       "primer_intento_ok": false,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Los artículos entregados del Código del Trabajo no tratan sobre pensión de alimentos para hijos, que es una materia de derecho de familia. Lo que sí regulan es el tiempo para dar alimento a hijos menores de dos años durante la jornada: tienes derecho a lo menos una hora al día, y ese tiempo se considera trabajado [Art. 206]. No encontré base legal en el Código del Trabajo para responder cómo se calcula la pensión de alimentos.",
+      "respuesta": "No encontré base legal en el Código del Trabajo para responder cómo calcular una pensión de alimentos para tu hijo. Los artículos que tengo se refieren al derecho a dar alimento al hijo durante la jornada, no al pago de una pensión de alimentos.",
       "uso": {
         "input_tokens": 5607,
-        "output_tokens": 191
+        "output_tokens": 118
       },
-      "ms": 1693
+      "ms": 1300
     },
     {
       "id": "x07",
@@ -1633,12 +1635,12 @@
       "primer_intento_ok": true,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Los artículos entregados hablan de una cuenta de ahorro especial que el empleador deposita en la AFP solo cuando se pactó una indemnización sustitutiva. Según el Código del Trabajo, esos fondos solo pueden girarse una vez que acredites que dejaste de prestar servicios en la empresa, cualquiera sea la causa de término [Art. 165]. Si fallece el trabajador, los fondos se pagan a las personas indicadas en el Código, y el saldo, si lo hay, pasa a la herencia [Art. 165]. No encontré base legal en estos artículos para explicar cómo retirar tus fondos previsionales generales de la AFP, que están regulados por el Decreto Ley 3.500, no por el Código del Trabajo.",
+      "respuesta": "Los artículos que tengo se refieren a una cuenta de ahorro especial que el empleador deposita solo cuando se pactó una indemnización sustitutiva. Según esa cuenta, los fondos solo pueden girarse una vez que acredites que dejaste de prestar servicios en la empresa, cualquiera sea la causa de la terminación [Art. 165]. Los artículos entregados no regulan otros retiros de fondos de la AFP, como los de tu cuenta de capitalización individual, así que no puedo explicarte esas situaciones.",
       "uso": {
         "input_tokens": 6431,
-        "output_tokens": 381
+        "output_tokens": 307
       },
-      "ms": 2568
+      "ms": 1974
     },
     {
       "id": "x08",
@@ -1653,12 +1655,12 @@
       "primer_intento_ok": false,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "No encontré base legal en el Código del Trabajo para responder sobre la licencia de conducir clase B. Los artículos disponibles tratan de jornada de choferes, buceo, gente de mar, acoso laboral y otros temas, pero no de licencias de conducir.",
+      "respuesta": "No encontré base legal en el Código del Trabajo para responder esta pregunta. Trata sobre licencias de conducir, que no están reguladas en los artículos entregados.",
       "uso": {
-        "input_tokens": 8859,
-        "output_tokens": 117
+        "input_tokens": 9084,
+        "output_tokens": 84
       },
-      "ms": 1291
+      "ms": 1220
     },
     {
       "id": "x09",
@@ -1673,12 +1675,12 @@
       "primer_intento_ok": false,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "No encontré base legal en el Código del Trabajo para responder. El Código regula contratos de trabajo, no el reparto de herencias por falta de testamento.",
+      "respuesta": "No encontré base legal en el Código del Trabajo para responder. Los artículos revisados tratan de remuneraciones, sindicatos y procedimientos judiciales laborales, pero no de cómo se reparte una herencia sin testamento.",
       "uso": {
         "input_tokens": 4085,
-        "output_tokens": 79
+        "output_tokens": 107
       },
-      "ms": 1307
+      "ms": 1579
     },
     {
       "id": "x10",
@@ -1693,12 +1695,12 @@
       "primer_intento_ok": false,
       "intentos": 1,
       "advertencia": null,
-      "respuesta": "Los artículos entregados no responden esta pregunta. El Código del Trabajo regula obligaciones del empleador, pero no encontré base legal en él para responder sobre la pena por hurto en un supermercado. El hurto es un delito que se rige por el Código Penal, no por el Código del Trabajo.",
+      "respuesta": "Los artículos que tengo no responden esta pregunta. El Código del Trabajo no regula el hurto ni sus penas, que son materia del Código Penal. No encontré base legal en el Código del Trabajo para responder.",
       "uso": {
         "input_tokens": 4711,
-        "output_tokens": 129
+        "output_tokens": 101
       },
-      "ms": 1754
+      "ms": 1212
     }
   ]
 }

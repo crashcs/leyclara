@@ -32,14 +32,14 @@ Lo que mostró la medición: la búsqueda por palabras falla porque la gente dic
 
 | Métrica | Haiku 5.5 (por defecto) | Sonnet 5.5 (modo preciso) |
 |---|---|---|
-| Exactitud de citas mostradas¹ | 100 % (166/166) | 100 % (132/132) |
-| Validación de citas al primer intento | 80,6 % | 87,9 % |
+| Exactitud de citas mostradas¹ | 100 % (168/168) | 100 % (132/132) |
+| Validación de citas al primer intento | 82,1 % | 87,9 % |
 | Respuestas que citan un artículo correcto | 94,7 % | 94,6 % |
 | … cuando la búsqueda trajo el artículo correcto | 98,2 % | 98,1 % |
 | Abstención correcta (fuera de alcance) | 90 % (9/10) | 90 % (9/10) |
 | Abstención indebida (en alcance) | 3,5 % (2/57) | 1,8 % (1/56) |
-| Latencia mediana | 2,8 s | 4,0 s |
-| Tokens por pregunta (entrada / salida) | ~6.800 / ~620 | ~6.000 / ~450 |
+| Latencia mediana | 2,5 s | 4,0 s |
+| Tokens por pregunta (entrada / salida) | ~6.650 / ~500 | ~6.000 / ~450 |
 
 ¹ Una cita es válida si (a) el artículo estaba entre los recuperados y (b) el fragmento citado aparece **textualmente** en ese artículo (comparando sin tildes ni mayúsculas). Si una respuesta falla la validación, se reintenta una vez con el detalle del error. Si sigue sin una cita verificable, se reemplaza por "no encontré base legal". Por eso las citas que llegan al usuario son 100 % verificables. La tasa al primer intento indica cuánto trabajo hace la validación.
 
@@ -76,7 +76,7 @@ Ley Chile publica el texto consolidado con la redacción final de cada reforma, 
 
 - Se indexan también los **artículos transitorios** de esas leyes ([`NORMAS`](ingest/leyclara/build.py)); por ahora, la Ley 21.561.
 - La ingesta detecta qué artículos del Código menciona cada transitorio y guarda la **relación** (el primero transitorio queda vinculado a los arts. 22, 25 bis, 27, 32, 33…). Al recuperar uno de esos artículos, `/api/ask` agrega el transitorio como contexto.
-- El modelo recibe la **fecha de hoy** (zona horaria de Chile) y tiene una regla explícita: empezar por la cifra que rige hoy y decir desde cuándo cambia.
+- El modelo recibe la **fecha de hoy** (zona horaria de Chile) y un **calendario de etapas ya calculado** por código desde el texto del transitorio (`calendario` en [worker/src/normas.ts](worker/src/normas.ts), con test contra el texto de la ley), marcando la que rige hoy. Sin el calendario, Haiku calculaba mal el "quinto año" y respondía 2027 en vez de 2028. La regla del prompt es empezar por la cifra que rige hoy y decir desde cuándo cambia.
 
 Resultado: a "¿cuántas horas a la semana puede durar la jornada?" responde "Hoy el máximo es de 42 horas…", citando el transitorio y el art. 22.
 
