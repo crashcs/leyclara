@@ -1,5 +1,7 @@
 # Ley Clara
 
+**En vivo: [ley.manuel.ac](https://ley.manuel.ac)**
+
 Responde dudas sobre el **Código del Trabajo de Chile** en lenguaje simple, **siempre citando el artículo exacto** con link a Ley Chile. Si ningún artículo respalda la respuesta, lo dice en vez de adivinar.
 
 > **No es asesoría legal.** Explica lo que dice el texto de la ley y puede equivocarse.
@@ -104,7 +106,7 @@ Un solo Worker sirve la API y la página (Workers Static Assets), así que no ha
 npm run deploy        # scripts/deploy.sh
 ```
 
-Publicado en **https://leyclara.venuxgaming.workers.dev** (mientras se configura `ley.manuel.ac`).
+Publicado en **https://ley.manuel.ac** (custom domain del Worker; `leyclara.venuxgaming.workers.dev` queda como respaldo).
 
 Si la key no está en Cloudflare, el script sube la de `.dev.vars` junto con el deploy. Para cambiarla después: `powershell -ExecutionPolicy Bypass -File scripts\set-api-key.ps1` (la pide oculta).
 
@@ -112,7 +114,7 @@ El script crea la D1 remota si no existe (y anota su `database_id` en `wrangler.
 
 Protecciones activas en producción: 10 solicitudes por minuto por IP a `/api/ask` y a `/api/search` (binding `ratelimits`), caché de 24 h para preguntas repetidas (la clave incluye la versión de la ley y el modelo) y preguntas de 500 caracteres como máximo.
 
-**Dominio `ley.manuel.ac`**: descomentar `routes` en `wrangler.jsonc` (custom domain). Requiere que la zona `manuel.ac` esté en la misma cuenta de Cloudflare que el Worker.
+El dominio se declara en `routes` de `wrangler.jsonc` como custom domain; Cloudflare crea el DNS y el certificado en el deploy. La caché de respuestas solo opera en el dominio propio, no en `*.workers.dev`.
 
 ## Pendiente
 
