@@ -39,10 +39,26 @@ export function fragmentoEnTexto(fragmento: string, texto: string): boolean {
 }
 
 /** Extrae los marcadores [Art. 67], [Art. 161 bis], [Art. 152 quáter J] del texto. */
-export function marcadores(respuesta: string): string[] {
+export function marcadores(respuesta: string, conocidos?: Set<string>): string[] {
+  // [Art. 67] siempre cuenta como marcador; sin "Art." solo si coincide con un artículo
+  // recuperado (el modelo a veces escribe "[primero transitorio, Ley 21.561]").
   const out: string[] = [];
-  for (const m of respuesta.matchAll(/\[Art(?:[íi]culo|\.)?\s*([^\]]+?)\]/gi)) out.push(m[1].trim());
+  for (const m of respuesta.matchAll(/\[(Art(?:[íi]culo|\.)?\s*)?([^\]]{1,80}?)\]/gi)) {
+    const num = m[2].trim();
+    if (m[1] || conocidos?.has(claveNumero(num))) out.push(num);
+  }
   return out;
+}
+
+/**
+ * Clave para comparar números de artículo escritos de distintas formas:
+ * "primero transitorio, Ley 21.561" == "Primero transitorio de la Ley 21.561".
+ */
+export function claveNumero(numero: string): string {
+  return normalizar(numero)
+    .split(" ")
+    .filter((w) => w && !["de", "la", "del", "el", "art", "articulo"].includes(w))
+    .join(" ");
 }
 
 /** "152 quáter J" -> "152-quater-j"; "23 transitorio" -> "t-23". */
@@ -66,7 +82,10 @@ export function validarCitas(
   });
   const validas = citas.filter((c) => c.valida);
   const idsValidos = new Set(validas.map((c) => c.articulo_id));
-  const marcadores_huerfanos = marcadores(salida.respuesta).filter((m) => !idsValidos.has(numeroASlug(m)));
+  const porClave = new Map([...recuperados].map(([id, a]) => [claveNumero(a.numero), id]));
+  const marcadores_huerfanos = marcadores(salida.respuesta, new Set(porClave.keys())).filter(
+    (m) => !idsValidos.has(porClave.get(claveNumero(m)) ?? numeroASlug(m)),
+  );
   return {
     citas,
     validas,

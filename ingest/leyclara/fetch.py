@@ -1,39 +1,53 @@
-"""Descarga el XML de Ley Chile y lo cachea en data/raw/.
+"""Descarga los XML de Ley Chile y los cachea en data/raw/.
 
-Solo descarga si el archivo no existe o tiene más de 24 h (o con --force).
+Usa el archivo cacheado si existe; solo vuelve a descargar con --force.
+En producción, la revisión diaria la hace el Worker (worker/src/actualizar.ts).
+
 Uso: python -m leyclara.fetch [--force]
 """
 
 from __future__ import annotations
 
 import sys
-import time
 import urllib.request
 from pathlib import Path
 
-ID_NORMA = "207436"  # DFL 1/2002, Código del Trabajo
-URL = f"https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma={ID_NORMA}"
 ROOT = Path(__file__).resolve().parents[2]
-DESTINO = ROOT / "data" / "raw" / f"codigo-trabajo-{ID_NORMA}.xml"
-MAX_EDAD_S = 24 * 3600
+RAW = ROOT / "data" / "raw"
+URL = "https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma={id}"
 # Ley Chile responde 401 sin un User-Agent de navegador.
 USER_AGENT = "Mozilla/5.0 (compatible; LeyClara/0.1; +https://ley.manuel.ac)"
+ARCHIVOS = {"207436": "codigo-trabajo-207436.xml"}
+
+ID_NORMA = "207436"  # DFL 1/2002, Código del Trabajo
+DESTINO = RAW / ARCHIVOS[ID_NORMA]
 
 
-def fetch(force: bool = False) -> Path:
-    if DESTINO.exists() and not force and time.time() - DESTINO.stat().st_mtime < MAX_EDAD_S:
-        print(f"usando cache: {DESTINO}")
-        return DESTINO
-    req = urllib.request.Request(URL, headers={"User-Agent": USER_AGENT})
+def ruta_norma(id_norma: str) -> Path:
+    return RAW / ARCHIVOS.get(id_norma, f"norma-{id_norma}.xml")
+
+
+def fetch_norma(id_norma: str, forzar: bool = False) -> Path:
+    destino = ruta_norma(id_norma)
+    if destino.exists() and not forzar:
+        return destino
+    req = urllib.request.Request(URL.format(id=id_norma), headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(req, timeout=60) as r:
         data = r.read()
     if not data.lstrip().startswith(b"<?xml"):
-        raise RuntimeError("La respuesta de Ley Chile no es XML")
-    DESTINO.parent.mkdir(parents=True, exist_ok=True)
-    DESTINO.write_bytes(data)
-    print(f"descargado {len(data):,} bytes -> {DESTINO}")
-    return DESTINO
+        raise RuntimeError(f"La respuesta de Ley Chile para idNorma={id_norma} no es XML")
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    destino.write_bytes(data)
+    print(f"descargado {len(data):,} bytes -> {destino}")
+    return destino
+
+
+def fetch(force: bool = False) -> Path:
+    return fetch_norma(ID_NORMA, forzar=force)
 
 
 if __name__ == "__main__":
-    fetch(force="--force" in sys.argv)
+    from .build import NORMAS
+
+    for cfg in NORMAS:
+        print(fetch_norma(cfg.id, forzar="--force" in sys.argv))

@@ -23,12 +23,13 @@ export interface ArticuloRow {
   url: string;
   ruta_str: string;
   texto: string;
+  norma_nombre: string;
 }
 
 export interface Resultado {
   articulo_id: string;
   score: number;
-  fuentes: { fts?: number; vector?: number; ref?: true; rerank?: number };
+  fuentes: { fts?: number; vector?: number; ref?: true; rerank?: number; rel?: string };
 }
 
 const RRF_K = 60;
@@ -117,7 +118,7 @@ export async function obtenerArticulos(db: D1Database, ids: string[]): Promise<M
   const ph = ids.map((_, i) => `?${i + 1}`).join(",");
   const { results } = await db
     .prepare(
-      `SELECT id, numero, transitorio, derogado, fecha_version, url, ruta_str, texto FROM articulos WHERE id IN (${ph})`,
+      `SELECT id, numero, transitorio, derogado, fecha_version, url, ruta_str, texto, norma_nombre FROM articulos WHERE id IN (${ph})`,
     )
     .bind(...ids)
     .all<ArticuloRow>();
@@ -143,6 +144,31 @@ export interface SearchOptions {
   modo?: Modo;
   /** Peso de la lista FTS en la fusión RRF (la de vectores pesa 1). */
   pesoFts?: number;
+  /**
+   * Máximo de artículos relacionados que se agregan después de los k primeros
+   * (p. ej. el transitorio de la Ley 21.561 que escalona el art. 22). 0 = ninguno.
+   */
+  relacionados?: number;
+}
+
+/** Artículos vinculados a los recuperados (tabla relaciones), en orden de aparición. */
+export async function agregarRelacionados(db: D1Database, base: Resultado[], max: number): Promise<Resultado[]> {
+  if (max <= 0 || !base.length) return base;
+  const ids = base.map((r) => r.articulo_id);
+  const ph = ids.map((_, i) => `?${i + 1}`).join(",");
+  const { results } = await db
+    .prepare(`SELECT articulo_id, relacionado_id FROM relaciones WHERE articulo_id IN (${ph})`)
+    .bind(...ids)
+    .all<{ articulo_id: string; relacionado_id: string }>();
+  const extra: Resultado[] = [];
+  for (const id of ids) {
+    for (const r of results.filter((x) => x.articulo_id === id)) {
+      if (extra.length >= max) break;
+      if (ids.includes(r.relacionado_id) || extra.some((e) => e.articulo_id === r.relacionado_id)) continue;
+      extra.push({ articulo_id: r.relacionado_id, score: 0, fuentes: { rel: id } });
+    }
+  }
+  return [...base, ...extra];
 }
 
 export const PESO_FTS_DEFAULT = 0.1;
@@ -179,5 +205,5 @@ export async function buscar(env: SearchEnv, q: string, opts: SearchOptions = {}
     const rer = await rerank(env.AI, q, pool, textos);
     fusion = [...fusion.slice(0, nRef), ...rer];
   }
-  return fusion.slice(0, k);
+  return agregarRelacionados(env.DB, fusion.slice(0, k), opts.relacionados ?? 0);
 }

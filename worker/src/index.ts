@@ -6,9 +6,10 @@
 //   POST /api/ask {pregunta, modelo?}  respuesta con citas validadas
 //   POST /admin/index?offset=&limit=   embebe chunks de D1 y los sube a Vectorize (requiere ADMIN_TOKEN)
 
-import { buscar, embed, obtenerArticulos, type Modo, type SearchEnv } from "./search";
+import { buscar, obtenerArticulos, type Modo, type SearchEnv } from "./search";
 import { generar, MODELO_DEFAULT, MODELO_PRECISO, RESPUESTA_SIN_BASE } from "./generate";
 import { normalizar } from "./textnorm";
+import { indexarChunks, revisarNormas } from "./actualizar";
 
 export interface Env extends SearchEnv {
   ASSETS?: Fetcher;
@@ -24,6 +25,8 @@ export interface Env extends SearchEnv {
 
 async function limitado(env: Env, req: Request, prefijo: string): Promise<boolean> {
   if (!env.RATE_LIMITER) return false;
+  // Sin CF-Visitor la petición no pasó por el borde de Cloudflare: es `wrangler dev`.
+  if (!req.headers.get("cf-visitor")) return false;
   const ip = req.headers.get("cf-connecting-ip") ?? "local";
   const { success } = await env.RATE_LIMITER.limit({ key: `${prefijo}:${ip}` });
   return !success;
@@ -54,6 +57,15 @@ function modoPorDefecto(env: Env): Modo {
 async function meta(env: Env): Promise<Record<string, string>> {
   const { results } = await env.DB.prepare("SELECT key, value FROM meta").all<{ key: string; value: string }>();
   return { ...Object.fromEntries(results.map((r) => [r.key, r.value])), modo_busqueda: modoPorDefecto(env) };
+}
+
+/** /api/meta: igual que meta(), con normas y última revisión como objetos. */
+async function metaPublica(env: Env) {
+  const m = await meta(env);
+  const parse = (s?: string) => {
+    try { return s ? JSON.parse(s) : undefined; } catch { return undefined; }
+  };
+  return { ...m, normas: parse(m.normas) ?? [], ultima_revision: parse(m.ultima_revision) };
 }
 
 async function handleSearch(req: Request, url: URL, env: Env): Promise<Response> {
@@ -110,7 +122,8 @@ async function handleAsk(req: Request, env: Env, ctx: ExecutionContext): Promise
 
   const t0 = Date.now();
   const k = parseInt(env.CONTEXT_K || "8", 10);
-  const recuperados = await buscar(env, pregunta, { k, modo: modoPorDefecto(env) });
+  // Hasta 2 artículos relacionados extra (p. ej. el transitorio de la Ley 21.561 que escalona el art. 22).
+  const recuperados = await buscar(env, pregunta, { k, modo: modoPorDefecto(env), relacionados: 2 });
   const arts = await obtenerArticulos(env.DB, recuperados.map((r) => r.articulo_id));
   const articulos = recuperados.map((r) => arts.get(r.articulo_id)!).filter(Boolean);
   const m = m0;
@@ -133,9 +146,9 @@ async function handleAsk(req: Request, env: Env, ctx: ExecutionContext): Promise
     advertencia: g.advertencia,
     citas: g.salida.citas.map((c) => {
       const a = porId.get(c.articulo_id)!;
-      return { ...c, numero: a.numero, ruta: a.ruta_str, url: a.url, fecha_version: a.fecha_version };
+      return { ...c, numero: a.numero, ruta: a.ruta_str, url: a.url, fecha_version: a.fecha_version, norma: a.norma_nombre };
     }),
-    recuperados: articulos.map((a) => ({ id: a.id, numero: a.numero, ruta: a.ruta_str, url: a.url })),
+    recuperados: articulos.map((a) => ({ id: a.id, numero: a.numero, ruta: a.ruta_str, url: a.url, norma: a.norma_nombre })),
     fecha_version: m.fecha_version,
     fuente: m.fuente,
     modelo: g.modelo,
@@ -164,15 +177,25 @@ async function handleIndex(req: Request, url: URL, env: Env): Promise<Response> 
   if (!env.AI || !env.VECTORIZE) return json({ error: "Vectorize/AI no configurados" }, 503);
   const offset = parseInt(url.searchParams.get("offset") || "0", 10);
   const limit = Math.min(parseInt(url.searchParams.get("limit") || "50", 10), 100);
+  const soloFaltantes = url.searchParams.get("faltantes") === "1";
   const { results } = await env.DB.prepare("SELECT id, articulo_id, texto FROM chunks ORDER BY rowid LIMIT ?1 OFFSET ?2")
     .bind(limit, offset)
     .all<{ id: string; articulo_id: string; texto: string }>();
   if (!results.length) return json({ indexados: 0, siguiente: null });
-  const vectores = await embed(env.AI, results.map((r) => r.texto));
-  await env.VECTORIZE.upsert(
-    results.map((r, i) => ({ id: r.id, values: vectores[i], metadata: { articulo_id: r.articulo_id } })),
-  );
-  return json({ indexados: results.length, dim: vectores[0]?.length, siguiente: offset + results.length });
+  let pendientes = results;
+  if (soloFaltantes) {
+    const existentes = new Set((await env.VECTORIZE.getByIds(results.map((r) => r.id))).map((v) => v.id));
+    pendientes = results.filter((r) => !existentes.has(r.id));
+  }
+  const indexados = await indexarChunks(env, pendientes);
+  return json({ revisados: results.length, indexados, siguiente: offset + results.length });
+}
+
+async function handleRevisar(req: Request, url: URL, env: Env): Promise<Response> {
+  if (!env.ADMIN_TOKEN || req.headers.get("authorization") !== `Bearer ${env.ADMIN_TOKEN}`) {
+    return json({ error: "No autorizado" }, 401);
+  }
+  return json(await revisarNormas(env, { forzar: url.searchParams.get("forzar") === "1" }));
 }
 
 const ES_LOCAL = new Set(["localhost", "127.0.0.1", "[::1]"]);
@@ -190,20 +213,30 @@ export default {
   async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(req.url);
     if (ES_LOCAL.has(url.hostname)) return manejar(req, url, env, ctx);
+    // El borde de Cloudflare indica el esquema original en CF-Visitor; en `wrangler dev`
+    // no existe (y la URL llega reescrita con el dominio de producción).
+    const esHttp = (req.headers.get("cf-visitor") ?? "").includes('"http"');
     // Fuera de local, las páginas se sirven por HTTPS (si no, el navegador marca el sitio como
     // "no seguro"). Solo se redirigen GET/HEAD: un 301 a un POST de una pestaña abierta en http://
     // lo convierte en una petición a otro origen y el navegador la corta ("Failed to fetch").
-    if (url.protocol === "http:" && (req.method === "GET" || req.method === "HEAD")) {
+    if (esHttp && (req.method === "GET" || req.method === "HEAD")) {
       url.protocol = "https:";
       return Response.redirect(url.toString(), 301);
     }
     return conSeguridad(await manejar(req, url, env, ctx));
   },
+
+  // Cron Trigger (wrangler.jsonc > triggers): revisa Ley Chile una vez al día.
+  async scheduled(_evento: ScheduledController, env: Env, ctx: ExecutionContext): Promise<void> {
+    ctx.waitUntil(
+      revisarNormas(env).then((inf) => console.log(JSON.stringify({ revision_ley_chile: inf }))),
+    );
+  },
 } satisfies ExportedHandler<Env>;
 
 async function manejar(req: Request, url: URL, env: Env, ctx: ExecutionContext): Promise<Response> {
     try {
-      if (url.pathname === "/api/meta" && req.method === "GET") return json(await meta(env));
+      if (url.pathname === "/api/meta" && req.method === "GET") return json(await metaPublica(env));
       if (url.pathname === "/api/search" && req.method === "GET") return await handleSearch(req, url, env);
       if (url.pathname === "/api/ask" && req.method === "POST") return await handleAsk(req, env, ctx);
       const art = url.pathname.match(/^\/api\/articulos\/([\w-]+)$/);
@@ -212,6 +245,7 @@ async function manejar(req: Request, url: URL, env: Env, ctx: ExecutionContext):
         return a ? json(a) : json({ error: "Artículo no encontrado" }, 404);
       }
       if (url.pathname === "/admin/index" && req.method === "POST") return await handleIndex(req, url, env);
+      if (url.pathname === "/admin/revisar" && req.method === "POST") return await handleRevisar(req, url, env);
       if (url.pathname.startsWith("/api/")) return json({ error: "No encontrado" }, 404);
     } catch (e) {
       console.error(e);

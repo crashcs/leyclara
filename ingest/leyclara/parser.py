@@ -46,6 +46,8 @@ class Articulo:
     url: str
     ruta: list[str] = field(default_factory=list)  # ["Libro I: ...", "Título II: ...", ...]
     texto: str = ""
+    norma: str = ""  # idNorma de Ley Chile
+    norma_nombre: str = ""  # "Código del Trabajo", "Ley 21.561"
 
     @property
     def ruta_str(self) -> str:
@@ -214,4 +216,5 @@ def _parse_articulo(el: ET.Element, ruta: list[str], id_norma: str) -> Articulo:
         url=LEYCHILE_URL.format(id_norma=id_norma, id_parte=id_parte),
         ruta=list(ruta),
         texto=limpiar_texto(_txt(el.find(f"{NS}Texto"))),
+        norma=id_norma,
     )

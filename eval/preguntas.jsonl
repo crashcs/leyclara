@@ -54,6 +54,7 @@
 {"id": "q54", "tipo": "en_alcance", "pregunta": "¿Las tiendas tienen que tener sillas para los vendedores?", "esperados": ["193"]}
 {"id": "q55", "tipo": "en_alcance", "pregunta": "¿Cuál es la jornada máxima de una trabajadora de casa particular puertas afuera?", "esperados": ["149"]}
 {"id": "q56", "tipo": "en_alcance", "pregunta": "¿A partir de cuántos trabajadores la empresa debe tener reglamento interno?", "esperados": ["153"]}
+{"id": "q57", "tipo": "en_alcance", "pregunta": "¿Cuántas horas a la semana puedo trabajar como máximo hoy, con la ley de 40 horas?", "esperados": ["l21561-t-primero", "22"]}
 {"id": "x01", "tipo": "fuera_de_alcance", "pregunta": "¿Cuánto me pueden subir el arriendo al año?", "esperados": []}
 {"id": "x02", "tipo": "fuera_de_alcance", "pregunta": "¿Cuál es la multa por pasarse una luz roja?", "esperados": []}
 {"id": "x03", "tipo": "fuera_de_alcance", "pregunta": "¿Cómo se tramita un divorcio de mutuo acuerdo?", "esperados": []}

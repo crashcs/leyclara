@@ -51,7 +51,18 @@ async function cargarMeta() {
     const m = await r.json();
     $("d-version").textContent = fmtFecha(m.fecha_version, true);
     $("d-articulos").textContent = m.n_articulos ?? "737";
-    $("version").innerHTML = `Código del Trabajo<br><strong>versión del ${escapar(fmtFecha(m.fecha_version))}</strong> · <a href="${escapar(m.fuente)}" target="_blank" rel="noopener">fuente</a>`;
+    let rev = "";
+    const r0 = m.ultima_revision?.revisado;
+    if (r0) {
+      const d = new Date(r0);
+      const hoy = new Date().toDateString() === d.toDateString();
+      const cuando = hoy
+        ? `hoy, ${d.toLocaleTimeString("es-CL", { hour: "2-digit", minute: "2-digit" })}`
+        : d.toLocaleDateString("es-CL", { day: "numeric", month: "short" });
+      const error = (m.ultima_revision.normas || []).some((n) => n.estado === "error");
+      rev = `<br><span title="Ley Clara revisa Ley Chile una vez al día">${error ? "Revisión con errores" : "Revisado en Ley Chile"}: ${escapar(cuando)}</span>`;
+    }
+    $("version").innerHTML = `Código del Trabajo<br><strong>versión del ${escapar(fmtFecha(m.fecha_version))}</strong> · <a href="${escapar(m.fuente)}" target="_blank" rel="noopener">fuente</a>${rev}`;
   } catch {
     $("version").textContent = "Código del Trabajo de Chile";
   }
@@ -60,16 +71,19 @@ async function cargarMeta() {
 /* ---------- Render de una respuesta ---------- */
 function renderTurno(turno, d) {
   // Numera las citas en orden de aparición del marcador [Art. N].
-  const porNumero = new Map(d.citas.map((c) => [c.numero.toLowerCase(), c]));
+  // Igual que claveNumero() del Worker: "primero transitorio, Ley 21.561" == "Primero transitorio de la Ley 21.561"
+  const clave = (n) => n.toLowerCase().normalize("NFD").replace(/\p{Mn}/gu, "").replace(/[^a-z0-9]+/g, " ").trim()
+    .split(" ").filter((w) => w && !["de", "la", "del", "el", "art", "articulo"].includes(w)).join(" ");
+  const porNumero = new Map(d.citas.map((c) => [clave(c.numero), c]));
   const orden = [];
   const idx = (c) => {
     let i = orden.findIndex((x) => x.articulo_id === c.articulo_id);
     if (i === -1) { orden.push(c); i = orden.length - 1; }
     return i + 1;
   };
-  let cuerpo = escapar(d.respuesta).replace(/\s*\[Art(?:ículo|\.)?\s*([^\]]+?)\]/gi, (_, num) => {
-    const c = porNumero.get(num.trim().toLowerCase());
-    if (!c) return "";
+  let cuerpo = escapar(d.respuesta).replace(/\s*\[(Art(?:ículo|\.)?\s*)?([^\]]{1,80}?)\]/gi, (todo, pref, num) => {
+    const c = porNumero.get(clave(num));
+    if (!c) return pref ? "" : todo; // [texto] que no es una cita: se deja tal cual
     const n = idx(c);
     return `<button type="button" class="cit" data-art="${escapar(c.articulo_id)}" aria-label="Cita ${n}: artículo ${escapar(c.numero)}">${n}</button>`;
   });
@@ -90,8 +104,8 @@ function renderTurno(turno, d) {
 
   const fuentes = orden.map((c, i) => `
     <li><button type="button" class="fuente-card" data-art="${escapar(c.articulo_id)}">
-      <span class="fc-top"><span class="fc-n">${i + 1}</span><span class="fc-art">Artículo ${escapar(c.numero)}</span></span>
-      <span class="fc-ruta">${escapar((c.ruta || "").split(" › ").slice(0, -1).pop() || "")}</span>
+      <span class="fc-top"><span class="fc-n">${i + 1}</span><span class="fc-art">Artículo ${escapar(c.numero.replace(/, .*$/, ""))}</span></span>
+      <span class="fc-ruta">${escapar(c.norma && c.norma !== "Código del Trabajo" ? c.norma : (c.ruta || "").split(" › ").slice(0, -1).pop() || "")}</span>
       <span class="fc-frag">“${escapar(c.fragmento)}”</span>
     </button></li>`).join("");
 
@@ -177,8 +191,9 @@ async function abrirArticulo(id) {
   artAbierto = id;
   const partes = a.ruta_str.split(" › ");
   $("art-ruta").textContent = partes.slice(0, -1).join(" › ");
-  $("art-titulo").textContent = `Artículo ${a.numero}`;
-  $("lector-etq").textContent = `Código del Trabajo · Art. ${a.numero}`;
+  const corto = a.numero.replace(/, .*$/, ""); // "primero transitorio, Ley 21.561" -> "primero transitorio"
+  $("art-titulo").textContent = `Artículo ${corto}`;
+  $("lector-etq").textContent = `${a.norma_nombre || "Código del Trabajo"} · Art. ${corto}`;
   $("art-meta").textContent = `${a.derogado ? "Derogado · " : ""}Última modificación: ${fmtFecha(a.fecha_version)}`;
   $("art-texto").innerHTML = a.texto.split("\n\n").map((p) => `<p>${resaltar(escapar(p), fragmentos.get(id) ?? [])}</p>`).join("");
   $("art-link").href = a.url;

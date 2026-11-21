@@ -58,3 +58,31 @@ describe("validarCitas", () => {
     expect(v.marcadores_huerfanos).toEqual(["67", "68"]);
   });
 });
+
+describe("artículos de leyes complementarias", () => {
+  const rec = new Map([
+    ["l21561-t-primero", { numero: "primero transitorio, Ley 21.561", texto: "Artículo primero.- Esta ley entrará en vigencia en forma gradual, según las modalidades y plazos siguientes." }],
+  ]);
+  it("acepta el marcador escrito con o sin 'de la'", () => {
+    for (const marca of ["[Art. primero transitorio, Ley 21.561]", "[Art. Primero transitorio de la Ley 21.561]"]) {
+      const v = validarCitas(
+        {
+          respuesta: `La reducción es gradual ${marca}.`,
+          citas: [{ articulo_id: "l21561-t-primero", fragmento: "Esta ley entrará en vigencia en forma gradual" }],
+          sin_base_legal: false,
+        },
+        rec,
+      );
+      expect(v.ok, marca).toBe(true);
+    }
+  });
+});
+
+describe("marcadores sin 'Art.'", () => {
+  it("cuenta [primero transitorio, Ley 21.561] solo si es un artículo conocido", () => {
+    const conocidos = new Set(["primero transitorio ley 21 561"]);
+    expect(marcadores("Rige 42 horas [primero transitorio, Ley 21.561]. Ver [nota].", conocidos)).toEqual([
+      "primero transitorio, Ley 21.561",
+    ]);
+  });
+});

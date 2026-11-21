@@ -8,6 +8,8 @@
   "compatibility_flags": ["nodejs_compat"],
   "assets": { "directory": "./web", "binding": "ASSETS", "run_worker_first": true },
   "observability": { "enabled": true },
+  // Revisión diaria de Ley Chile: 10:00 UTC (6 o 7 a. m. en Chile). Ver worker/src/actualizar.ts.
+  "triggers": { "crons": ["0 10 * * *"] },
   "vars": { "SEARCH_MODE": "vector", "CONTEXT_K": "8", "CACHE_HORAS": "24" },
   // Dominio propio (la zona manuel.ac está en esta cuenta). workers.dev queda como respaldo.
   "routes": [{ "pattern": "ley.manuel.ac", "custom_domain": true }],
