@@ -14,6 +14,7 @@ const args = Object.fromEntries(
   process.argv.slice(2).reduce((acc, a, i, arr) => (a.startsWith("--") ? [...acc, [a.slice(2), arr[i + 1]]] : acc), []),
 );
 const BASE = args.base || "http://localhost:8787";
+// Un modo puede llevar peso FTS: "hybrid@0.3"
 const MODOS = (args.modos || "fts").split(",");
 const preguntas = readFileSync(new URL("./preguntas.jsonl", import.meta.url), "utf8")
   .split("\n")
@@ -21,8 +22,10 @@ const preguntas = readFileSync(new URL("./preguntas.jsonl", import.meta.url), "u
   .map((l) => JSON.parse(l))
   .filter((p) => p.tipo === "en_alcance");
 
-async function buscar(q, modo) {
-  const r = await fetch(`${BASE}/api/search?k=10&modo=${modo}&q=${encodeURIComponent(q)}`);
+async function buscar(q, modoSpec) {
+  const [modo, peso] = modoSpec.split("@");
+  const extra = peso !== undefined ? `&peso_fts=${peso}` : "";
+  const r = await fetch(`${BASE}/api/search?k=10&modo=${modo}${extra}&q=${encodeURIComponent(q)}`);
   if (!r.ok) throw new Error(`${r.status} ${await r.text()}`);
   return (await r.json()).resultados.map((x) => x.articulo_id);
 }

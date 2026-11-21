@@ -44,7 +44,9 @@ async function handleSearch(url: URL, env: Env): Promise<Response> {
   const modoParam = url.searchParams.get("modo") as Modo | null;
   const modo = modoParam && MODOS.includes(modoParam) ? modoParam : modoPorDefecto(env);
   const t0 = Date.now();
-  const res = await buscar(env, q, { k, modo });
+  const pesoParam = url.searchParams.get("peso_fts");
+  const pesoFts = pesoParam !== null && !Number.isNaN(parseFloat(pesoParam)) ? parseFloat(pesoParam) : undefined;
+  const res = await buscar(env, q, { k, modo, pesoFts });
   const arts = await obtenerArticulos(env.DB, res.map((r) => r.articulo_id));
   return json({
     q,

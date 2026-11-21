@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-11-21T01:28:01.735Z",
+  "fecha": "2026-11-21T02:04:08.896Z",
   "n": 56,
   "modos": {
     "fts": {
@@ -465,6 +465,940 @@
           "rec10": 0
         }
       ]
+    },
+    "vector": {
+      "metricas": {
+        "hit@1": 73.2,
+        "hit@5": 96.4,
+        "hit@10": 96.4,
+        "recall@5": 93.8,
+        "recall@10": 95.5,
+        "MRR@10": 0.824
+      },
+      "fallos": [
+        {
+          "id": "q05",
+          "pregunta": "¿Puedo dividir mis vacaciones en partes?",
+          "esperados": [
+            "70"
+          ],
+          "top5": [
+            "76-bis",
+            "34",
+            "40-bis-c",
+            "37",
+            "376"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q15",
+          "pregunta": "Quiero renunciar, ¿con cuántos días de anticipación tengo que avisar?",
+          "esperados": [
+            "159"
+          ],
+          "top5": [
+            "162",
+            "156",
+            "197-bis",
+            "152-quater-o-ter",
+            "152-quinquies-a"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        }
+      ]
+    },
+    "hybrid": {
+      "metricas": {
+        "hit@1": 42.9,
+        "hit@5": 80.4,
+        "hit@10": 91.1,
+        "recall@5": 77.7,
+        "recall@10": 90.2,
+        "MRR@10": 0.594
+      },
+      "fallos": [
+        {
+          "id": "q03",
+          "pregunta": "¿Puedo juntar las vacaciones de dos años y tomarlas todas juntas?",
+          "esperados": [
+            "70"
+          ],
+          "top5": [
+            "376",
+            "203",
+            "67",
+            "38-bis",
+            "76-bis"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q04",
+          "pregunta": "Me voy de la empresa y no alcancé a tomar vacaciones, ¿me las tienen que pagar?",
+          "esperados": [
+            "73"
+          ],
+          "top5": [
+            "76-bis",
+            "37",
+            "38",
+            "163-bis",
+            "32"
+          ],
+          "rango": 10,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q05",
+          "pregunta": "¿Puedo dividir mis vacaciones en partes?",
+          "esperados": [
+            "70"
+          ],
+          "top5": [
+            "34",
+            "376",
+            "76-bis",
+            "67",
+            "152-quater-v"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q13",
+          "pregunta": "¿Por qué causas me pueden despedir sin pagarme indemnización?",
+          "esperados": [
+            "160"
+          ],
+          "top5": [
+            "171",
+            "168",
+            "169",
+            "163",
+            "489"
+          ],
+          "rango": 7,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q15",
+          "pregunta": "Quiero renunciar, ¿con cuántos días de anticipación tengo que avisar?",
+          "esperados": [
+            "159"
+          ],
+          "top5": [
+            "162",
+            "152-quinquies-a",
+            "152-quater-o-ter",
+            "161",
+            "147"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q19",
+          "pregunta": "¿Me pueden despedir si estoy embarazada?",
+          "esperados": [
+            "201",
+            "174"
+          ],
+          "top5": [
+            "211-i",
+            "195",
+            "202",
+            "215",
+            "197"
+          ],
+          "rango": 7,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0.5
+        },
+        {
+          "id": "q20",
+          "pregunta": "¿Cuánto dura el prenatal y el postnatal?",
+          "esperados": [
+            "195"
+          ],
+          "top5": [
+            "196",
+            "197-bis",
+            "201",
+            "200",
+            "198"
+          ],
+          "rango": 6,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q35",
+          "pregunta": "¿Qué datos debe tener mi contrato de trabajo?",
+          "esperados": [
+            "10"
+          ],
+          "top5": [
+            "154-ter",
+            "152-quater-s",
+            "517",
+            "9-bis",
+            "145-bis-g"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q36",
+          "pregunta": "¿Me pueden cambiar de funciones o de lugar de trabajo sin mi permiso?",
+          "esperados": [
+            "12"
+          ],
+          "top5": [
+            "235",
+            "152-quater-o-ter",
+            "199-bis",
+            "66-bis",
+            "10"
+          ],
+          "rango": 6,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q39",
+          "pregunta": "¿Cada cuánto tiempo me tienen que pagar el sueldo?",
+          "esperados": [
+            "55"
+          ],
+          "top5": [
+            "44",
+            "42",
+            "45",
+            "32",
+            "162"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q40",
+          "pregunta": "¿Qué descuentos me pueden hacer del sueldo?",
+          "esperados": [
+            "58"
+          ],
+          "top5": [
+            "261",
+            "44",
+            "45",
+            "59",
+            "42"
+          ],
+          "rango": 8,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        }
+      ]
+    },
+    "hybrid_rerank": {
+      "metricas": {
+        "hit@1": 41.1,
+        "hit@5": 82.1,
+        "hit@10": 96.4,
+        "recall@5": 80.4,
+        "recall@10": 93.8,
+        "MRR@10": 0.59
+      },
+      "fallos": [
+        {
+          "id": "q01",
+          "pregunta": "¿Cuántos días de vacaciones me tocan al año?",
+          "esperados": [
+            "67"
+          ],
+          "top5": [
+            "38-bis",
+            "23",
+            "35-ter",
+            "152-ter-k",
+            "70"
+          ],
+          "rango": 8,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q07",
+          "pregunta": "¿Me pueden despedir estando con licencia médica?",
+          "esperados": [
+            "161"
+          ],
+          "top5": [
+            "199-bis",
+            "183-nn",
+            "197",
+            "196",
+            "199"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q08",
+          "pregunta": "Me despidieron por necesidades de la empresa, ¿qué significa eso?",
+          "esperados": [
+            "161"
+          ],
+          "top5": [
+            "168",
+            "162",
+            "177",
+            "169",
+            "3"
+          ],
+          "rango": 6,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q15",
+          "pregunta": "Quiero renunciar, ¿con cuántos días de anticipación tengo que avisar?",
+          "esperados": [
+            "159"
+          ],
+          "top5": [
+            "147",
+            "12",
+            "161",
+            "152-quater-i",
+            "67"
+          ],
+          "rango": 6,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q32",
+          "pregunta": "¿Me pueden hacer trabajar el domingo?",
+          "esperados": [
+            "35",
+            "38"
+          ],
+          "top5": [
+            "109",
+            "45",
+            "38-bis",
+            "145-d",
+            "35-bis"
+          ],
+          "rango": 10,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0.5
+        },
+        {
+          "id": "q39",
+          "pregunta": "¿Cada cuánto tiempo me tienen que pagar el sueldo?",
+          "esperados": [
+            "55"
+          ],
+          "top5": [
+            "64",
+            "38",
+            "137",
+            "139",
+            "56"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q43",
+          "pregunta": "Trabajo desde mi casa, ¿quién paga el computador y los gastos de internet?",
+          "esperados": [
+            "152-quater-l"
+          ],
+          "top5": [
+            "152-quater-v",
+            "152-quater-y",
+            "152-quater-g",
+            "53",
+            "151"
+          ],
+          "rango": 6,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q44",
+          "pregunta": "Hago teletrabajo, ¿tengo derecho a no contestar correos fuera de mi horario?",
+          "esperados": [
+            "152-quater-j"
+          ],
+          "top5": [
+            "206-bis",
+            "202",
+            "152-quater-c",
+            "152-quater-g",
+            "152-quater-h"
+          ],
+          "rango": 6,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q45",
+          "pregunta": "¿Qué tiene que hacer mi empresa si denuncio acoso laboral o sexual?",
+          "esperados": [
+            "211-a",
+            "211-b"
+          ],
+          "top5": [
+            "211-c",
+            "211-b-bis",
+            "2",
+            "168",
+            "211-e"
+          ],
+          "rango": 6,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0.5
+        },
+        {
+          "id": "q56",
+          "pregunta": "¿A partir de cuántos trabajadores la empresa debe tener reglamento interno?",
+          "esperados": [
+            "153"
+          ],
+          "top5": [
+            "505-bis",
+            "154",
+            "227",
+            "62",
+            "18-bis"
+          ],
+          "rango": 8,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        }
+      ]
+    },
+    "hybrid@0.1": {
+      "metricas": {
+        "hit@1": 60.7,
+        "hit@5": 92.9,
+        "hit@10": 96.4,
+        "recall@5": 90.2,
+        "recall@10": 95.5,
+        "MRR@10": 0.748
+      },
+      "fallos": [
+        {
+          "id": "q03",
+          "pregunta": "¿Puedo juntar las vacaciones de dos años y tomarlas todas juntas?",
+          "esperados": [
+            "70"
+          ],
+          "top5": [
+            "376",
+            "203",
+            "76-bis",
+            "67",
+            "68"
+          ],
+          "rango": 7,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q05",
+          "pregunta": "¿Puedo dividir mis vacaciones en partes?",
+          "esperados": [
+            "70"
+          ],
+          "top5": [
+            "76-bis",
+            "34",
+            "376",
+            "40-bis-c",
+            "37"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q15",
+          "pregunta": "Quiero renunciar, ¿con cuántos días de anticipación tengo que avisar?",
+          "esperados": [
+            "159"
+          ],
+          "top5": [
+            "162",
+            "156",
+            "152-quater-o-ter",
+            "152-quinquies-a",
+            "197-bis"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q39",
+          "pregunta": "¿Cada cuánto tiempo me tienen que pagar el sueldo?",
+          "esperados": [
+            "55"
+          ],
+          "top5": [
+            "44",
+            "152-bis-h",
+            "139",
+            "56",
+            "45"
+          ],
+          "rango": 8,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        }
+      ]
+    },
+    "hybrid@0.2": {
+      "metricas": {
+        "hit@1": 60.7,
+        "hit@5": 91.1,
+        "hit@10": 94.6,
+        "recall@5": 88.4,
+        "recall@10": 93.8,
+        "MRR@10": 0.725
+      },
+      "fallos": [
+        {
+          "id": "q03",
+          "pregunta": "¿Puedo juntar las vacaciones de dos años y tomarlas todas juntas?",
+          "esperados": [
+            "70"
+          ],
+          "top5": [
+            "376",
+            "203",
+            "76-bis",
+            "67",
+            "68"
+          ],
+          "rango": 10,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q04",
+          "pregunta": "Me voy de la empresa y no alcancé a tomar vacaciones, ¿me las tienen que pagar?",
+          "esperados": [
+            "73"
+          ],
+          "top5": [
+            "37",
+            "38",
+            "76-bis",
+            "163-bis",
+            "32"
+          ],
+          "rango": 6,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q05",
+          "pregunta": "¿Puedo dividir mis vacaciones en partes?",
+          "esperados": [
+            "70"
+          ],
+          "top5": [
+            "34",
+            "76-bis",
+            "376",
+            "67",
+            "40-bis-c"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q15",
+          "pregunta": "Quiero renunciar, ¿con cuántos días de anticipación tengo que avisar?",
+          "esperados": [
+            "159"
+          ],
+          "top5": [
+            "162",
+            "156",
+            "152-quater-o-ter",
+            "152-quinquies-a",
+            "147"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q39",
+          "pregunta": "¿Cada cuánto tiempo me tienen que pagar el sueldo?",
+          "esperados": [
+            "55"
+          ],
+          "top5": [
+            "44",
+            "152-bis-h",
+            "45",
+            "42",
+            "163-bis"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        }
+      ]
+    },
+    "hybrid@0.3": {
+      "metricas": {
+        "hit@1": 60.7,
+        "hit@5": 87.5,
+        "hit@10": 92.9,
+        "recall@5": 84.8,
+        "recall@10": 92.9,
+        "MRR@10": 0.717
+      },
+      "fallos": [
+        {
+          "id": "q03",
+          "pregunta": "¿Puedo juntar las vacaciones de dos años y tomarlas todas juntas?",
+          "esperados": [
+            "70"
+          ],
+          "top5": [
+            "376",
+            "203",
+            "67",
+            "76-bis",
+            "68"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q04",
+          "pregunta": "Me voy de la empresa y no alcancé a tomar vacaciones, ¿me las tienen que pagar?",
+          "esperados": [
+            "73"
+          ],
+          "top5": [
+            "37",
+            "38",
+            "76-bis",
+            "163-bis",
+            "32"
+          ],
+          "rango": 6,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q05",
+          "pregunta": "¿Puedo dividir mis vacaciones en partes?",
+          "esperados": [
+            "70"
+          ],
+          "top5": [
+            "34",
+            "76-bis",
+            "376",
+            "67",
+            "40-bis-c"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q15",
+          "pregunta": "Quiero renunciar, ¿con cuántos días de anticipación tengo que avisar?",
+          "esperados": [
+            "159"
+          ],
+          "top5": [
+            "162",
+            "156",
+            "152-quater-o-ter",
+            "152-quinquies-a",
+            "147"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q35",
+          "pregunta": "¿Qué datos debe tener mi contrato de trabajo?",
+          "esperados": [
+            "10"
+          ],
+          "top5": [
+            "9-bis",
+            "154-ter",
+            "152-quater-s",
+            "517",
+            "183-n"
+          ],
+          "rango": 9,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q39",
+          "pregunta": "¿Cada cuánto tiempo me tienen que pagar el sueldo?",
+          "esperados": [
+            "55"
+          ],
+          "top5": [
+            "44",
+            "152-bis-h",
+            "42",
+            "45",
+            "163-bis"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q40",
+          "pregunta": "¿Qué descuentos me pueden hacer del sueldo?",
+          "esperados": [
+            "58"
+          ],
+          "top5": [
+            "45",
+            "44",
+            "261",
+            "59",
+            "64"
+          ],
+          "rango": 8,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        }
+      ]
+    },
+    "hybrid@0.5": {
+      "metricas": {
+        "hit@1": 53.6,
+        "hit@5": 85.7,
+        "hit@10": 91.1,
+        "recall@5": 82.1,
+        "recall@10": 91.1,
+        "MRR@10": 0.673
+      },
+      "fallos": [
+        {
+          "id": "q03",
+          "pregunta": "¿Puedo juntar las vacaciones de dos años y tomarlas todas juntas?",
+          "esperados": [
+            "70"
+          ],
+          "top5": [
+            "376",
+            "203",
+            "67",
+            "76-bis",
+            "38-bis"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q04",
+          "pregunta": "Me voy de la empresa y no alcancé a tomar vacaciones, ¿me las tienen que pagar?",
+          "esperados": [
+            "73"
+          ],
+          "top5": [
+            "37",
+            "76-bis",
+            "38",
+            "163-bis",
+            "32"
+          ],
+          "rango": 9,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q05",
+          "pregunta": "¿Puedo dividir mis vacaciones en partes?",
+          "esperados": [
+            "70"
+          ],
+          "top5": [
+            "34",
+            "376",
+            "76-bis",
+            "67",
+            "40-bis-c"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q15",
+          "pregunta": "Quiero renunciar, ¿con cuántos días de anticipación tengo que avisar?",
+          "esperados": [
+            "159"
+          ],
+          "top5": [
+            "162",
+            "152-quinquies-a",
+            "152-quater-o-ter",
+            "156",
+            "147"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q20",
+          "pregunta": "¿Cuánto dura el prenatal y el postnatal?",
+          "esperados": [
+            "195"
+          ],
+          "top5": [
+            "196",
+            "197-bis",
+            "201",
+            "200",
+            "198"
+          ],
+          "rango": 6,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q35",
+          "pregunta": "¿Qué datos debe tener mi contrato de trabajo?",
+          "esperados": [
+            "10"
+          ],
+          "top5": [
+            "154-ter",
+            "9-bis",
+            "152-quater-s",
+            "517",
+            "183-n"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q39",
+          "pregunta": "¿Cada cuánto tiempo me tienen que pagar el sueldo?",
+          "esperados": [
+            "55"
+          ],
+          "top5": [
+            "44",
+            "42",
+            "152-bis-h",
+            "45",
+            "32"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q40",
+          "pregunta": "¿Qué descuentos me pueden hacer del sueldo?",
+          "esperados": [
+            "58"
+          ],
+          "top5": [
+            "44",
+            "45",
+            "261",
+            "59",
+            "64"
+          ],
+          "rango": 8,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        }
+      ]
     }
-  }
+  },
+  "nota": "hybrid = RRF con peso FTS 1.0; hybrid@w = peso FTS w. hybrid_rerank usa @cf/baai/bge-reranker-base."
 }

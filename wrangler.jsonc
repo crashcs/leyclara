@@ -1,12 +1,14 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "leyclara",
+  // Cuenta de Cloudflare (venuxgaming). No es un secreto.
+  "account_id": "8ece96f1cb9468880aceb096264ea49c",
   "main": "worker/src/index.ts",
   "compatibility_date": "2026-11-01",
   "compatibility_flags": ["nodejs_compat"],
   "assets": { "directory": "./web", "binding": "ASSETS", "run_worker_first": ["/api/*", "/admin/*"] },
   "observability": { "enabled": true },
-  "vars": { "SEARCH_MODE": "hybrid", "CONTEXT_K": "8" },
+  "vars": { "SEARCH_MODE": "vector", "CONTEXT_K": "8" },
 
   // D1: local en `wrangler dev`. Para producción, reemplazar database_id por el de `wrangler d1 create leyclara`.
   "d1_databases": [

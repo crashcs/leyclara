@@ -97,12 +97,13 @@ export async function buscarVector(env: SearchEnv, q: string, limit = CANDIDATOS
   return ids;
 }
 
-export function rrf(listas: Record<string, string[]>, k = RRF_K): Resultado[] {
+export function rrf(listas: Record<string, string[]>, k = RRF_K, pesos: Record<string, number> = {}): Resultado[] {
   const acc = new Map<string, Resultado>();
   for (const [fuente, ids] of Object.entries(listas)) {
+    const peso = pesos[fuente] ?? 1;
     ids.forEach((id, i) => {
       const r = acc.get(id) ?? { articulo_id: id, score: 0, fuentes: {} };
-      r.score += 1 / (k + i + 1);
+      r.score += peso / (k + i + 1);
       (r.fuentes as any)[fuente] = i + 1;
       acc.set(id, r);
     });
@@ -140,7 +141,11 @@ async function rerank(ai: Ai, q: string, cands: Resultado[], textos: Map<string,
 export interface SearchOptions {
   k?: number;
   modo?: Modo;
+  /** Peso de la lista FTS en la fusión RRF (la de vectores pesa 1). */
+  pesoFts?: number;
 }
+
+export const PESO_FTS_DEFAULT = 0.1;
 
 export async function buscar(env: SearchEnv, q: string, opts: SearchOptions = {}): Promise<Resultado[]> {
   const k = opts.k ?? 8;
@@ -154,7 +159,7 @@ export async function buscar(env: SearchEnv, q: string, opts: SearchOptions = {}
     fusion = rrf({ vector: await buscarVector(env, q) });
   } else {
     const [fts, vector] = await Promise.all([buscarFts(env.DB, q), buscarVector(env, q)]);
-    fusion = rrf({ fts, vector });
+    fusion = rrf({ fts, vector }, RRF_K, { fts: opts.pesoFts ?? PESO_FTS_DEFAULT });
   }
 
   // Las referencias explícitas ("artículo 67") van primero si existen.
