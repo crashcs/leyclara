@@ -38,7 +38,7 @@ Estado al 21 de noviembre de 2026. Detalle técnico y métricas en el [README](R
 
 ### Repositorio
 - [x] GIF de demo en el README.
-- [ ] Repo público en GitHub con licencia MIT y CI.
+- [x] Repo público en GitHub con licencia MIT y CI: [crashcs/leyclara](https://github.com/crashcs/leyclara).
 
 ## Después del release
 
