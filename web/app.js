@@ -1,3 +1,8 @@
+// Si la página se abrió por http://, pasar a https:// (no en desarrollo local).
+if (location.protocol === "http:" && !["localhost", "127.0.0.1", "[::1]"].includes(location.hostname)) {
+  location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+}
+
 const $ = (id) => document.getElementById(id);
 const app = document.querySelector(".app");
 const portada = $("portada");
@@ -142,7 +147,11 @@ async function preguntar(pregunta) {
     guardarReciente(pregunta);
     if (d.citas[0] && window.matchMedia("(min-width: 1101px)").matches) abrirArticulo(d.citas[0].articulo_id);
   } catch (e) {
-    turno.querySelector(".turno-cuerpo").innerHTML = `<p class="error">No pude responder: ${escapar(e.message)}</p>`;
+    const sinRed = e instanceof TypeError; // fetch() falló antes de recibir respuesta
+    const msg = sinRed
+      ? "No pude conectarme con el servidor. Revisa tu conexión y recarga la página."
+      : `No pude responder: ${e.message}`;
+    turno.querySelector(".turno-cuerpo").innerHTML = `<p class="error">${escapar(msg)}</p>`;
   } finally {
     clearTimeout(t);
     enCurso = false;

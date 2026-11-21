@@ -190,8 +190,10 @@ export default {
   async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(req.url);
     if (ES_LOCAL.has(url.hostname)) return manejar(req, url, env, ctx);
-    // Fuera de local, todo va por HTTPS (si no, el navegador marca el sitio como "no seguro").
-    if (url.protocol === "http:") {
+    // Fuera de local, las páginas se sirven por HTTPS (si no, el navegador marca el sitio como
+    // "no seguro"). Solo se redirigen GET/HEAD: un 301 a un POST de una pestaña abierta en http://
+    // lo convierte en una petición a otro origen y el navegador la corta ("Failed to fetch").
+    if (url.protocol === "http:" && (req.method === "GET" || req.method === "HEAD")) {
       url.protocol = "https:";
       return Response.redirect(url.toString(), 301);
     }
