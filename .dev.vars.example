@@ -1,0 +1,4 @@
+# Copia este archivo a .dev.vars (ignorado por git) y completa los valores.
+ANTHROPIC_API_KEY=
+# Token para POST /admin/index (cualquier string largo y aleatorio)
+ADMIN_TOKEN=

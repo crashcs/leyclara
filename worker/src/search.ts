@@ -67,9 +67,10 @@ export async function buscarFts(db: D1Database, q: string, limit = CANDIDATOS): 
   if (!match) return [];
   const { results } = await db
     .prepare(
-      `SELECT articulo_id, MIN(bm25(chunks_fts, 0, 0, 1.0, 0.4)) AS s
-       FROM chunks_fts WHERE chunks_fts MATCH ?1
-       GROUP BY articulo_id ORDER BY s LIMIT ?2`,
+      `SELECT articulo_id, MIN(s) AS s FROM (
+         SELECT articulo_id, bm25(chunks_fts, 0, 0, 1.0, 0.4) AS s
+         FROM chunks_fts WHERE chunks_fts MATCH ?1 ORDER BY s LIMIT 200
+       ) GROUP BY articulo_id ORDER BY s LIMIT ?2`,
     )
     .bind(match, limit)
     .all<{ articulo_id: string; s: number }>();

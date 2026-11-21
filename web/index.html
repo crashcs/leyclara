@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ley Clara</title>
+  <meta name="description" content="Dudas sobre el Código del Trabajo de Chile, respondidas en lenguaje simple y siempre con el artículo exacto." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="marca">
+      <span class="logo" aria-hidden="true">§</span>
+      <div>
+        <h1>Ley Clara</h1>
+        <p class="sub">Código del Trabajo de Chile, en simple y con el artículo exacto.</p>
+      </div>
+    </div>
+    <p class="version" id="version">Cargando versión de la ley…</p>
+  </header>
+
+  <div class="aviso" role="note">
+    <strong>No es asesoría legal.</strong> Ley Clara explica lo que dice el texto de la ley y puede equivocarse.
+    Para tu caso concreto consulta a la <a href="https://www.dt.gob.cl" target="_blank" rel="noopener">Dirección del Trabajo</a> o a un abogado laboral.
+  </div>
+
+  <main class="layout">
+    <section class="chat" aria-label="Conversación">
+      <div id="mensajes" class="mensajes" aria-live="polite">
+        <div class="vacio" id="vacio">
+          <p>Pregunta lo que quieras sobre tus derechos laborales. Por ejemplo:</p>
+          <div class="ejemplos">
+            <button type="button" class="ejemplo">¿Cuántos días de vacaciones me tocan si llevo 12 años trabajando?</button>
+            <button type="button" class="ejemplo">¿Me pueden despedir estando con licencia médica?</button>
+            <button type="button" class="ejemplo">¿Cómo se calcula la indemnización por años de servicio?</button>
+            <button type="button" class="ejemplo">Trabajo desde mi casa, ¿quién paga el internet?</button>
+          </div>
+        </div>
+      </div>
+      <form id="form" class="form">
+        <label for="pregunta" class="sr">Tu pregunta</label>
+        <textarea id="pregunta" rows="2" maxlength="500" placeholder="Escribe tu pregunta…" required></textarea>
+        <div class="acciones">
+          <label class="preciso"><input type="checkbox" id="preciso" /> Modo preciso</label>
+          <button type="submit" id="enviar">Preguntar</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="panel" id="panel" aria-label="Artículo citado">
+      <div class="panel-vacio" id="panel-vacio">
+        <p>Toca una cita como <span class="chip estatico">Art. 67</span> para leer el artículo completo aquí.</p>
+      </div>
+      <article id="articulo" hidden>
+        <button type="button" class="cerrar" id="cerrar" aria-label="Cerrar artículo">×</button>
+        <p class="ruta" id="art-ruta"></p>
+        <h2 id="art-titulo"></h2>
+        <p class="meta" id="art-meta"></p>
+        <div class="texto" id="art-texto"></div>
+        <a id="art-link" class="fuente" target="_blank" rel="noopener">Ver en Ley Chile (BCN) ↗</a>
+      </article>
+    </aside>
+  </main>
+
+  <footer class="pie">
+    Texto legal: <a href="https://www.bcn.cl/leychile/navegar?idNorma=207436" target="_blank" rel="noopener">Ley Chile, Biblioteca del Congreso Nacional</a> (DFL 1, 2002).
+    Código abierto bajo licencia MIT.
+  </footer>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

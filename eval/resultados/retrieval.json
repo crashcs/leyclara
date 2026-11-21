@@ -1,0 +1,470 @@
+{
+  "fecha": "2026-11-21T01:28:01.735Z",
+  "n": 56,
+  "modos": {
+    "fts": {
+      "metricas": {
+        "hit@1": 33.9,
+        "hit@5": 55.4,
+        "hit@10": 64.3,
+        "recall@5": 53.6,
+        "recall@10": 63.4,
+        "MRR@10": 0.436
+      },
+      "fallos": [
+        {
+          "id": "q02",
+          "pregunta": "Llevo 12 años trabajando, ¿me corresponden más días de vacaciones?",
+          "esperados": [
+            "68"
+          ],
+          "top5": [
+            "203",
+            "14",
+            "67",
+            "376",
+            "104"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q03",
+          "pregunta": "¿Puedo juntar las vacaciones de dos años y tomarlas todas juntas?",
+          "esperados": [
+            "70"
+          ],
+          "top5": [
+            "203",
+            "376",
+            "103",
+            "67",
+            "38-bis"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q04",
+          "pregunta": "Me voy de la empresa y no alcancé a tomar vacaciones, ¿me las tienen que pagar?",
+          "esperados": [
+            "73"
+          ],
+          "top5": [
+            "20",
+            "352",
+            "203",
+            "152-quinquies-e",
+            "388"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q05",
+          "pregunta": "¿Puedo dividir mis vacaciones en partes?",
+          "esperados": [
+            "70"
+          ],
+          "top5": [
+            "376",
+            "152-quater-v",
+            "34",
+            "112",
+            "152-quater-y"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q06",
+          "pregunta": "¿Cómo se calcula la indemnización por años de servicio?",
+          "esperados": [
+            "163"
+          ],
+          "top5": [
+            "152-quinquies-g",
+            "40-bis-d",
+            "172",
+            "167",
+            "163-bis"
+          ],
+          "rango": 6,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q07",
+          "pregunta": "¿Me pueden despedir estando con licencia médica?",
+          "esperados": [
+            "161"
+          ],
+          "top5": [
+            "350",
+            "215",
+            "183-nn",
+            "158",
+            "420"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q08",
+          "pregunta": "Me despidieron por necesidades de la empresa, ¿qué significa eso?",
+          "esperados": [
+            "161"
+          ],
+          "top5": [
+            "354",
+            "311",
+            "152-quater-c",
+            "261",
+            "145-bis-e"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q09",
+          "pregunta": "¿Con cuánta anticipación me tienen que avisar si me despiden?",
+          "esperados": [
+            "161",
+            "162"
+          ],
+          "top5": [
+            "496",
+            "444",
+            "18-bis",
+            "18-quater",
+            "t-10"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q13",
+          "pregunta": "¿Por qué causas me pueden despedir sin pagarme indemnización?",
+          "esperados": [
+            "160"
+          ],
+          "top5": [
+            "215",
+            "171",
+            "t-6",
+            "168",
+            "169"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q15",
+          "pregunta": "Quiero renunciar, ¿con cuántos días de anticipación tengo que avisar?",
+          "esperados": [
+            "159"
+          ],
+          "top5": [
+            "161",
+            "195",
+            "444",
+            "496",
+            "27"
+          ],
+          "rango": 9,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q18",
+          "pregunta": "¿En cuántos días me tienen que pagar el finiquito?",
+          "esperados": [
+            "177"
+          ],
+          "top5": [
+            "163-bis",
+            "162",
+            "t-8",
+            "63-bis",
+            "67"
+          ],
+          "rango": 6,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q19",
+          "pregunta": "¿Me pueden despedir si estoy embarazada?",
+          "esperados": [
+            "201",
+            "174"
+          ],
+          "top5": [
+            "211-i",
+            "215",
+            "183",
+            "325",
+            "334"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q20",
+          "pregunta": "¿Cuánto dura el prenatal y el postnatal?",
+          "esperados": [
+            "195"
+          ],
+          "top5": [
+            "196",
+            "197-bis",
+            "201",
+            "198",
+            "200"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q27",
+          "pregunta": "Me voy a casar, ¿me dan días libres?",
+          "esperados": [
+            "207-bis"
+          ],
+          "top5": [
+            "437",
+            "8",
+            "400",
+            "402",
+            "145-bis-e"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q28",
+          "pregunta": "¿Cuántas horas a la semana puede durar la jornada laboral?",
+          "esperados": [
+            "22"
+          ],
+          "top5": [
+            "22-bis",
+            "34-bis",
+            "149",
+            "26",
+            "38"
+          ],
+          "rango": 8,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q31",
+          "pregunta": "¿Tengo derecho a un tiempo para almorzar y se cuenta como trabajado?",
+          "esperados": [
+            "34"
+          ],
+          "top5": [
+            "206",
+            "274",
+            "252",
+            "199-bis",
+            "359"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q35",
+          "pregunta": "¿Qué datos debe tener mi contrato de trabajo?",
+          "esperados": [
+            "10"
+          ],
+          "top5": [
+            "517",
+            "152-quinquies-d",
+            "154-ter",
+            "183-y",
+            "447"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q36",
+          "pregunta": "¿Me pueden cambiar de funciones o de lugar de trabajo sin mi permiso?",
+          "esperados": [
+            "12"
+          ],
+          "top5": [
+            "10",
+            "53",
+            "201",
+            "235",
+            "183"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q39",
+          "pregunta": "¿Cada cuánto tiempo me tienen que pagar el sueldo?",
+          "esperados": [
+            "55"
+          ],
+          "top5": [
+            "44",
+            "32",
+            "71",
+            "98",
+            "42"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q40",
+          "pregunta": "¿Qué descuentos me pueden hacer del sueldo?",
+          "esperados": [
+            "58"
+          ],
+          "top5": [
+            "42",
+            "261",
+            "183",
+            "32",
+            "325"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q43",
+          "pregunta": "Trabajo desde mi casa, ¿quién paga el computador y los gastos de internet?",
+          "esperados": [
+            "152-quater-l"
+          ],
+          "top5": [
+            "53",
+            "129",
+            "41",
+            "149",
+            "203"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q48",
+          "pregunta": "¿Cuántos trabajadores se necesitan para formar un sindicato?",
+          "esperados": [
+            "227"
+          ],
+          "top5": [
+            "228",
+            "158",
+            "496",
+            "444",
+            "18-bis"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q49",
+          "pregunta": "¿Los dirigentes sindicales tienen fuero?",
+          "esperados": [
+            "243"
+          ],
+          "top5": [
+            "274",
+            "272",
+            "283",
+            "251",
+            "289"
+          ],
+          "rango": 8,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 1
+        },
+        {
+          "id": "q50",
+          "pregunta": "¿Pueden reemplazar a los trabajadores que están en huelga?",
+          "esperados": [
+            "345"
+          ],
+          "top5": [
+            "400",
+            "403",
+            "183-p",
+            "183",
+            "350"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q52",
+          "pregunta": "¿Cuánto tiempo tengo para reclamar derechos laborales antes de que prescriban?",
+          "esperados": [
+            "510"
+          ],
+          "top5": [
+            "213",
+            "305",
+            "34",
+            "44",
+            "206"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        }
+      ]
+    }
+  }
+}
