@@ -5,7 +5,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
+    "dev": "wrangler dev --env=\"\"",
+    "deploy": "bash scripts/deploy.sh",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "db:migrate:local": "wrangler d1 migrations apply leyclara --local",

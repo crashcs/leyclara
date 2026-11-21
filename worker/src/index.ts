@@ -8,6 +8,7 @@
 
 import { buscar, embed, obtenerArticulos, type Modo, type SearchEnv } from "./search";
 import { generar, MODELO_DEFAULT, MODELO_PRECISO, RESPUESTA_SIN_BASE } from "./generate";
+import { normalizar } from "./textnorm";
 
 export interface Env extends SearchEnv {
   ASSETS?: Fetcher;
@@ -15,6 +16,24 @@ export interface Env extends SearchEnv {
   ADMIN_TOKEN?: string;
   SEARCH_MODE?: Modo;
   CONTEXT_K?: string;
+  /** Rate limiting por IP (binding "ratelimits"); si no existe, no se limita. */
+  RATE_LIMITER?: RateLimit;
+  /** Horas que se cachea una respuesta a la misma pregunta (0 = sin caché). */
+  CACHE_HORAS?: string;
+}
+
+async function limitado(env: Env, req: Request, prefijo: string): Promise<boolean> {
+  if (!env.RATE_LIMITER) return false;
+  const ip = req.headers.get("cf-connecting-ip") ?? "local";
+  const { success } = await env.RATE_LIMITER.limit({ key: `${prefijo}:${ip}` });
+  return !success;
+}
+
+function respuestaLimitada(): Response {
+  return new Response(JSON.stringify({ error: "Demasiadas preguntas seguidas. Espera un minuto e intenta de nuevo." }), {
+    status: 429,
+    headers: { "content-type": "application/json; charset=utf-8", "retry-after": "60" },
+  });
 }
 
 const MODOS: Modo[] = ["fts", "vector", "hybrid", "hybrid_rerank"];
@@ -37,7 +56,8 @@ async function meta(env: Env): Promise<Record<string, string>> {
   return { ...Object.fromEntries(results.map((r) => [r.key, r.value])), modo_busqueda: modoPorDefecto(env) };
 }
 
-async function handleSearch(url: URL, env: Env): Promise<Response> {
+async function handleSearch(req: Request, url: URL, env: Env): Promise<Response> {
+  if (await limitado(env, req, "search")) return respuestaLimitada();
   const q = (url.searchParams.get("q") || "").slice(0, MAX_PREGUNTA).trim();
   if (!q) return json({ error: "Falta el parámetro q" }, 400);
   const k = Math.min(Math.max(parseInt(url.searchParams.get("k") || "8", 10) || 8, 1), 30);
@@ -59,7 +79,7 @@ async function handleSearch(url: URL, env: Env): Promise<Response> {
   });
 }
 
-async function handleAsk(req: Request, env: Env): Promise<Response> {
+async function handleAsk(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
   if (!env.ANTHROPIC_API_KEY) return json({ error: "Falta ANTHROPIC_API_KEY (ver .dev.vars.example)" }, 503);
   let body: { pregunta?: string; modelo?: string };
   try {
@@ -72,12 +92,28 @@ async function handleAsk(req: Request, env: Env): Promise<Response> {
   if (pregunta.length > MAX_PREGUNTA) return json({ error: `La pregunta supera ${MAX_PREGUNTA} caracteres` }, 400);
   const modelo = body.modelo === "preciso" ? MODELO_PRECISO : MODELO_DEFAULT;
 
+  // Caché de preguntas repetidas (la clave incluye la versión de la ley y el modelo).
+  const horas = parseFloat(env.CACHE_HORAS ?? "24");
+  const m0 = await meta(env);
+  const cacheKey = new Request(
+    `https://cache.leyclara.internal/ask?v=${encodeURIComponent(m0.fecha_version ?? "")}&m=${modelo}&q=${encodeURIComponent(normalizar(pregunta))}`,
+  );
+  const cache = horas > 0 && typeof caches !== "undefined" ? caches.default : undefined;
+  const enCache = cache ? await cache.match(cacheKey) : undefined;
+  if (enCache) {
+    const r = new Response(enCache.body, enCache);
+    r.headers.set("x-cache", "HIT");
+    r.headers.set("cache-control", "no-store");
+    return r;
+  }
+  if (await limitado(env, req, "ask")) return respuestaLimitada();
+
   const t0 = Date.now();
   const k = parseInt(env.CONTEXT_K || "8", 10);
   const recuperados = await buscar(env, pregunta, { k, modo: modoPorDefecto(env) });
   const arts = await obtenerArticulos(env.DB, recuperados.map((r) => r.articulo_id));
   const articulos = recuperados.map((r) => arts.get(r.articulo_id)!).filter(Boolean);
-  const m = await meta(env);
+  const m = m0;
 
   if (!articulos.length) {
     return json({
@@ -91,7 +127,7 @@ async function handleAsk(req: Request, env: Env): Promise<Response> {
 
   const g = await generar(env.ANTHROPIC_API_KEY, pregunta, articulos, modelo);
   const porId = new Map(articulos.map((a) => [a.id, a]));
-  return json({
+  const resp = json({
     respuesta: g.salida.respuesta,
     sin_base_legal: g.abstencion,
     advertencia: g.advertencia,
@@ -112,6 +148,13 @@ async function handleAsk(req: Request, env: Env): Promise<Response> {
     uso: g.uso,
     ms: Date.now() - t0,
   });
+  if (cache) {
+    const paraCache = resp.clone();
+    const h = new Headers(paraCache.headers);
+    h.set("cache-control", `public, max-age=${Math.round(horas * 3600)}`);
+    ctx.waitUntil(cache.put(cacheKey, new Response(paraCache.body, { status: 200, headers: h })));
+  }
+  return resp;
 }
 
 async function handleIndex(req: Request, url: URL, env: Env): Promise<Response> {
@@ -133,12 +176,12 @@ async function handleIndex(req: Request, url: URL, env: Env): Promise<Response> 
 }
 
 export default {
-  async fetch(req: Request, env: Env): Promise<Response> {
+  async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(req.url);
     try {
       if (url.pathname === "/api/meta" && req.method === "GET") return json(await meta(env));
-      if (url.pathname === "/api/search" && req.method === "GET") return await handleSearch(url, env);
-      if (url.pathname === "/api/ask" && req.method === "POST") return await handleAsk(req, env);
+      if (url.pathname === "/api/search" && req.method === "GET") return await handleSearch(req, url, env);
+      if (url.pathname === "/api/ask" && req.method === "POST") return await handleAsk(req, env, ctx);
       const art = url.pathname.match(/^\/api\/articulos\/([\w-]+)$/);
       if (art && req.method === "GET") {
         const a = (await obtenerArticulos(env.DB, [art[1]])).get(art[1]);

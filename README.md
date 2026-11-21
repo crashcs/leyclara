@@ -94,10 +94,23 @@ Tests: `cd ingest && uv run pytest` (parser y stemming) y `npx vitest run` (vali
 | POST | `/api/ask` | `{pregunta, modelo?: "rapido" \| "preciso"}` → respuesta, citas validadas, artículos recuperados |
 | GET | `/api/articulos/:id` | Texto completo de un artículo (`67`, `152-quater-j`, `t-23`) |
 
+## Deploy
+
+Un solo Worker sirve la API y la página (Workers Static Assets), así que no hace falta un proyecto de Pages aparte.
+
+```bash
+npx wrangler secret put ANTHROPIC_API_KEY   # una vez
+npm run deploy                              # scripts/deploy.sh
+```
+
+El script crea la D1 remota si no existe (y anota su `database_id` en `wrangler.jsonc`), aplica la migración, carga `seed.sql`, verifica el secreto, hace el deploy y prueba `/api/meta` y `/api/search`. Usa el mismo índice Vectorize que el desarrollo local.
+
+Protecciones activas en producción: 10 solicitudes por minuto por IP a `/api/ask` y a `/api/search` (binding `ratelimits`), caché de 24 h para preguntas repetidas (la clave incluye la versión de la ley y el modelo) y preguntas de 500 caracteres como máximo.
+
+**Dominio `ley.manuel.ac`**: descomentar `routes` en `wrangler.jsonc` (custom domain). Requiere que la zona `manuel.ac` esté en la misma cuenta de Cloudflare que el Worker.
+
 ## Pendiente
 
-- Deploy en `ley.manuel.ac`: D1 y Vectorize de producción, secreto `ANTHROPIC_API_KEY`, dominio.
-- Rate limit por IP y caché de preguntas frecuentes.
 - Cron diario que compare `fechaVersion` y reindexe solo lo que cambió.
 - Más leyes: Ley del Consumidor 19.496, Ley de Arriendo 18.101.
 
