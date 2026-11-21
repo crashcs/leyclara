@@ -51,9 +51,10 @@ describe("parser.ts (unidades)", () => {
 });
 
 describe.skipIf(!hayDatos)("paridad con la ingesta de Python", () => {
-  const py = JSON.parse(readFileSync(resolve(build, "articulos.json"), "utf8"));
-  const pyChunks: { id: string; texto: string }[] = JSON.parse(readFileSync(resolve(build, "chunks.json"), "utf8"));
-  const ts = NORMAS.flatMap((cfg) => articulosDeNorma(parseNorma(readFileSync(xmlDe(cfg.id), "utf8")), cfg));
+  // Vitest ejecuta este cuerpo aunque el bloque se salte: leer solo si hay datos.
+  const py = hayDatos ? JSON.parse(readFileSync(resolve(build, "articulos.json"), "utf8")) : { articulos: [] };
+  const pyChunks: { id: string; texto: string }[] = hayDatos ? JSON.parse(readFileSync(resolve(build, "chunks.json"), "utf8")) : [];
+  const ts = hayDatos ? NORMAS.flatMap((cfg) => articulosDeNorma(parseNorma(readFileSync(xmlDe(cfg.id), "utf8")), cfg)) : [];
 
   it("mismos artículos, en el mismo orden", () => {
     expect(ts.map((a) => a.id)).toEqual(py.articulos.map((a: any) => a.id));
