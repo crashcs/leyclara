@@ -7,9 +7,17 @@
 //   POST /admin/index?offset=&limit=   embebe chunks de D1 y los sube a Vectorize (requiere ADMIN_TOKEN)
 
 import { buscar, obtenerArticulos, type Modo, type SearchEnv } from "./search";
-import { generar, MODELO_DEFAULT, MODELO_PRECISO, RESPUESTA_SIN_BASE } from "./generate";
+import { fechaChile, generar, MODELO_DEFAULT, MODELO_PRECISO, RESPUESTA_SIN_BASE, SYSTEM_PROMPT } from "./generate";
 import { normalizar } from "./textnorm";
 import { indexarChunks, revisarNormas } from "./actualizar";
+import { NORMAS } from "./normas";
+
+/** Huella del prompt y de las normas: si cambian, las respuestas cacheadas dejan de servirse. */
+const HUELLA = (() => {
+  let h = 0x811c9dc5;
+  for (const ch of SYSTEM_PROMPT + JSON.stringify(NORMAS)) h = Math.imul(h ^ ch.charCodeAt(0), 0x01000193) >>> 0;
+  return h.toString(36);
+})();
 
 export interface Env extends SearchEnv {
   ASSETS?: Fetcher;
@@ -108,7 +116,7 @@ async function handleAsk(req: Request, env: Env, ctx: ExecutionContext): Promise
   const horas = parseFloat(env.CACHE_HORAS ?? "24");
   const m0 = await meta(env);
   const cacheKey = new Request(
-    `https://cache.leyclara.internal/ask?v=${encodeURIComponent(m0.fecha_version ?? "")}&m=${modelo}&q=${encodeURIComponent(normalizar(pregunta))}`,
+    `https://cache.leyclara.internal/ask?v=${encodeURIComponent(m0.fecha_version ?? "")}&h=${HUELLA}&d=${fechaChile()}&m=${modelo}&q=${encodeURIComponent(normalizar(pregunta))}`,
   );
   const cache = horas > 0 && typeof caches !== "undefined" ? caches.default : undefined;
   const enCache = cache ? await cache.match(cacheKey) : undefined;
