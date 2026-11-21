@@ -1,0 +1,55 @@
+{
+  "fecha": "2026-11-21T06:25:41.924Z",
+  "n": 57,
+  "modos": {
+    "vector": {
+      "metricas": {
+        "hit@1": 73.7,
+        "hit@5": 96.5,
+        "hit@10": 98.2,
+        "recall@5": 93.9,
+        "recall@10": 97.4,
+        "MRR@10": 0.833
+      },
+      "fallos": [
+        {
+          "id": "q15",
+          "pregunta": "Quiero renunciar, ¿con cuántos días de anticipación tengo que avisar?",
+          "esperados": [
+            "159"
+          ],
+          "top5": [
+            "162",
+            "170",
+            "197-bis",
+            "152-quater-o-ter",
+            "161"
+          ],
+          "rango": 0,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0
+        },
+        {
+          "id": "q57",
+          "pregunta": "¿Cuántas horas a la semana puedo trabajar como máximo hoy, con la ley de 40 horas?",
+          "esperados": [
+            "l21561-t-primero",
+            "22"
+          ],
+          "top5": [
+            "l21561-t-octavo",
+            "34-bis",
+            "28",
+            "40-bis-a",
+            "24"
+          ],
+          "rango": 7,
+          "rec1": 0,
+          "rec5": 0,
+          "rec10": 0.5
+        }
+      ]
+    }
+  }
+}

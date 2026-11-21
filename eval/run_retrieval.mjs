@@ -24,8 +24,8 @@ const preguntas = readFileSync(new URL("./preguntas.jsonl", import.meta.url), "u
 
 async function buscar(q, modoSpec) {
   const [modo, peso] = modoSpec.split("@");
-  const extra = peso !== undefined ? `&peso_fts=${peso}` : "";
-  const r = await fetch(`${BASE}/api/search?k=10&modo=${modo}${extra}&q=${encodeURIComponent(q)}`);
+  const cuerpo = { q, k: 10, modo, expandir: args.expandir !== "0", ...(peso !== undefined ? { peso_fts: parseFloat(peso) } : {}) };
+  const r = await fetch(`${BASE}/api/search`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(cuerpo) });
   if (!r.ok) throw new Error(`${r.status} ${await r.text()}`);
   return (await r.json()).resultados.map((x) => x.articulo_id);
 }
@@ -56,5 +56,6 @@ for (const modo of MODOS) {
 }
 
 mkdirSync(new URL("./resultados/", import.meta.url), { recursive: true });
-writeFileSync(new URL("./resultados/retrieval.json", import.meta.url), JSON.stringify(informe, null, 2));
-console.log("\nGuardado en eval/resultados/retrieval.json");
+const salida = args.salida || "retrieval.json";
+writeFileSync(new URL(`./resultados/${salida}`, import.meta.url), JSON.stringify(informe, null, 2));
+console.log(`\nGuardado en eval/resultados/${salida}`);

@@ -51,20 +51,23 @@ async function cargarMeta() {
     const m = await r.json();
     $("d-version").textContent = fmtFecha(m.fecha_version, true);
     $("d-articulos").textContent = m.n_articulos ?? "737";
-    let rev = "";
+    $("pie-version").textContent = `· ${fmtFecha(m.fecha_version, true)}`;
+    $("pie-fuente").href = m.fuente || $("pie-fuente").href;
     const r0 = m.ultima_revision?.revisado;
     if (r0) {
       const d = new Date(r0);
       const hoy = new Date().toDateString() === d.toDateString();
       const cuando = hoy
         ? `hoy, ${d.toLocaleTimeString("es-CL", { hour: "2-digit", minute: "2-digit" })}`
-        : d.toLocaleDateString("es-CL", { day: "numeric", month: "short" });
-      const error = (m.ultima_revision.normas || []).some((n) => n.estado === "error");
-      rev = `<br><span title="Ley Clara revisa Ley Chile una vez al día">${error ? "Revisión con errores" : "Revisado en Ley Chile"}: ${escapar(cuando)}</span>`;
+        : `el ${d.toLocaleDateString("es-CL", { day: "numeric", month: "short" })}`;
+      const conError = (m.ultima_revision.normas || []).some((n) => n.estado === "error");
+      $("pie-rev").textContent = conError ? `Última revisión con errores (${cuando})` : `Revisado en Ley Chile ${cuando}`;
+      $("pie-rev").title = "Ley Clara revisa una vez al día si Ley Chile publicó una versión nueva";
+      $("pie-rev").hidden = false;
     }
-    $("version").innerHTML = `Código del Trabajo<br><strong>versión del ${escapar(fmtFecha(m.fecha_version))}</strong> · <a href="${escapar(m.fuente)}" target="_blank" rel="noopener">fuente</a>${rev}`;
+    if (m.turnstile_site_key) iniciarTurnstile(m.turnstile_site_key);
   } catch {
-    $("version").textContent = "Código del Trabajo de Chile";
+    /* sin metadatos: el pie muestra solo el nombre de la ley */
   }
 }
 
@@ -90,15 +93,25 @@ function renderTurno(turno, d) {
   for (const c of d.citas) idx(c); // citas sin marcador también van a fuentes
   cuerpo = cuerpo.split(/\n{2,}/).map((p) => `<p>${p.replace(/\n/g, "<br>")}</p>`).join("");
 
-  const meta = [
-    `Código del Trabajo, versión del ${escapar(fmtFecha(d.fecha_version))}`,
-    d.modelo ? (d.modelo.includes("sonnet") ? "Modo preciso" : "Modo rápido") : "",
-  ].filter(Boolean).map((t) => `<span>${t}</span>`).join("");
+  const meta = `<span>Código del Trabajo, versión del ${escapar(fmtFecha(d.fecha_version))}. Fuente: Ley Chile – BCN. No es asesoría legal.</span>`;
+  const acciones = (pregunta) => `
+    <div class="acciones-resp" data-pregunta="${escapar(pregunta)}">
+      <span class="valorar"><span class="valorar-txt">¿Te sirvió?</span>
+        <button type="button" class="btn-ico" data-util="1" aria-label="Sí, me sirvió">👍</button>
+        <button type="button" class="btn-ico" data-util="0" aria-label="No me sirvió">👎</button>
+      </span>
+      <span class="acciones-der">
+        <button type="button" class="btn-txt" data-accion="copiar">Copiar</button>
+        <button type="button" class="btn-txt" data-accion="compartir">Compartir</button>
+      </span>
+    </div>`;
+  turno._datos = d;
 
   if (d.sin_base_legal) {
     turno.querySelector(".turno-cuerpo").innerHTML = `
       <div class="sin-base"><div class="respuesta"><p>${escapar(d.respuesta)}</p></div></div>
-      <div class="turno-meta">${meta}</div>`;
+      <div class="turno-meta">${meta}</div>
+      ${acciones(turno.dataset.pregunta)}`;
     return;
   }
 
@@ -114,12 +127,41 @@ function renderTurno(turno, d) {
     ${d.advertencia ? `<p class="nota">${escapar(d.advertencia)}</p>` : ""}
     <p class="fuentes-titulo">Fuentes</p>
     <ul class="fuentes">${fuentes}</ul>
-    <div class="turno-meta">${meta}</div>`;
+    <div class="turno-meta">${meta}</div>
+    ${acciones(turno.dataset.pregunta)}`;
 }
 
 /* ---------- Preguntar ---------- */
-function modoPreciso() {
-  return [...document.querySelectorAll("[data-preciso]")].some((x) => x.checked);
+/* ---------- Cloudflare Turnstile (opcional) ---------- */
+let tsWidget = null;
+let tsPendiente = null;
+let tsListo = null; // promesa que se resuelve cuando el widget está montado
+function iniciarTurnstile(sitekey) {
+  let listo;
+  tsListo = new Promise((r) => (listo = r));
+  window.onTurnstileListo = () => {
+    tsWidget = window.turnstile.render("#turnstile", {
+      sitekey,
+      execution: "execute",
+      appearance: "interaction-only",
+      callback: (token) => tsPendiente?.resolve(token),
+      "error-callback": () => tsPendiente?.reject(new Error("No pudimos verificar que eres una persona. Recarga la página.")),
+    });
+    listo();
+  };
+  const s = document.createElement("script");
+  s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileListo";
+  s.async = true;
+  document.head.appendChild(s);
+}
+async function tokenTurnstile() {
+  if (tsListo) await Promise.race([tsListo, new Promise((r) => setTimeout(r, 8000))]);
+  if (tsWidget === null || !window.turnstile) return undefined;
+  return new Promise((resolve, reject) => {
+    tsPendiente = { resolve, reject };
+    window.turnstile.reset(tsWidget);
+    window.turnstile.execute(tsWidget);
+  });
 }
 
 async function preguntar(pregunta) {
@@ -132,6 +174,7 @@ async function preguntar(pregunta) {
 
   const turno = document.createElement("article");
   turno.className = "turno";
+  turno.dataset.pregunta = pregunta;
   turno.innerHTML = `
     <h2 class="turno-preg">${escapar(pregunta)}</h2>
     <div class="turno-cuerpo"><div class="cargando">
@@ -145,10 +188,11 @@ async function preguntar(pregunta) {
   const estado = turno.querySelector(".estado");
   const t = setTimeout(() => estado && (estado.textContent = "Redactando la respuesta y verificando cada cita…"), 1400);
   try {
+    const turnstile = await tokenTurnstile();
     const r = await fetch("/api/ask", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ pregunta, modelo: modoPreciso() ? "preciso" : "rapido" }),
+      body: JSON.stringify({ pregunta, turnstile }),
     });
     const d = await r.json().catch(() => ({}));
     if (!r.ok) throw new Error(d.error || `Error ${r.status}`);
@@ -247,9 +291,86 @@ document.querySelectorAll("textarea").forEach((ta) => {
     if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); ta.form.requestSubmit(); }
   });
 });
-document.querySelectorAll("[data-preciso]").forEach((c) =>
-  c.addEventListener("change", () => document.querySelectorAll("[data-preciso]").forEach((o) => (o.checked = c.checked))),
-);
+/* ---------- Valorar, copiar y compartir ---------- */
+async function valorar(boton) {
+  const caja = boton.closest(".acciones-resp");
+  const turno = boton.closest(".turno");
+  const d = turno?._datos;
+  if (!caja || !d || caja.dataset.valorado) return;
+  caja.dataset.valorado = "1";
+  const util = boton.dataset.util === "1";
+  caja.querySelectorAll("[data-util]").forEach((b) => (b.disabled = true));
+  boton.setAttribute("aria-pressed", "true");
+  try {
+    await fetch("/api/feedback", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        pregunta: caja.dataset.pregunta,
+        util,
+        citas: d.citas.map((c) => c.articulo_id),
+        abstencion: !!d.sin_base_legal,
+        huella: d.huella,
+      }),
+    });
+    caja.querySelector(".valorar-txt").textContent = util ? "¡Gracias!" : "Gracias, nos ayuda a mejorar.";
+  } catch {
+    caja.querySelector(".valorar-txt").textContent = "No se pudo enviar.";
+  }
+}
+
+const enlaceDe = (pregunta) => `${location.origin}/?q=${encodeURIComponent(pregunta)}`;
+
+function textoParaCopiar(pregunta, d) {
+  const respuesta = d.respuesta.replace(/\s*\[(Art(?:ículo|\.)?\s*)?([^\]]{1,80}?)\]/gi, (t, pref, num) => (pref ? ` (Art. ${num})` : t));
+  const fuentes = d.citas
+    .filter((c, i, l) => l.findIndex((x) => x.articulo_id === c.articulo_id) === i)
+    .map((c) => `- Artículo ${c.numero}: ${c.url}`)
+    .join("\n");
+  return [
+    pregunta,
+    "",
+    respuesta,
+    fuentes ? `\nFuentes:\n${fuentes}` : "",
+    `\nRespondido por Ley Clara (no es asesoría legal): ${enlaceDe(pregunta)}`,
+  ].join("\n");
+}
+
+async function copiar(texto, boton, etiqueta) {
+  try {
+    await navigator.clipboard.writeText(texto);
+    boton.textContent = etiqueta;
+  } catch {
+    boton.textContent = "No se pudo copiar";
+  }
+  setTimeout(() => (boton.textContent = boton.dataset.accion === "copiar" ? "Copiar" : "Compartir"), 2000);
+}
+
+async function accion(boton) {
+  const caja = boton.closest(".acciones-resp");
+  const d = boton.closest(".turno")?._datos;
+  if (!caja || !d) return;
+  const pregunta = caja.dataset.pregunta;
+  if (boton.dataset.accion === "copiar") return copiar(textoParaCopiar(pregunta, d), boton, "Copiado");
+  const url = enlaceDe(pregunta);
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: "Ley Clara", text: pregunta, url });
+      return;
+    } catch {
+      /* cancelado o no disponible: se copia el enlace */
+    }
+  }
+  copiar(url, boton, "Enlace copiado");
+}
+
+document.addEventListener("click", (e) => {
+  const util = e.target.closest("[data-util]");
+  if (util) return valorar(util);
+  const acc = e.target.closest("[data-accion]");
+  if (acc) accion(acc);
+});
+
 $("cerrar").addEventListener("click", cerrarLector);
 $("velo").addEventListener("click", cerrarLector);
 $("nueva").addEventListener("click", nuevaConsulta);
@@ -257,4 +378,11 @@ $("inicio").addEventListener("click", (e) => { e.preventDefault(); nuevaConsulta
 document.addEventListener("keydown", (e) => { if (e.key === "Escape" && artAbierto) cerrarLector(); });
 
 pintarRecientes();
-cargarMeta();
+cargarMeta().then(() => {
+  // Enlace compartido: /?q=pregunta
+  const q = new URLSearchParams(location.search).get("q");
+  if (q) {
+    history.replaceState(null, "", location.pathname);
+    preguntar(q.slice(0, 500));
+  }
+});

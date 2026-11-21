@@ -2,6 +2,7 @@
 // re-ranking opcional con un cross-encoder de Workers AI.
 
 import { tokens } from "./textnorm";
+import { expandirConsulta } from "./sinonimos";
 
 export const EMBEDDING_MODEL = "@cf/baai/bge-m3";
 export const RERANK_MODEL = "@cf/baai/bge-reranker-base";
@@ -149,6 +150,8 @@ export interface SearchOptions {
    * (p. ej. el transitorio de la Ley 21.561 que escalona el art. 22). 0 = ninguno.
    */
   relacionados?: number;
+  /** Agregar términos legales a la consulta ("vacaciones" -> "feriado anual"). Por defecto, sí. */
+  expandir?: boolean;
 }
 
 /** Artículos vinculados a los recuperados (tabla relaciones), en orden de aparición. */
@@ -177,6 +180,8 @@ export async function buscar(env: SearchEnv, q: string, opts: SearchOptions = {}
   const k = opts.k ?? 8;
   const modo: Modo = opts.modo ?? (env.VECTORIZE && env.AI ? "hybrid" : "fts");
   const refs = referenciasExplicitas(q);
+  const original = q;
+  q = opts.expandir === false ? q : expandirConsulta(q);
 
   let fusion: Resultado[];
   if (modo === "fts") {
@@ -202,7 +207,7 @@ export async function buscar(env: SearchEnv, q: string, opts: SearchOptions = {}
     const nRef = fusion.filter((r) => r.fuentes.ref).length;
     const pool = fusion.slice(nRef, nRef + 20);
     const textos = await obtenerArticulos(env.DB, pool.map((p) => p.articulo_id));
-    const rer = await rerank(env.AI, q, pool, textos);
+    const rer = await rerank(env.AI, original, pool, textos);
     fusion = [...fusion.slice(0, nRef), ...rer];
   }
   return agregarRelacionados(env.DB, fusion.slice(0, k), opts.relacionados ?? 0);

@@ -63,7 +63,7 @@ url=$(echo "$salida" | grep -oE 'https://[a-z0-9.-]+\.workers\.dev' | head -1 ||
 paso "5. Prueba"
 if [ -n "$url" ]; then
   curl -fsS "$url/api/meta" && echo
-  curl -fsS "$url/api/search?q=vacaciones&k=3" | head -c 300 && echo
+  curl -fsS -X POST -H 'content-type: application/json' -d '{"q":"vacaciones","k":3}' "$url/api/search" | head -c 300 && echo
   echo "Listo: $url"
 else
   echo "No encontré la URL de workers.dev en la salida; revisa el dashboard."

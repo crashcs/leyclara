@@ -2,3 +2,8 @@
 ANTHROPIC_API_KEY=
 # Token para POST /admin/index (cualquier string largo y aleatorio)
 ADMIN_TOKEN=
+# Opcional: Cloudflare Turnstile (en producción, TURNSTILE_SITE_KEY va en vars y TURNSTILE_SECRET como secreto)
+# TURNSTILE_SITE_KEY=
+# TURNSTILE_SECRET=
+# Opcional: webhook para avisos de la revisión diaria (Discord, Slack, ntfy)
+# ALERTA_WEBHOOK_URL=

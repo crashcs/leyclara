@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Privacidad y uso · Ley Clara</title>
+  <meta name="description" content="Qué datos procesa Ley Clara, a quién se envían y cómo se usa el texto de Ley Chile." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter+Tight:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    body { height: auto; }
+    .doc { max-width: 720px; margin: 0 auto; padding: 48px max(20px, env(safe-area-inset-right, 0px)) 72px max(20px, env(safe-area-inset-left, 0px)); }
+    .doc .volver { font-size: 14px; color: var(--tinta-2); text-decoration: none; }
+    .doc .volver:hover { text-decoration: underline; }
+    .doc h1 { font: 400 clamp(34px, 5vw, 48px)/1.08 var(--serif); letter-spacing: -0.02em; margin: 18px 0 8px; }
+    .doc .act { color: var(--gris); font-size: 13.5px; margin: 0 0 32px; }
+    .doc h2 { font: 500 22px/1.25 var(--serif); margin: 36px 0 8px; }
+    .doc p, .doc li { font-size: 16px; line-height: 1.65; color: var(--tinta); }
+    .doc ul { padding-left: 20px; }
+    .doc li + li { margin-top: 6px; }
+    .doc .caja-aviso { border-left: 2px solid var(--alerta); padding: 4px 0 4px 16px; color: var(--tinta-2); }
+  </style>
+</head>
+<body>
+  <main class="doc">
+    <a href="/" class="volver">← Volver a Ley Clara</a>
+    <h1>Privacidad y uso</h1>
+    <p class="act">Actualizado el 21 de noviembre de 2026.</p>
+
+    <p class="caja-aviso"><strong>Ley Clara no es asesoría legal.</strong> Explica lo que dice el texto de la ley y puede equivocarse. Para tu caso concreto consulta a la <a href="https://www.dt.gob.cl" target="_blank" rel="noopener">Dirección del Trabajo</a> o a un abogado laboral.</p>
+
+    <h2>Qué pasa con tu pregunta</h2>
+    <ul>
+      <li>Para responder, tu pregunta y los artículos del Código del Trabajo que encontramos se envían a <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic</a>, que provee el modelo de lenguaje (Claude). Según sus políticas para la API, esos datos no se usan para entrenar modelos.</li>
+      <li>La misma pregunta, hecha el mismo día, puede responderse desde una caché de Cloudflare por hasta 24 horas. La caché no guarda quién preguntó.</li>
+      <li>Ley Clara no guarda tu pregunta en una base de datos, salvo que marques 👍 o 👎 (ver abajo).</li>
+      <li>Cloudflare, donde corre el sitio, registra datos técnicos de cada visita (dirección IP, página, hora) por pocos días, para seguridad y diagnóstico. El texto de tu pregunta no va en la dirección de la página, así que no queda en esos registros.</li>
+    </ul>
+    <p><strong>No escribas datos personales</strong> (nombre, RUT, empresa, montos de tu liquidación). Para entender qué dice la ley no hacen falta.</p>
+
+    <h2>Valoraciones 👍 / 👎</h2>
+    <p>Si marcas que una respuesta te sirvió o no, guardamos la pregunta, tu valoración, los artículos citados y la fecha, sin tu IP ni ningún identificador. Las usamos para medir y mejorar la calidad de las respuestas. Si una pregunta trae datos personales, se elimina al revisarla.</p>
+
+    <h2>En tu navegador</h2>
+    <ul>
+      <li>Tus preguntas recientes se guardan solo en tu navegador (almacenamiento local) para mostrarlas en la barra lateral. Puedes borrarlas limpiando los datos del sitio.</li>
+      <li>Ley Clara no usa cookies propias, publicidad ni herramientas de analítica.</li>
+      <li>Para evitar abusos, el sitio puede usar Cloudflare Turnstile, que verifica que eres una persona sin pedirte resolver un captcha ni seguirte entre sitios.</li>
+    </ul>
+
+    <h2>Límites de uso</h2>
+    <p>Para mantener el servicio gratuito hay un límite de preguntas por minuto por persona y un tope total por día. Si se alcanza, el sitio te lo dirá.</p>
+
+    <h2>Fuente de la ley</h2>
+    <p>El texto del Código del Trabajo (DFL 1 de 2002) y de la Ley 21.561 proviene de <a href="https://www.bcn.cl/leychile" target="_blank" rel="noopener">Ley Chile – Biblioteca del Congreso Nacional</a>. Ley Clara revisa una vez al día si hay una versión nueva; la fecha de obtención aparece en la barra lateral. El texto oficial es el publicado en Ley Chile: ante cualquier diferencia, vale ese. La Biblioteca del Congreso Nacional no es responsable del contenido ni de la calidad de las respuestas de Ley Clara.</p>
+
+    <h2>Código abierto</h2>
+    <p>Ley Clara es un proyecto personal y de código abierto (licencia MIT), sin fines de lucro. Puedes revisar cómo funciona, sus métricas de calidad y reportar problemas en su repositorio.</p>
+  </main>
+</body>
+</html>

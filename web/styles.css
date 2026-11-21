@@ -79,9 +79,12 @@ svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width:
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .temas button:hover, .recientes button:hover, .recientes button[aria-current="true"] { background: var(--lado-2); color: var(--tinta-inv); }
-.side-pie { margin-top: auto; padding: 14px 10px 0; border-top: 1px solid var(--lado-linea); font-size: 12.5px; color: var(--lado-gris); display: flex; flex-direction: column; gap: 4px; }
+.side-pie { margin-top: auto; padding: 16px 10px 2px; border-top: 1px solid var(--lado-linea); font-size: 12.5px; line-height: 1.45; color: var(--lado-gris); display: flex; flex-direction: column; gap: 6px; }
 .side-pie p { margin: 0; }
-.side-pie strong { color: var(--tinta-inv); font-weight: 500; }
+.pie-ley strong { color: var(--tinta-inv); font-weight: 500; }
+.pie-links { display: flex; gap: 14px; margin-top: 4px; }
+.pie-links a { color: var(--lado-gris); text-decoration: none; }
+.pie-links a:hover { color: var(--tinta-inv); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- Portada ---------- */
 .portada { width: 100%; max-width: 1080px; margin: 0 auto; padding: clamp(40px, 7vh, 88px) clamp(20px, 4vw, 56px) 40px; display: flex; flex-direction: column; gap: 36px; }
@@ -224,3 +227,43 @@ svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width:
   .lector-cuerpo { padding: 22px 20px 36px; }
 }
 @media (prefers-reduced-motion: reduce) { .linea-sk { animation: none; } }
+
+/* ---------- Acciones de cada respuesta ---------- */
+.acciones-resp {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px;
+  padding-top: 14px; border-top: 1px solid var(--linea);
+}
+.valorar, .acciones-der { display: inline-flex; align-items: center; gap: 6px; }
+.valorar-txt { font-size: 13px; color: var(--gris); margin-right: 2px; }
+.btn-ico {
+  border: 1px solid var(--linea-2); background: var(--superficie); border-radius: var(--radio);
+  padding: 4px 9px; font-size: 15px; line-height: 1.2; cursor: pointer;
+}
+.btn-ico:hover:not(:disabled) { border-color: var(--tinta); }
+.btn-ico:disabled { opacity: .45; cursor: default; }
+.btn-ico[aria-pressed="true"] { opacity: 1; border-color: var(--tinta); background: var(--papel); }
+.btn-txt {
+  border: 0; background: transparent; color: var(--tinta-2); cursor: pointer; font-size: 13.5px; font-weight: 500;
+  padding: 5px 8px; border-radius: var(--radio);
+}
+.btn-txt:hover { background: var(--linea); color: var(--tinta); }
+
+/* ---------- Formulario y enlaces ---------- */
+.pista { font-size: 13px; color: var(--gris); }
+.aviso a { color: inherit; text-underline-offset: 2px; }
+
+/* ---------- Temas en móvil (en escritorio están en la barra lateral) ---------- */
+.temas-movil { display: none; }
+@media (max-width: 860px) {
+  .temas-movil { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; margin-top: -12px; scrollbar-width: none; }
+  .temas-movil::-webkit-scrollbar { display: none; }
+  .temas-movil button {
+    flex: none; border: 1px solid var(--linea-2); background: var(--superficie); color: var(--tinta);
+    border-radius: 999px; padding: 6px 13px; font-size: 13.5px; cursor: pointer;
+  }
+  .pista { display: none; }
+}
+
+/* ---------- Turnstile: solo aparece si Cloudflare necesita interacción ---------- */
+.turnstile { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(96px, env(safe-area-inset-bottom, 0px)); z-index: 40; }
+.caja-pie .btn-enviar { margin-left: auto; }

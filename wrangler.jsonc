@@ -10,7 +10,8 @@
   "observability": { "enabled": true },
   // Revisión diaria de Ley Chile: 10:00 UTC (6 o 7 a. m. en Chile). Ver worker/src/actualizar.ts.
   "triggers": { "crons": ["0 10 * * *"] },
-  "vars": { "SEARCH_MODE": "vector", "CONTEXT_K": "8", "CACHE_HORAS": "24" },
+  "vars": { "SEARCH_MODE": "vector", "CONTEXT_K": "8", "CACHE_HORAS": "24", "MAX_PREGUNTAS_DIA": "1500" },
+  // Turnstile (opcional): TURNSTILE_SITE_KEY como var y TURNSTILE_SECRET como secreto. Ver README.
   // Dominio propio (la zona manuel.ac está en esta cuenta). workers.dev queda como respaldo.
   "routes": [{ "pattern": "ley.manuel.ac", "custom_domain": true }],
   "workers_dev": true,
