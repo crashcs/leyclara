@@ -1,7 +1,10 @@
 import re
 from pathlib import Path
 
+import pytest
+
 from leyclara.build import NORMAS, cargar_corpus, referencias_al_codigo
+from leyclara.fetch import ruta_norma
 
 RAIZ = Path(__file__).resolve().parents[2]
 
@@ -24,6 +27,10 @@ def test_referencias_al_codigo():
     assert referencias_al_codigo(texto, ids, propios=frozenset({"1", "2", "3"})) == ["22", "25-bis", "28"]
 
 
+@pytest.mark.skipif(
+    not all(ruta_norma(n.id).exists() for n in NORMAS),
+    reason="requiere los XML de Ley Chile en data/raw (python -m leyclara.fetch); Ley Chile bloquea a GitHub Actions",
+)
 def test_transitorio_40_horas_vinculado_al_articulo_22():
     corpus = cargar_corpus()
     rel = set(corpus.relaciones)
