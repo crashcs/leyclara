@@ -49,8 +49,7 @@ if $W secret list --env="" 2>/dev/null | grep -q ANTHROPIC_API_KEY; then
 elif grep -q '^ANTHROPIC_API_KEY=.' .dev.vars 2>/dev/null; then
   # Sube solo la key de .dev.vars (no ADMIN_TOKEN: /admin/index queda cerrado en producción).
   tmp=$(mktemp); trap 'rm -f "$tmp"' EXIT
-  grep '^ANTHROPIC_API_KEY=' .dev.vars | tr -d '
-' > "$tmp"
+  grep '^ANTHROPIC_API_KEY=' .dev.vars | tr -d '\r' > "$tmp"
   secretos=(--secrets-file "$tmp")
   echo "se subirá desde .dev.vars junto con el deploy"
 else
