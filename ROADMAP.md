@@ -45,6 +45,7 @@ Estado al 21 de noviembre de 2026. Detalle técnico y métricas en el [README](R
 - [ ] Registrarse en la [API oficial de Ley Chile](https://www.bcn.cl/leychile/api/condiciones-de-uso) (permite uso para IA) y migrar la revisión diaria a ella.
 - [ ] Más leyes: Ley del Consumidor (19.496), Ley de Arriendo (18.101).
 - [ ] Transitorios de otras reformas con vigencia gradual.
-- [ ] Set de evaluación ampliado con las preguntas reales marcadas con 👎.
+- [x] Script para exportar las valoraciones y preparar candidatas desde los 👎 (`npm run eval:feedback`).
+- [ ] Set de evaluación ampliado con las preguntas reales marcadas con 👎 (revisión periódica).
 - [ ] Re-evaluar Sonnet 5.5 y decidir si vuelve el "modo preciso".
 - [ ] Alertas para usuarios cuando cambia un artículo que consultaron.

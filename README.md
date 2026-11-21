@@ -59,6 +59,8 @@ Lo que mostró la medición:
 
 **Límites de esta evaluación**: 57 preguntas es poco y las escribí yo, así que pueden tener sesgo. Por eso la app pide 👍/👎: las preguntas reales mal respondidas van a ampliar el set. "Respalda lo que se afirma" se verifica por fragmento textual por artículo, no por cada frase.
 
+**Valoraciones reales**: `npm run eval:feedback` lee los 👍/👎 de D1 (producción; `-- --local` para la base local), guarda un resumen en `eval/feedback/resumen.json` y deja las preguntas con 👎 que aún no están en el set en `eval/feedback/candidatas.jsonl`, para completar sus artículos correctos y sumarlas a `eval/preguntas.jsonl`. La carpeta está en `.gitignore` porque las preguntas pueden traer datos personales.
+
 Reproducir (con `wrangler dev --var CACHE_HORAS:0` corriendo; si no, la caché devuelve respuestas viejas): `npm run eval:retrieval -- --modos vector` y `npm run eval:answers -- --modelo rapido`. Resultados pregunta por pregunta en [eval/resultados/](eval/resultados/).
 
 ## Cómo funciona

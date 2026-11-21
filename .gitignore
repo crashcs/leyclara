@@ -15,3 +15,6 @@ __pycache__/
 .venv/
 .pytest_cache/
 dist/
+
+# exportes de valoraciones (pueden traer datos personales)
+eval/feedback/

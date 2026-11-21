@@ -12,7 +12,8 @@
     "db:migrate:local": "wrangler d1 migrations apply leyclara --local --env=\"\"",
     "db:seed:local": "wrangler d1 execute leyclara --local --env=\"\" --file data/build/seed.sql",
     "eval:retrieval": "node eval/run_retrieval.mjs",
-    "eval:answers": "node eval/run_answers.mjs"
+    "eval:answers": "node eval/run_answers.mjs",
+    "eval:feedback": "node eval/exportar_feedback.mjs"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20261121.1",
