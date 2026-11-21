@@ -26,7 +26,8 @@ if (-not $key.StartsWith("sk-ant-")) {
 }
 
 Write-Host "Cargando el secreto en Cloudflare..."
-$key | npx wrangler secret put ANTHROPIC_API_KEY --env=""
+# npx.cmd evita el bloqueo de npx.ps1 por la política de ejecución de PowerShell.
+$key | npx.cmd wrangler secret put ANTHROPIC_API_KEY --env=""
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Wrangler falló. ¿Ya hiciste el deploy y el login?" -ForegroundColor Red
     exit 1
@@ -42,4 +43,4 @@ if ($TambienLocal) {
 }
 
 Remove-Variable key, seguro -ErrorAction SilentlyContinue
-Write-Host "Listo. Prueba: npx wrangler secret list" -ForegroundColor Green
+Write-Host "Listo. Prueba: npx.cmd wrangler secret list" -ForegroundColor Green
