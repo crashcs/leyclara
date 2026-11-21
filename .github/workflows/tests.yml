@@ -1,0 +1,15 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Python (parser y textnorm)
+        working-directory: ingest
+        run: uv run pytest -q
+      - name: Worker (citas, búsqueda, textnorm)
+        run: npm ci && npx vitest run && npx tsc --noEmit
