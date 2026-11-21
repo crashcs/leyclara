@@ -1,0 +1,17 @@
+# secretos
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+
+# datos generados / cache
+data/raw/
+data/build/
+.wrangler/
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+dist/

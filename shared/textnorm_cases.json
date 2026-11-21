@@ -1,0 +1,4175 @@
+{
+ "frases": [
+  {
+   "input": "¿Cuántos días de vacaciones me tocan si llevo 12 años trabajando?",
+   "tokens": [
+    "cuant",
+    "dia",
+    "vacacion",
+    "tocan",
+    "llev",
+    "12",
+    "ano",
+    "trabajand"
+   ]
+  },
+  {
+   "input": "¿Me pueden despedir estando con licencia médica?",
+   "tokens": [
+    "pueden",
+    "despedir",
+    "estand",
+    "licenci",
+    "medic"
+   ]
+  },
+  {
+   "input": "Indemnización por años de servicio",
+   "tokens": [
+    "indemniz",
+    "ano",
+    "servici"
+   ]
+  },
+  {
+   "input": "Artículo 161 bis: necesidades de la empresa",
+   "tokens": [
+    "articul",
+    "161",
+    "bis",
+    "neces",
+    "empres"
+   ]
+  },
+  {
+   "input": "Feriado anual, remuneraciones, trabajadoras embarazadas, fuero maternal",
+   "tokens": [
+    "feriad",
+    "anual",
+    "remuner",
+    "trabaj",
+    "embarazad",
+    "fuer",
+    "maternal"
+   ]
+  },
+  {
+   "input": "jornada ordinaria de cuarenta y cinco horas semanales",
+   "tokens": [
+    "jornad",
+    "ordinari",
+    "cuarent",
+    "cinc",
+    "hora",
+    "semanal"
+   ]
+  },
+  {
+   "input": "sindicatos, negociación colectiva y huelga",
+   "tokens": [
+    "sindicat",
+    "negoci",
+    "colect",
+    "huelg"
+   ]
+  },
+  {
+   "input": "Ñandú PEQUEÑAS empresas — actividades peligrosas",
+   "tokens": [
+    "nandu",
+    "pequen",
+    "empres",
+    "activ",
+    "peligr"
+   ]
+  },
+  {
+   "input": "horas extraordinarias lunes a viernes",
+   "tokens": [
+    "hora",
+    "extraordinari",
+    "lun",
+    "viern"
+   ]
+  },
+  {
+   "input": "la sala cuna y el permiso postnatal parental",
+   "tokens": [
+    "sala",
+    "cuna",
+    "permis",
+    "postnatal",
+    "parental"
+   ]
+  },
+  {
+   "input": "autorizaciones, vacaciones, raciones, naciones, luces, peces, meses, mes",
+   "tokens": [
+    "autoriz",
+    "vacacion",
+    "racion",
+    "nacion",
+    "luc",
+    "pec",
+    "mes",
+    "mes"
+   ]
+  }
+ ],
+ "palabras": {
+  "04": [
+   "04"
+  ],
+  "1": [
+   "1"
+  ],
+  "10": [
+   "10"
+  ],
+  "100": [
+   "100"
+  ],
+  "104": [
+   "104"
+  ],
+  "12": [
+   "12"
+  ],
+  "127": [
+   "127"
+  ],
+  "13": [
+   "13"
+  ],
+  "14": [
+   "14"
+  ],
+  "145": [
+   "145"
+  ],
+  "15": [
+   "15"
+  ],
+  "151": [
+   "151"
+  ],
+  "152": [
+   "152"
+  ],
+  "153": [
+   "153"
+  ],
+  "16": [
+   "16"
+  ],
+  "163": [
+   "163"
+  ],
+  "166": [
+   "166"
+  ],
+  "17": [
+   "17"
+  ],
+  "18": [
+   "18"
+  ],
+  "183": [
+   "183"
+  ],
+  "184": [
+   "184"
+  ],
+  "19": [
+   "19"
+  ],
+  "1980": [
+   "1980"
+  ],
+  "199": [
+   "199"
+  ],
+  "1999": [
+   "1999"
+  ],
+  "2": [
+   "2"
+  ],
+  "20": [
+   "20"
+  ],
+  "2023": [
+   "2023"
+  ],
+  "21": [
+   "21"
+  ],
+  "211": [
+   "211"
+  ],
+  "21561": [
+   "21561"
+  ],
+  "22": [
+   "22"
+  ],
+  "23": [
+   "23"
+  ],
+  "231": [
+   "231"
+  ],
+  "24": [
+   "24"
+  ],
+  "253": [
+   "253"
+  ],
+  "26": [
+   "26"
+  ],
+  "27": [
+   "27"
+  ],
+  "276": [
+   "276"
+  ],
+  "28": [
+   "28"
+  ],
+  "298": [
+   "298"
+  ],
+  "3": [
+   "3"
+  ],
+  "32": [
+   "32"
+  ],
+  "321": [
+   "321"
+  ],
+  "34": [
+   "34"
+  ],
+  "344": [
+   "344"
+  ],
+  "367": [
+   "367"
+  ],
+  "375": [
+   "375"
+  ],
+  "376": [
+   "376"
+  ],
+  "389": [
+   "389"
+  ],
+  "4": [
+   "4"
+  ],
+  "415": [
+   "415"
+  ],
+  "422": [
+   "422"
+  ],
+  "437": [
+   "437"
+  ],
+  "457": [
+   "457"
+  ],
+  "459": [
+   "459"
+  ],
+  "47": [
+   "47"
+  ],
+  "482": [
+   "482"
+  ],
+  "5": [
+   "5"
+  ],
+  "50": [
+   "50"
+  ],
+  "500": [
+   "500"
+  ],
+  "501": [
+   "501"
+  ],
+  "519": [
+   "519"
+  ],
+  "532": [
+   "532"
+  ],
+  "594": [
+   "594"
+  ],
+  "6": [
+   "6"
+  ],
+  "60": [
+   "60"
+  ],
+  "66": [
+   "66"
+  ],
+  "7": [
+   "7"
+  ],
+  "744": [
+   "744"
+  ],
+  "80": [
+   "80"
+  ],
+  "83": [
+   "83"
+  ],
+  "a": [],
+  "aa": [
+   "aa"
+  ],
+  "absolver": [
+   "absolver"
+  ],
+  "acaecido": [
+   "acaecid"
+  ],
+  "acceso": [
+   "acces"
+  ],
+  "accidente": [
+   "accident"
+  ],
+  "acoger": [
+   "acoger"
+  ],
+  "acogido": [
+   "acogid"
+  ],
+  "acompanando": [
+   "acompanand"
+  ],
+  "acordado": [
+   "acordad"
+  ],
+  "acordarse": [
+   "acordars"
+  ],
+  "acreditados": [
+   "acreditad"
+  ],
+  "acreditar": [
+   "acreditar"
+  ],
+  "acreditarse": [
+   "acreditars"
+  ],
+  "acrediten": [
+   "acrediten"
+  ],
+  "acta": [
+   "acta"
+  ],
+  "actividades": [
+   "activ"
+  ],
+  "acto": [
+   "acto"
+  ],
+  "actualizado": [
+   "actualizad"
+  ],
+  "acuerden": [
+   "acuerden"
+  ],
+  "acuerdo": [
+   "acuerd"
+  ],
+  "acuerdos": [
+   "acuerd"
+  ],
+  "adecuados": [
+   "adecuad"
+  ],
+  "ademas": [
+   "adem"
+  ],
+  "adherido": [
+   "adherid"
+  ],
+  "adicional": [
+   "adicional"
+  ],
+  "adicionalmente": [
+   "adicional"
+  ],
+  "administracion": [
+   "administr"
+  ],
+  "administrador": [
+   "administr"
+  ],
+  "administradora": [
+   "administr"
+  ],
+  "administrativamente": [
+   "administrativa"
+  ],
+  "administrativos": [
+   "administrat"
+  ],
+  "adolescentes": [
+   "adolescent"
+  ],
+  "adoptar": [
+   "adoptar"
+  ],
+  "adquiriran": [
+   "adquiriran"
+  ],
+  "adulta": [
+   "adult"
+  ],
+  "advirtiere": [
+   "advirtier"
+  ],
+  "aeronautica": [
+   "aeronautic"
+  ],
+  "afectado": [
+   "afectad"
+  ],
+  "afectar": [
+   "afectar"
+  ],
+  "afecte": [
+   "afect"
+  ],
+  "afectos": [
+   "afect"
+  ],
+  "afiliacion": [
+   "afili"
+  ],
+  "afiliados": [
+   "afiliad"
+  ],
+  "afiliaran": [
+   "afiliaran"
+  ],
+  "afilie": [
+   "afili"
+  ],
+  "agricolas": [
+   "agricol"
+  ],
+  "agrupados": [
+   "agrupad"
+  ],
+  "aguda": [
+   "agud"
+  ],
+  "aguirre": [
+   "aguirr"
+  ],
+  "aisen": [
+   "aisen"
+  ],
+  "al": [],
+  "alcanzado": [
+   "alcanzad"
+  ],
+  "alegaciones": [
+   "aleg"
+  ],
+  "alguna": [],
+  "alguno": [],
+  "alimentos": [
+   "aliment"
+  ],
+  "alto": [
+   "alto"
+  ],
+  "amarilla": [
+   "amarill"
+  ],
+  "ambas": [
+   "amba"
+  ],
+  "ambiente": [
+   "ambient"
+  ],
+  "ambos": [
+   "ambo"
+  ],
+  "analisis": [
+   "analisi"
+  ],
+  "angeles": [
+   "angel"
+  ],
+  "ano": [
+   "ano"
+  ],
+  "anos": [
+   "ano"
+  ],
+  "anotacion": [
+   "anot"
+  ],
+  "anotado": [
+   "anotad"
+  ],
+  "antartica": [
+   "antartic"
+  ],
+  "ante": [],
+  "antecedentes": [
+   "antecedent"
+  ],
+  "anterior": [
+   "anterior"
+  ],
+  "anteriores": [
+   "anterior"
+  ],
+  "anteriormente": [
+   "anterior"
+  ],
+  "antofagasta": [
+   "antofagast"
+  ],
+  "antuco": [
+   "antuc"
+  ],
+  "anual": [
+   "anual"
+  ],
+  "anualmente": [
+   "anual"
+  ],
+  "aplicables": [
+   "aplic"
+  ],
+  "aplicacion": [
+   "aplic"
+  ],
+  "aplicar": [
+   "aplicar"
+  ],
+  "aplicara": [
+   "aplicar"
+  ],
+  "aplicaran": [
+   "aplicaran"
+  ],
+  "aplicarse": [
+   "aplicars"
+  ],
+  "aporte": [
+   "aport"
+  ],
+  "aportes": [
+   "aport"
+  ],
+  "aprendiz": [
+   "aprendiz"
+  ],
+  "aprendizaje": [
+   "aprendizaj"
+  ],
+  "aquel": [],
+  "aquella": [],
+  "aquellas": [],
+  "aquellos": [],
+  "araucania": [
+   "araucani"
+  ],
+  "arbitral": [
+   "arbitral"
+  ],
+  "archiveros": [
+   "archiver"
+  ],
+  "arenas": [
+   "aren"
+  ],
+  "arica": [
+   "aric"
+  ],
+  "armador": [
+   "armador"
+  ],
+  "arrendamiento": [
+   "arrend"
+  ],
+  "arrendatario": [
+   "arrendatari"
+  ],
+  "art": [
+   "art"
+  ],
+  "articulo": [
+   "articul"
+  ],
+  "articulos": [
+   "articul"
+  ],
+  "as": [
+   "as"
+  ],
+  "asambleas": [
+   "asamble"
+  ],
+  "asesorar": [
+   "asesorar"
+  ],
+  "asiento": [
+   "asient"
+  ],
+  "asimismo": [
+   "asimism"
+  ],
+  "asista": [
+   "asist"
+  ],
+  "asistencia": [
+   "asist"
+  ],
+  "asistir": [
+   "asistir"
+  ],
+  "aspectos": [
+   "aspect"
+  ],
+  "atacama": [
+   "atacam"
+  ],
+  "atencion": [
+   "atencion"
+  ],
+  "atender": [
+   "atender"
+  ],
+  "atiendan": [
+   "atiendan"
+  ],
+  "atienden": [
+   "atienden"
+  ],
+  "audiencia": [
+   "audi"
+  ],
+  "aunque": [
+   "aunqu"
+  ],
+  "ausencia": [
+   "ausenci"
+  ],
+  "ausentarse": [
+   "ausentars"
+  ],
+  "autoridad": [
+   "autor"
+  ],
+  "autorizacion": [
+   "autoriz"
+  ],
+  "aviso": [
+   "avis"
+  ],
+  "b": [
+   "b"
+  ],
+  "bajo": [],
+  "base": [
+   "base"
+  ],
+  "bases": [
+   "bas"
+  ],
+  "beneficios": [
+   "benefici"
+  ],
+  "bernardo": [
+   "bernard"
+  ],
+  "bien": [],
+  "bio": [
+   "bio"
+  ],
+  "bipartita": [
+   "bipartit"
+  ],
+  "bis": [
+   "bis"
+  ],
+  "bordo": [
+   "bord"
+  ],
+  "bosque": [
+   "bosqu"
+  ],
+  "buceo": [
+   "buce"
+  ],
+  "c": [
+   "c"
+  ],
+  "cabina": [
+   "cabin"
+  ],
+  "cada": [],
+  "calama": [
+   "calam"
+  ],
+  "calera": [
+   "caler"
+  ],
+  "cambio": [
+   "cambi"
+  ],
+  "campo": [
+   "camp"
+  ],
+  "capacitacion": [
+   "capacit"
+  ],
+  "capitan": [
+   "capitan"
+  ],
+  "caracter": [
+   "caracter"
+  ],
+  "caracteres": [
+   "caracter"
+  ],
+  "caracteristicas": [
+   "caracteristic"
+  ],
+  "cargas": [
+   "carg"
+  ],
+  "cargo": [
+   "carg"
+  ],
+  "carlos": [
+   "carl"
+  ],
+  "carta": [
+   "cart"
+  ],
+  "casa": [
+   "casa"
+  ],
+  "casas": [
+   "casa"
+  ],
+  "caso": [
+   "caso"
+  ],
+  "casos": [
+   "caso"
+  ],
+  "castro": [
+   "castr"
+  ],
+  "catemu": [
+   "catemu"
+  ],
+  "causa": [
+   "caus"
+  ],
+  "causas": [
+   "caus"
+  ],
+  "celebrado": [
+   "celebrad"
+  ],
+  "celebrados": [
+   "celebrad"
+  ],
+  "celebraran": [
+   "celebraran"
+  ],
+  "celebrarse": [
+   "celebrars"
+  ],
+  "centrales": [
+   "central"
+  ],
+  "centralizada": [
+   "centralizad"
+  ],
+  "cerda": [
+   "cerd"
+  ],
+  "certificada": [
+   "certificad"
+  ],
+  "certificado": [
+   "certificad"
+  ],
+  "cesare": [
+   "cesar"
+  ],
+  "chiguayante": [
+   "chiguayant"
+  ],
+  "chile": [
+   "chil"
+  ],
+  "chilena": [
+   "chilen"
+  ],
+  "chillan": [
+   "chillan"
+  ],
+  "chonchi": [
+   "chonchi"
+  ],
+  "ciento": [
+   "cient"
+  ],
+  "cinco": [
+   "cinc"
+  ],
+  "circunstancia": [
+   "circunst"
+  ],
+  "circunstancias": [
+   "circunst"
+  ],
+  "cisterna": [
+   "cistern"
+  ],
+  "citadas": [
+   "citad"
+  ],
+  "citar": [
+   "citar"
+  ],
+  "civil": [
+   "civil"
+  ],
+  "claro": [
+   "clar"
+  ],
+  "clase": [
+   "clas"
+  ],
+  "clemente": [
+   "clement"
+  ],
+  "clubes": [
+   "club"
+  ],
+  "cobertura": [
+   "cobertur"
+  ],
+  "cobro": [
+   "cobr"
+  ],
+  "cochamo": [
+   "cocham"
+  ],
+  "codegua": [
+   "codegu"
+  ],
+  "codigo": [
+   "codig"
+  ],
+  "coihueco": [
+   "coihuec"
+  ],
+  "coinco": [
+   "coinc"
+  ],
+  "colacion": [
+   "colacion"
+  ],
+  "colectiva": [
+   "colect"
+  ],
+  "colectivo": [
+   "colect"
+  ],
+  "colectivos": [
+   "colect"
+  ],
+  "coltauco": [
+   "coltauc"
+  ],
+  "combinacion": [
+   "combin"
+  ],
+  "comerciales": [
+   "comercial"
+  ],
+  "cometido": [
+   "cometid"
+  ],
+  "comision": [
+   "comision"
+  ],
+  "como": [],
+  "comparecer": [
+   "comparecer"
+  ],
+  "compatible": [
+   "compat"
+  ],
+  "compensados": [
+   "compensad"
+  ],
+  "compensar": [
+   "compensar"
+  ],
+  "competencia": [
+   "compet"
+  ],
+  "complejidad": [
+   "complej"
+  ],
+  "complementarias": [
+   "complementari"
+  ],
+  "completa": [
+   "complet"
+  ],
+  "completas": [
+   "complet"
+  ],
+  "comprender": [
+   "comprender"
+  ],
+  "comun": [
+   "comun"
+  ],
+  "comuna": [
+   "comun"
+  ],
+  "comunas": [
+   "comun"
+  ],
+  "comunicacion": [
+   "comunic"
+  ],
+  "con": [],
+  "concepcion": [
+   "concepcion"
+  ],
+  "concesion": [
+   "concesion"
+  ],
+  "concon": [
+   "concon"
+  ],
+  "condicion": [
+   "condicion"
+  ],
+  "condiciones": [
+   "condicion"
+  ],
+  "conduce": [
+   "conduc"
+  ],
+  "conduzca": [
+   "conduzc"
+  ],
+  "confeccionar": [
+   "confeccionar"
+  ],
+  "conferidas": [
+   "conferid"
+  ],
+  "conforme": [
+   "conform"
+  ],
+  "conformidad": [
+   "conform"
+  ],
+  "congreso": [
+   "congres"
+  ],
+  "conjunta": [
+   "conjunt"
+  ],
+  "conoce": [
+   "conoc"
+  ],
+  "conocimiento": [
+   "conoc"
+  ],
+  "consagra": [
+   "consagr"
+  ],
+  "consagrados": [
+   "consagrad"
+  ],
+  "consecuencia": [
+   "consecu"
+  ],
+  "consentimiento": [
+   "consent"
+  ],
+  "conservadores": [
+   "conserv"
+  ],
+  "consideraciones": [
+   "consider"
+  ],
+  "consideradas": [
+   "considerad"
+  ],
+  "considerara": [
+   "considerar"
+  ],
+  "consideraran": [
+   "consideraran"
+  ],
+  "constancia": [
+   "const"
+  ],
+  "constar": [
+   "constar"
+  ],
+  "constitucion": [
+   "constit"
+  ],
+  "constitucionales": [
+   "constitucional"
+  ],
+  "constituir": [
+   "constituir"
+  ],
+  "construccion": [
+   "construccion"
+  ],
+  "consul": [
+   "consul"
+  ],
+  "contabilidad": [
+   "contabil"
+  ],
+  "contables": [
+   "cont"
+  ],
+  "contado": [
+   "contad"
+  ],
+  "contados": [
+   "contad"
+  ],
+  "contar": [
+   "contar"
+  ],
+  "contemplados": [
+   "contemplad"
+  ],
+  "contemplar": [
+   "contemplar"
+  ],
+  "contemplen": [
+   "contemplen"
+  ],
+  "contener": [
+   "contener"
+  ],
+  "contenga": [
+   "conteng"
+  ],
+  "contenido": [
+   "contenid"
+  ],
+  "contenidos": [
+   "contenid"
+  ],
+  "continuas": [
+   "continu"
+  ],
+  "continuidad": [
+   "continu"
+  ],
+  "contra": [],
+  "contrarias": [
+   "contrari"
+  ],
+  "contratado": [
+   "contratad"
+  ],
+  "contrate": [
+   "contrat"
+  ],
+  "contratista": [
+   "contrat"
+  ],
+  "contrato": [
+   "contrat"
+  ],
+  "contratos": [
+   "contrat"
+  ],
+  "controles": [
+   "control"
+  ],
+  "controversias": [
+   "controversi"
+  ],
+  "convengan": [
+   "convengan"
+  ],
+  "convenio": [
+   "conveni"
+  ],
+  "convenir": [
+   "convenir"
+  ],
+  "conviviente": [
+   "convivient"
+  ],
+  "convocadas": [
+   "convocad"
+  ],
+  "conyuge": [
+   "conyug"
+  ],
+  "cooperativas": [
+   "cooperat"
+  ],
+  "copia": [
+   "copi"
+  ],
+  "copiapo": [
+   "copiap"
+  ],
+  "copias": [
+   "copi"
+  ],
+  "coquimbo": [
+   "coquimb"
+  ],
+  "cordillera": [
+   "cordiller"
+  ],
+  "corral": [
+   "corral"
+  ],
+  "corregir": [
+   "corregir"
+  ],
+  "corresponda": [
+   "correspond"
+  ],
+  "correspondan": [
+   "correspondan"
+  ],
+  "corresponde": [
+   "correspond"
+  ],
+  "correspondera": [
+   "corresponder"
+  ],
+  "correspondiente": [
+   "correspondient"
+  ],
+  "corridos": [
+   "corrid"
+  ],
+  "corte": [
+   "cort"
+  ],
+  "costa": [
+   "cost"
+  ],
+  "costas": [
+   "cost"
+  ],
+  "costear": [
+   "costear"
+  ],
+  "coyhaique": [
+   "coyhaiqu"
+  ],
+  "cual": [],
+  "cuales": [],
+  "cualesquiera": [
+   "cualesquier"
+  ],
+  "cualquier": [],
+  "cualquiera": [
+   "cualquier"
+  ],
+  "cuando": [],
+  "cuantia": [
+   "cuanti"
+  ],
+  "cuarenta": [
+   "cuarent"
+  ],
+  "cuarta": [
+   "cuart"
+  ],
+  "cuatro": [
+   "cuatr"
+  ],
+  "cuenta": [
+   "cuent"
+  ],
+  "cuerpo": [
+   "cuerp"
+  ],
+  "cuestiones": [
+   "cuestion"
+  ],
+  "cuidado": [
+   "cuidad"
+  ],
+  "cuidador": [
+   "cuid"
+  ],
+  "cumpliendose": [
+   "cumpliendos"
+  ],
+  "cumplimiento": [
+   "cumpl"
+  ],
+  "cumplir": [
+   "cumplir"
+  ],
+  "cumplirse": [
+   "cumplirs"
+  ],
+  "cunco": [
+   "cunc"
+  ],
+  "curico": [
+   "curic"
+  ],
+  "curso": [
+   "curs"
+  ],
+  "cuyos": [
+   "cuyo"
+  ],
+  "d": [
+   "d"
+  ],
+  "dalcahue": [
+   "dalcahu"
+  ],
+  "danos": [
+   "dano"
+  ],
+  "dar": [
+   "dar"
+  ],
+  "dara": [
+   "dara"
+  ],
+  "de": [],
+  "debe": [
+   "debe"
+  ],
+  "deben": [
+   "deben"
+  ],
+  "debera": [
+   "deber"
+  ],
+  "deberan": [
+   "deberan"
+  ],
+  "deberes": [
+   "deber"
+  ],
+  "debidamente": [
+   "debida"
+  ],
+  "debido": [
+   "debid"
+  ],
+  "debiendo": [
+   "debiend"
+  ],
+  "decima": [
+   "decim"
+  ],
+  "decimo": [
+   "decim"
+  ],
+  "decimocuarta": [
+   "decimocuart"
+  ],
+  "decimonoveno": [
+   "decimonoven"
+  ],
+  "decimosexta": [
+   "decimosext"
+  ],
+  "decision": [
+   "decision"
+  ],
+  "decreto": [
+   "decret"
+  ],
+  "definitiva": [
+   "definit"
+  ],
+  "defuncion": [
+   "defuncion"
+  ],
+  "dejandose": [
+   "dejandos"
+  ],
+  "dejara": [
+   "dejar"
+  ],
+  "del": [],
+  "delito": [
+   "delit"
+  ],
+  "demanda": [
+   "demand"
+  ],
+  "demas": [
+   "dema"
+  ],
+  "denominacion": [
+   "denomin"
+  ],
+  "dentro": [
+   "dentr"
+  ],
+  "dependencia": [
+   "depend"
+  ],
+  "dependencias": [
+   "depend"
+  ],
+  "dependiente": [
+   "dependient"
+  ],
+  "derecho": [
+   "derech"
+  ],
+  "derechos": [
+   "derech"
+  ],
+  "derogado": [
+   "derogad"
+  ],
+  "desafiliacion": [
+   "desafili"
+  ],
+  "desahuciados": [
+   "desahuciad"
+  ],
+  "desarrollen": [
+   "desarrollen"
+  ],
+  "descanso": [
+   "descans"
+  ],
+  "descentralizada": [
+   "descentralizad"
+  ],
+  "descontar": [
+   "descontar"
+  ],
+  "desde": [],
+  "desembarco": [
+   "desembarc"
+  ],
+  "desempenen": [
+   "desempenen"
+  ],
+  "designacion": [
+   "design"
+  ],
+  "designados": [
+   "designad"
+  ],
+  "designar": [
+   "designar"
+  ],
+  "despues": [
+   "despu"
+  ],
+  "destinado": [
+   "destinad"
+  ],
+  "detalladamente": [
+   "detallada"
+  ],
+  "determinacion": [
+   "determin"
+  ],
+  "determinada": [
+   "determinad"
+  ],
+  "determinado": [
+   "determinad"
+  ],
+  "determinara": [
+   "determinar"
+  ],
+  "determinaren": [
+   "determinaren"
+  ],
+  "determinen": [
+   "determinen"
+  ],
+  "devengado": [
+   "devengad"
+  ],
+  "devolver": [
+   "devolver"
+  ],
+  "dia": [
+   "dia"
+  ],
+  "diagnostica": [
+   "diagnostic"
+  ],
+  "diaria": [
+   "diari"
+  ],
+  "diario": [
+   "diari"
+  ],
+  "diarios": [
+   "diari"
+  ],
+  "dias": [
+   "dia"
+  ],
+  "dicha": [
+   "dich"
+  ],
+  "dichas": [
+   "dich"
+  ],
+  "dicho": [
+   "dich"
+  ],
+  "dichos": [
+   "dich"
+  ],
+  "dictacion": [
+   "dict"
+  ],
+  "dictar": [
+   "dictar"
+  ],
+  "dictare": [
+   "dictar"
+  ],
+  "dicte": [
+   "dict"
+  ],
+  "diecinueve": [
+   "diecinuev"
+  ],
+  "dieciocho": [
+   "diecioch"
+  ],
+  "diere": [
+   "dier"
+  ],
+  "diez": [
+   "diez"
+  ],
+  "diferentes": [
+   "diferent"
+  ],
+  "dificil": [
+   "dificil"
+  ],
+  "digno": [
+   "dign"
+  ],
+  "diligencia": [
+   "dilig"
+  ],
+  "dinero": [
+   "diner"
+  ],
+  "direccion": [
+   "direccion"
+  ],
+  "directamente": [
+   "directa"
+  ],
+  "director": [
+   "director"
+  ],
+  "directoras": [
+   "director"
+  ],
+  "directorio": [
+   "directori"
+  ],
+  "dirigente": [
+   "dirigent"
+  ],
+  "dirigiendoles": [
+   "dirigiendol"
+  ],
+  "discapacidad": [
+   "discapac"
+  ],
+  "disciplinario": [
+   "disciplinari"
+  ],
+  "discontinuas": [
+   "discontinu"
+  ],
+  "disolucion": [
+   "disol"
+  ],
+  "disponer": [
+   "disponer"
+  ],
+  "disposicion": [
+   "disposicion"
+  ],
+  "disposiciones": [
+   "disposicion"
+  ],
+  "dispositiva": [
+   "disposit"
+  ],
+  "dispuesto": [
+   "dispuest"
+  ],
+  "distancia": [
+   "dist"
+  ],
+  "distintas": [
+   "distint"
+  ],
+  "distinto": [
+   "distint"
+  ],
+  "distribucion": [
+   "distrib"
+  ],
+  "distribuidas": [
+   "distribuid"
+  ],
+  "diversas": [
+   "divers"
+  ],
+  "doce": [
+   "doce"
+  ],
+  "documentales": [
+   "documental"
+  ],
+  "documento": [
+   "document"
+  ],
+  "donde": [],
+  "donihue": [
+   "donihu"
+  ],
+  "dos": [],
+  "dotacion": [
+   "dotacion"
+  ],
+  "dueno": [
+   "duen"
+  ],
+  "durante": [
+   "durant"
+  ],
+  "e": [],
+  "economicas": [
+   "economic"
+  ],
+  "edad": [
+   "edad"
+  ],
+  "edificaciones": [
+   "edific"
+  ],
+  "edificio": [
+   "edifici"
+  ],
+  "efectivamente": [
+   "efectiva"
+  ],
+  "efectivo": [
+   "efect"
+  ],
+  "efectivos": [
+   "efect"
+  ],
+  "efecto": [
+   "efect"
+  ],
+  "efectos": [
+   "efect"
+  ],
+  "efectuada": [
+   "efectuad"
+  ],
+  "efectuar": [
+   "efectuar"
+  ],
+  "efectue": [
+   "efectu"
+  ],
+  "eficazmente": [
+   "eficaz"
+  ],
+  "ejerce": [
+   "ejerc"
+  ],
+  "ejercer": [
+   "ejercer"
+  ],
+  "ejercicio": [
+   "ejercici"
+  ],
+  "el": [],
+  "eleccion": [
+   "eleccion"
+  ],
+  "electronica": [
+   "electronic"
+  ],
+  "electronico": [
+   "electronic"
+  ],
+  "elegido": [
+   "elegid"
+  ],
+  "elementos": [
+   "element"
+  ],
+  "ella": [],
+  "ellas": [],
+  "ello": [],
+  "ellos": [],
+  "emane": [
+   "eman"
+  ],
+  "embargo": [
+   "embarg"
+  ],
+  "emitir": [
+   "emitir"
+  ],
+  "empleador": [
+   "emple"
+  ],
+  "empleadora": [
+   "emple"
+  ],
+  "empleadores": [
+   "emple"
+  ],
+  "empleo": [
+   "emple"
+  ],
+  "empresa": [
+   "empres"
+  ],
+  "empresas": [
+   "empres"
+  ],
+  "en": [],
+  "encargado": [
+   "encargad"
+  ],
+  "encargue": [
+   "encargu"
+  ],
+  "encontrara": [
+   "encontrar"
+  ],
+  "encuentra": [
+   "encuentr"
+  ],
+  "encuentre": [
+   "encuentr"
+  ],
+  "encuentren": [
+   "encuentren"
+  ],
+  "enfermedad": [
+   "enfermedad"
+  ],
+  "entidad": [
+   "entidad"
+  ],
+  "entidades": [
+   "entidad"
+  ],
+  "entre": [],
+  "entregandose": [
+   "entregandos"
+  ],
+  "entregaran": [
+   "entregaran"
+  ],
+  "entregarse": [
+   "entregars"
+  ],
+  "envio": [
+   "envi"
+  ],
+  "equidad": [
+   "equidad"
+  ],
+  "equivalente": [
+   "equivalent"
+  ],
+  "equivalentes": [
+   "equivalent"
+  ],
+  "errores": [
+   "error"
+  ],
+  "es": [],
+  "esa": [],
+  "escrito": [
+   "escrit"
+  ],
+  "especial": [
+   "especial"
+  ],
+  "especiales": [
+   "especial"
+  ],
+  "especialidad": [
+   "especial"
+  ],
+  "especialmente": [
+   "especial"
+  ],
+  "especie": [
+   "especi"
+  ],
+  "especificacion": [
+   "especific"
+  ],
+  "especificandolas": [
+   "especificandol"
+  ],
+  "espejo": [
+   "espej"
+  ],
+  "esta": [],
+  "establece": [
+   "establec"
+  ],
+  "establecidas": [
+   "establecid"
+  ],
+  "establecido": [
+   "establecid"
+  ],
+  "establecidos": [
+   "establecid"
+  ],
+  "establecimiento": [
+   "establec"
+  ],
+  "establecimientos": [
+   "establec"
+  ],
+  "establezca": [
+   "establezc"
+  ],
+  "estado": [],
+  "estar": [],
+  "estaran": [
+   "estaran"
+  ],
+  "estas": [
+   "esta"
+  ],
+  "estatuto": [
+   "estatut"
+  ],
+  "estatutos": [
+   "estatut"
+  ],
+  "este": [],
+  "esten": [
+   "esten"
+  ],
+  "estimacion": [
+   "estim"
+  ],
+  "estimaren": [
+   "estimaren"
+  ],
+  "estime": [
+   "estim"
+  ],
+  "estipulaciones": [
+   "estipul"
+  ],
+  "estipular": [
+   "estipular"
+  ],
+  "estos": [],
+  "estuvieren": [
+   "estuvieren"
+  ],
+  "estuviese": [
+   "estuvies"
+  ],
+  "evento": [
+   "event"
+  ],
+  "evitar": [
+   "evitar"
+  ],
+  "exacta": [
+   "exact"
+  ],
+  "excedentes": [
+   "excedent"
+  ],
+  "excepcion": [
+   "excepcion"
+  ],
+  "exceso": [
+   "exces"
+  ],
+  "excluida": [
+   "excluid"
+  ],
+  "exclusivo": [
+   "exclus"
+  ],
+  "exigir": [
+   "exigir"
+  ],
+  "existente": [
+   "existent"
+  ],
+  "existir": [
+   "existir"
+  ],
+  "existira": [
+   "existir"
+  ],
+  "experiencia": [
+   "experi"
+  ],
+  "expertos": [
+   "expert"
+  ],
+  "expida": [
+   "expid"
+  ],
+  "expresa": [
+   "expres"
+  ],
+  "expresamente": [
+   "expresa"
+  ],
+  "expreso": [
+   "expres"
+  ],
+  "extendera": [
+   "extender"
+  ],
+  "extenderse": [
+   "extenders"
+  ],
+  "extension": [
+   "extension"
+  ],
+  "extranjero": [
+   "extranjer"
+  ],
+  "extraordinarias": [
+   "extraordinari"
+  ],
+  "f": [
+   "f"
+  ],
+  "fabricas": [
+   "fabric"
+  ],
+  "facultad": [
+   "facultad"
+  ],
+  "facultades": [
+   "facultad"
+  ],
+  "faena": [
+   "faen"
+  ],
+  "faenas": [
+   "faen"
+  ],
+  "falle": [
+   "fall"
+  ],
+  "fallecimiento": [
+   "fallec"
+  ],
+  "fallo": [
+   "fall"
+  ],
+  "fe": [
+   "fe"
+  ],
+  "fecha": [
+   "fech"
+  ],
+  "felipe": [
+   "felip"
+  ],
+  "feriado": [
+   "feriad"
+  ],
+  "fernandez": [
+   "fernandez"
+  ],
+  "fetal": [
+   "fetal"
+  ],
+  "fijando": [
+   "fijand"
+  ],
+  "fijara": [
+   "fijar"
+  ],
+  "fijo": [
+   "fijo"
+  ],
+  "fin": [
+   "fin"
+  ],
+  "final": [
+   "final"
+  ],
+  "fines": [
+   "fin"
+  ],
+  "firma": [
+   "firm"
+  ],
+  "firmada": [
+   "firmad"
+  ],
+  "firmar": [
+   "firmar"
+  ],
+  "fiscalizacion": [
+   "fiscaliz"
+  ],
+  "fisico": [
+   "fisic"
+  ],
+  "fondos": [
+   "fond"
+  ],
+  "forma": [
+   "form"
+  ],
+  "formacion": [
+   "form"
+  ],
+  "formalidades": [
+   "formal"
+  ],
+  "formalizarse": [
+   "formalizars"
+  ],
+  "fraccion": [
+   "fraccion"
+  ],
+  "fraccionarse": [
+   "fraccionars"
+  ],
+  "frecuencia": [
+   "frecu"
+  ],
+  "freire": [
+   "freir"
+  ],
+  "fuere": [
+   "fuer"
+  ],
+  "fueren": [
+   "fueren"
+  ],
+  "fuero": [
+   "fuer"
+  ],
+  "funcionarios": [
+   "funcionari"
+  ],
+  "funciones": [
+   "funcion"
+  ],
+  "funda": [
+   "fund"
+  ],
+  "fundada": [
+   "fundad"
+  ],
+  "fusion": [
+   "fusion"
+  ],
+  "g": [
+   "g"
+  ],
+  "garantizar": [
+   "garantizar"
+  ],
+  "general": [
+   "general"
+  ],
+  "gestacion": [
+   "gest"
+  ],
+  "giros": [
+   "giro"
+  ],
+  "gorda": [
+   "gord"
+  ],
+  "gozara": [
+   "gozar"
+  ],
+  "gradual": [
+   "gradual"
+  ],
+  "grandes": [
+   "grand"
+  ],
+  "graneros": [
+   "graner"
+  ],
+  "granja": [
+   "granj"
+  ],
+  "gratificacion": [
+   "gratific"
+  ],
+  "gratificar": [
+   "gratificar"
+  ],
+  "grave": [
+   "grav"
+  ],
+  "gravedad": [
+   "gravedad"
+  ],
+  "guia": [
+   "guia"
+  ],
+  "h": [
+   "h"
+  ],
+  "ha": [],
+  "haberse": [
+   "habers"
+  ],
+  "habida": [
+   "habid"
+  ],
+  "habil": [
+   "habil"
+  ],
+  "habiles": [
+   "habil"
+  ],
+  "habitacion": [
+   "habit"
+  ],
+  "habitual": [
+   "habitual"
+  ],
+  "habitualmente": [
+   "habitual"
+  ],
+  "hace": [
+   "hace"
+  ],
+  "hacer": [
+   "hacer"
+  ],
+  "hacerse": [
+   "hacers"
+  ],
+  "hara": [
+   "hara"
+  ],
+  "hasta": [],
+  "hayan": [
+   "hayan"
+  ],
+  "hecho": [
+   "hech"
+  ],
+  "hechos": [
+   "hech"
+  ],
+  "hermano": [
+   "herman"
+  ],
+  "higgins": [
+   "higgin"
+  ],
+  "higiene": [
+   "higien"
+  ],
+  "higuera": [
+   "higuer"
+  ],
+  "hijo": [
+   "hijo"
+  ],
+  "hora": [
+   "hora"
+  ],
+  "horas": [
+   "hora"
+  ],
+  "hoteles": [
+   "hotel"
+  ],
+  "hualpen": [
+   "hualpen"
+  ],
+  "hualqui": [
+   "hualqui"
+  ],
+  "hubiere": [
+   "hubier"
+  ],
+  "hubieren": [
+   "hubieren"
+  ],
+  "i": [
+   "i"
+  ],
+  "ibanez": [
+   "ibanez"
+  ],
+  "ida": [
+   "ida"
+  ],
+  "identifique": [
+   "identifiqu"
+  ],
+  "igual": [
+   "igual"
+  ],
+  "iguales": [
+   "igual"
+  ],
+  "ii": [
+   "ii"
+  ],
+  "iii": [
+   "iii"
+  ],
+  "ilegales": [
+   "ilegal"
+  ],
+  "ilegalidad": [
+   "ilegal"
+  ],
+  "imparta": [
+   "impart"
+  ],
+  "implementacion": [
+   "implement"
+  ],
+  "implementara": [
+   "implementar"
+  ],
+  "imponerle": [
+   "imponerl"
+  ],
+  "impugnar": [
+   "impugnar"
+  ],
+  "imputable": [
+   "imput"
+  ],
+  "imputables": [
+   "imput"
+  ],
+  "imputacion": [
+   "imput"
+  ],
+  "imputado": [
+   "imputad"
+  ],
+  "imputar": [
+   "imputar"
+  ],
+  "inciso": [
+   "incis"
+  ],
+  "incisos": [
+   "incis"
+  ],
+  "incluidas": [
+   "incluid"
+  ],
+  "incluidos": [
+   "incluid"
+  ],
+  "incluir": [
+   "incluir"
+  ],
+  "incorporar": [
+   "incorporar"
+  ],
+  "incorporen": [
+   "incorporen"
+  ],
+  "indemnizacion": [
+   "indemniz"
+  ],
+  "independientemente": [
+   "independiente"
+  ],
+  "indica": [
+   "indic"
+  ],
+  "indicara": [
+   "indicar"
+  ],
+  "individualizacion": [
+   "individualiz"
+  ],
+  "indole": [
+   "indol"
+  ],
+  "industria": [
+   "industri"
+  ],
+  "industriales": [
+   "industrial"
+  ],
+  "inferior": [
+   "inferior"
+  ],
+  "influyeren": [
+   "influyeren"
+  ],
+  "infraccion": [
+   "infraccion"
+  ],
+  "infractor": [
+   "infractor"
+  ],
+  "ingreso": [
+   "ingres"
+  ],
+  "iniciada": [
+   "iniciad"
+  ],
+  "inicio": [
+   "inici"
+  ],
+  "inmersion": [
+   "inmersion"
+  ],
+  "inscritas": [
+   "inscrit"
+  ],
+  "inscrito": [
+   "inscrit"
+  ],
+  "inspeccion": [
+   "inspeccion"
+  ],
+  "instituciones": [
+   "instit"
+  ],
+  "instrumento": [
+   "instrument"
+  ],
+  "instrumentos": [
+   "instrument"
+  ],
+  "integra": [
+   "integr"
+  ],
+  "integrado": [
+   "integrad"
+  ],
+  "integrantes": [
+   "integrant"
+  ],
+  "intelectual": [
+   "intelectual"
+  ],
+  "interes": [
+   "inter"
+  ],
+  "intermedio": [
+   "intermedi"
+  ],
+  "interna": [
+   "intern"
+  ],
+  "internacionales": [
+   "internacional"
+  ],
+  "interno": [
+   "intern"
+  ],
+  "interrupcion": [
+   "interrupcion"
+  ],
+  "interrupciones": [
+   "interrupcion"
+  ],
+  "introducida": [
+   "introducid"
+  ],
+  "invalidara": [
+   "invalidar"
+  ],
+  "involucradas": [
+   "involucrad"
+  ],
+  "involucrados": [
+   "involucrad"
+  ],
+  "iquique": [
+   "iquiqu"
+  ],
+  "j": [
+   "j"
+  ],
+  "joaquin": [
+   "joaquin"
+  ],
+  "jornada": [
+   "jornad"
+  ],
+  "jornadas": [
+   "jornad"
+  ],
+  "juan": [
+   "juan"
+  ],
+  "judicial": [
+   "judicial"
+  ],
+  "jueces": [
+   "juez"
+  ],
+  "juez": [
+   "juez"
+  ],
+  "juicio": [
+   "juici"
+  ],
+  "junto": [
+   "junt"
+  ],
+  "juridica": [
+   "juridic"
+  ],
+  "juridicas": [
+   "juridic"
+  ],
+  "juzgado": [
+   "juzgad"
+  ],
+  "juzgados": [
+   "juzgad"
+  ],
+  "juzgue": [
+   "juzgu"
+  ],
+  "k": [
+   "k"
+  ],
+  "l": [
+   "l"
+  ],
+  "la": [],
+  "laboral": [
+   "laboral"
+  ],
+  "laborales": [
+   "laboral"
+  ],
+  "laboran": [
+   "laboran"
+  ],
+  "laborando": [
+   "laborand"
+  ],
+  "labores": [
+   "labor"
+  ],
+  "lagos": [
+   "lago"
+  ],
+  "lapso": [
+   "laps"
+  ],
+  "las": [],
+  "le": [],
+  "legal": [
+   "legal"
+  ],
+  "legales": [
+   "legal"
+  ],
+  "legislacion": [
+   "legisl"
+  ],
+  "letra": [
+   "letr"
+  ],
+  "letras": [
+   "letr"
+  ],
+  "ley": [
+   "ley"
+  ],
+  "leyes": [
+   "ley"
+  ],
+  "libertad": [
+   "libertad"
+  ],
+  "libertador": [
+   "libert"
+  ],
+  "libre": [
+   "libr"
+  ],
+  "libremente": [
+   "libre"
+  ],
+  "libretas": [
+   "libret"
+  ],
+  "libro": [
+   "libr"
+  ],
+  "libros": [
+   "libr"
+  ],
+  "limites": [
+   "limit"
+  ],
+  "liquidacion": [
+   "liquid"
+  ],
+  "liquidadores": [
+   "liquid"
+  ],
+  "liquidos": [
+   "liquid"
+  ],
+  "literales": [
+   "literal"
+  ],
+  "litigantes": [
+   "litigant"
+  ],
+  "llay": [
+   "llay"
+  ],
+  "llevar": [
+   "llevar"
+  ],
+  "llevara": [
+   "llevar"
+  ],
+  "lo": [],
+  "loa": [
+   "loa"
+  ],
+  "locales": [
+   "local"
+  ],
+  "localidades": [
+   "local"
+  ],
+  "los": [],
+  "lucro": [
+   "lucr"
+  ],
+  "luego": [
+   "lueg"
+  ],
+  "lugar": [
+   "lugar"
+  ],
+  "m": [
+   "m"
+  ],
+  "machali": [
+   "machali"
+  ],
+  "madre": [
+   "madr"
+  ],
+  "maestro": [
+   "maestr"
+  ],
+  "magallanes": [
+   "magallan"
+  ],
+  "mandatario": [
+   "mandatari"
+  ],
+  "mando": [
+   "mand"
+  ],
+  "manera": [
+   "maner"
+  ],
+  "manifestado": [
+   "manifestad"
+  ],
+  "manipulacion": [
+   "manipul"
+  ],
+  "mantendra": [
+   "mantendr"
+  ],
+  "mantener": [
+   "mantener"
+  ],
+  "manual": [
+   "manual"
+  ],
+  "mar": [
+   "mar"
+  ],
+  "maria": [
+   "mari"
+  ],
+  "maritima": [
+   "maritim"
+  ],
+  "mas": [],
+  "materia": [
+   "materi"
+  ],
+  "materias": [
+   "materi"
+  ],
+  "maule": [
+   "maul"
+  ],
+  "mayor": [
+   "mayor"
+  ],
+  "mayores": [
+   "mayor"
+  ],
+  "mecanicos": [
+   "mecanic"
+  ],
+  "mecanismo": [
+   "mecanism"
+  ],
+  "mecanismos": [
+   "mecanism"
+  ],
+  "media": [
+   "medi"
+  ],
+  "mediacion": [
+   "medi"
+  ],
+  "medianas": [
+   "median"
+  ],
+  "mediante": [
+   "mediant"
+  ],
+  "medico": [
+   "medic"
+  ],
+  "medidas": [
+   "medid"
+  ],
+  "medio": [
+   "medi"
+  ],
+  "medios": [
+   "medi"
+  ],
+  "melipeuco": [
+   "melipeuc"
+  ],
+  "menciones": [
+   "mencion"
+  ],
+  "menor": [
+   "menor"
+  ],
+  "menos": [
+   "meno"
+  ],
+  "mensual": [
+   "mensual"
+  ],
+  "mensuales": [
+   "mensual"
+  ],
+  "mental": [
+   "mental"
+  ],
+  "mes": [
+   "mes"
+  ],
+  "meses": [
+   "mes"
+  ],
+  "metodos": [
+   "metod"
+  ],
+  "microempresas": [
+   "microempres"
+  ],
+  "miembros": [
+   "miembr"
+  ],
+  "miguel": [
+   "miguel"
+  ],
+  "mineros": [
+   "miner"
+  ],
+  "minimo": [
+   "minim"
+  ],
+  "ministerio": [
+   "ministeri"
+  ],
+  "ministro": [
+   "ministr"
+  ],
+  "misma": [
+   "mism"
+  ],
+  "mismo": [],
+  "mismos": [
+   "mism"
+  ],
+  "modalidad": [
+   "modal"
+  ],
+  "modificacion": [
+   "modific"
+  ],
+  "modificaciones": [
+   "modific"
+  ],
+  "modo": [
+   "modo"
+  ],
+  "momento": [
+   "moment"
+  ],
+  "moneda": [
+   "moned"
+  ],
+  "monto": [
+   "mont"
+  ],
+  "montt": [
+   "montt"
+  ],
+  "morada": [
+   "morad"
+  ],
+  "mostazal": [
+   "mostazal"
+  ],
+  "motivo": [
+   "motiv"
+  ],
+  "motivos": [
+   "motiv"
+  ],
+  "muerte": [
+   "muert"
+  ],
+  "multa": [
+   "mult"
+  ],
+  "multideficit": [
+   "multideficit"
+  ],
+  "mutuo": [
+   "mutu"
+  ],
+  "n": [
+   "n"
+  ],
+  "nacional": [
+   "nacional"
+  ],
+  "natural": [
+   "natural"
+  ],
+  "naturaleza": [
+   "naturalez"
+  ],
+  "nave": [
+   "nave"
+  ],
+  "necesarias": [
+   "necesari"
+  ],
+  "necesarios": [
+   "necesari"
+  ],
+  "necesidad": [
+   "neces"
+  ],
+  "negare": [
+   "negar"
+  ],
+  "negarse": [
+   "negars"
+  ],
+  "negociacion": [
+   "negoci"
+  ],
+  "negro": [
+   "negr"
+  ],
+  "ni": [],
+  "nina": [
+   "nina"
+  ],
+  "ninguna": [
+   "ningun"
+  ],
+  "nino": [
+   "nino"
+  ],
+  "no": [],
+  "nombrara": [
+   "nombrar"
+  ],
+  "norma": [
+   "norm"
+  ],
+  "normalmente": [
+   "normal"
+  ],
+  "normas": [
+   "norm"
+  ],
+  "notarias": [
+   "notari"
+  ],
+  "noticia": [
+   "notici"
+  ],
+  "notificacion": [
+   "notific"
+  ],
+  "notifican": [
+   "notifican"
+  ],
+  "notificarse": [
+   "notificars"
+  ],
+  "notifique": [
+   "notifiqu"
+  ],
+  "novena": [
+   "noven"
+  ],
+  "nuble": [
+   "nubl"
+  ],
+  "nueva": [
+   "nuev"
+  ],
+  "nuevo": [
+   "nuev"
+  ],
+  "nulidad": [
+   "nulidad"
+  ],
+  "numero": [
+   "numer"
+  ],
+  "numeros": [
+   "numer"
+  ],
+  "o": [],
+  "objeto": [
+   "objet"
+  ],
+  "obligacion": [
+   "oblig"
+  ],
+  "obligaciones": [
+   "oblig"
+  ],
+  "obligadas": [
+   "obligad"
+  ],
+  "obligados": [
+   "obligad"
+  ],
+  "obligatorias": [
+   "obligatori"
+  ],
+  "obra": [
+   "obra"
+  ],
+  "observar": [
+   "observar"
+  ],
+  "obstante": [
+   "obstant"
+  ],
+  "obtengan": [
+   "obtengan"
+  ],
+  "obtenido": [
+   "obtenid"
+  ],
+  "ocho": [
+   "ocho"
+  ],
+  "octava": [
+   "octav"
+  ],
+  "octay": [
+   "octay"
+  ],
+  "ocupar": [
+   "ocupar"
+  ],
+  "ocupe": [
+   "ocup"
+  ],
+  "ocupen": [
+   "ocupen"
+  ],
+  "oficial": [
+   "oficial"
+  ],
+  "oficiales": [
+   "oficial"
+  ],
+  "oficio": [
+   "ofici"
+  ],
+  "oficios": [
+   "ofici"
+  ],
+  "olivar": [
+   "olivar"
+  ],
+  "omision": [
+   "omision"
+  ],
+  "opinion": [
+   "opinion"
+  ],
+  "oportunas": [
+   "oportun"
+  ],
+  "oportunidad": [
+   "oportun"
+  ],
+  "optar": [
+   "optar"
+  ],
+  "orden": [
+   "orden"
+  ],
+  "ordene": [
+   "orden"
+  ],
+  "ordinarias": [
+   "ordinari"
+  ],
+  "organico": [
+   "organic"
+  ],
+  "organismo": [
+   "organism"
+  ],
+  "organismos": [
+   "organism"
+  ],
+  "organizacion": [
+   "organiz"
+  ],
+  "organizaciones": [
+   "organiz"
+  ],
+  "originen": [
+   "originen"
+  ],
+  "osorno": [
+   "osorn"
+  ],
+  "otorgado": [
+   "otorgad"
+  ],
+  "otorgar": [
+   "otorgar"
+  ],
+  "otorgarseles": [
+   "otorgarsel"
+  ],
+  "otra": [],
+  "otras": [],
+  "otro": [],
+  "otros": [],
+  "p": [
+   "p"
+  ],
+  "pablo": [
+   "pabl"
+  ],
+  "pactada": [
+   "pactad"
+  ],
+  "pactar": [
+   "pactar"
+  ],
+  "pacto": [
+   "pact"
+  ],
+  "pactos": [
+   "pact"
+  ],
+  "padre": [
+   "padr"
+  ],
+  "padres": [
+   "padr"
+  ],
+  "pagado": [
+   "pagad"
+  ],
+  "pagar": [
+   "pagar"
+  ],
+  "pago": [
+   "pago"
+  ],
+  "panquehue": [
+   "panquehu"
+  ],
+  "para": [],
+  "parciales": [
+   "parcial"
+  ],
+  "parinacota": [
+   "parinacot"
+  ],
+  "parrafo": [
+   "parraf"
+  ],
+  "parte": [
+   "part"
+  ],
+  "partes": [
+   "part"
+  ],
+  "participacion": [
+   "particip"
+  ],
+  "particular": [
+   "particular"
+  ],
+  "partir": [
+   "partir"
+  ],
+  "pasaren": [
+   "pasaren"
+  ],
+  "paz": [
+   "paz"
+  ],
+  "pedro": [
+   "pedr"
+  ],
+  "pelarco": [
+   "pelarc"
+  ],
+  "peligrosos": [
+   "peligr"
+  ],
+  "pencahue": [
+   "pencahu"
+  ],
+  "penco": [
+   "penc"
+  ],
+  "pensiones": [
+   "pension"
+  ],
+  "pequenas": [
+   "pequen"
+  ],
+  "perderan": [
+   "perderan"
+  ],
+  "periodo": [
+   "period"
+  ],
+  "periodos": [
+   "period"
+  ],
+  "perjuicio": [
+   "perjuici"
+  ],
+  "perjuicios": [
+   "perjuici"
+  ],
+  "permanecer": [
+   "permanecer"
+  ],
+  "permanencia": [
+   "perman"
+  ],
+  "permanente": [
+   "permanent"
+  ],
+  "permanentes": [
+   "permanent"
+  ],
+  "permiso": [
+   "permis"
+  ],
+  "permisos": [
+   "permis"
+  ],
+  "permitan": [
+   "permitan"
+  ],
+  "permite": [
+   "permit"
+  ],
+  "permitir": [
+   "permitir"
+  ],
+  "pernocta": [
+   "pernoct"
+  ],
+  "pero": [],
+  "persigan": [
+   "persigan"
+  ],
+  "persona": [
+   "person"
+  ],
+  "personal": [
+   "personal"
+  ],
+  "personalidad": [
+   "personal"
+  ],
+  "personas": [
+   "person"
+  ],
+  "pertenezcan": [
+   "pertenezcan"
+  ],
+  "pintana": [
+   "pintan"
+  ],
+  "pinto": [
+   "pint"
+  ],
+  "plazo": [
+   "plaz"
+  ],
+  "poder": [
+   "poder"
+  ],
+  "podra": [
+   "podr"
+  ],
+  "podran": [
+   "podran"
+  ],
+  "ponderacion": [
+   "ponder"
+  ],
+  "por": [],
+  "porcentaje": [
+   "porcentaj"
+  ],
+  "portero": [
+   "porter"
+  ],
+  "posible": [
+   "posibl"
+  ],
+  "posteriores": [
+   "posterior"
+  ],
+  "posterioridad": [
+   "posterior"
+  ],
+  "practicar": [
+   "practicar"
+  ],
+  "precedente": [
+   "precedent"
+  ],
+  "precedentes": [
+   "precedent"
+  ],
+  "preceptos": [
+   "precept"
+  ],
+  "precio": [
+   "preci"
+  ],
+  "precisa": [
+   "precis"
+  ],
+  "prefijado": [
+   "prefijad"
+  ],
+  "preparatoria": [
+   "preparatori"
+  ],
+  "prerrogativas": [
+   "prerrogat"
+  ],
+  "presentacion": [
+   "present"
+  ],
+  "presentar": [
+   "presentar"
+  ],
+  "presente": [
+   "present"
+  ],
+  "presenten": [
+   "presenten"
+  ],
+  "presidente": [
+   "president"
+  ],
+  "prestacion": [
+   "prest"
+  ],
+  "prestar": [
+   "prestar"
+  ],
+  "presten": [
+   "presten"
+  ],
+  "previa": [
+   "previ"
+  ],
+  "previas": [
+   "previ"
+  ],
+  "prevista": [
+   "prev"
+  ],
+  "previstos": [
+   "previst"
+  ],
+  "primer": [
+   "primer"
+  ],
+  "primera": [
+   "primer"
+  ],
+  "primero": [
+   "primer"
+  ],
+  "primeros": [
+   "primer"
+  ],
+  "principal": [
+   "principal"
+  ],
+  "principios": [
+   "principi"
+  ],
+  "probados": [
+   "probad"
+  ],
+  "procedente": [
+   "procedent"
+  ],
+  "procedentes": [
+   "procedent"
+  ],
+  "procedera": [
+   "proceder"
+  ],
+  "procederan": [
+   "procederan"
+  ],
+  "proceso": [
+   "proces"
+  ],
+  "procesos": [
+   "proces"
+  ],
+  "procurara": [
+   "procurar"
+  ],
+  "produce": [
+   "produc"
+  ],
+  "profesion": [
+   "profesion"
+  ],
+  "profesional": [
+   "profesional"
+  ],
+  "programa": [
+   "program"
+  ],
+  "prohibiciones": [
+   "prohibicion"
+  ],
+  "pronunciada": [
+   "pronunciad"
+  ],
+  "pronunciamiento": [
+   "pronunci"
+  ],
+  "pronunciarse": [
+   "pronunciars"
+  ],
+  "propios": [
+   "propi"
+  ],
+  "proporcion": [
+   "proporcion"
+  ],
+  "proporcional": [
+   "proporcional"
+  ],
+  "proporcionando": [
+   "proporcionand"
+  ],
+  "proporcionar": [
+   "proporcionar"
+  ],
+  "proteger": [
+   "proteger"
+  ],
+  "provincia": [
+   "provinci"
+  ],
+  "provincias": [
+   "provinci"
+  ],
+  "proximo": [
+   "proxim"
+  ],
+  "proyecto": [
+   "proyect"
+  ],
+  "prueba": [
+   "prueb"
+  ],
+  "psiquica": [
+   "psiquic"
+  ],
+  "publicacion": [
+   "public"
+  ],
+  "publicada": [
+   "publicad"
+  ],
+  "publico": [
+   "public"
+  ],
+  "publicos": [
+   "public"
+  ],
+  "pueda": [
+   "pued"
+  ],
+  "puedan": [
+   "puedan"
+  ],
+  "puente": [
+   "puent"
+  ],
+  "puerto": [
+   "puert"
+  ],
+  "punta": [
+   "punt"
+  ],
+  "puqueldon": [
+   "puqueldon"
+  ],
+  "purranque": [
+   "purranqu"
+  ],
+  "puyehue": [
+   "puyehu"
+  ],
+  "quater": [
+   "quater"
+  ],
+  "que": [],
+  "quedado": [
+   "quedad"
+  ],
+  "quedara": [
+   "quedar"
+  ],
+  "queilen": [
+   "queilen"
+  ],
+  "quellon": [
+   "quellon"
+  ],
+  "querellarse": [
+   "querellars"
+  ],
+  "quien": [],
+  "quienes": [],
+  "quilleco": [
+   "quillec"
+  ],
+  "quince": [
+   "quinc"
+  ],
+  "quinta": [
+   "quint"
+  ],
+  "quinto": [
+   "quint"
+  ],
+  "radio": [
+   "radi"
+  ],
+  "rafael": [
+   "rafael"
+  ],
+  "ramon": [
+   "ramon"
+  ],
+  "rancagua": [
+   "rancagu"
+  ],
+  "rango": [
+   "rang"
+  ],
+  "ratificados": [
+   "ratificad"
+  ],
+  "rauco": [
+   "rauc"
+  ],
+  "razon": [
+   "razon"
+  ],
+  "razonamiento": [
+   "razon"
+  ],
+  "razones": [
+   "razon"
+  ],
+  "realizacion": [
+   "realiz"
+  ],
+  "realizado": [
+   "realizad"
+  ],
+  "realizan": [
+   "realizan"
+  ],
+  "reciba": [
+   "recib"
+  ],
+  "recibido": [
+   "recibid"
+  ],
+  "recinto": [
+   "recint"
+  ],
+  "reconocen": [
+   "reconocen"
+  ],
+  "reconocese": [
+   "reconoces"
+  ],
+  "recurso": [
+   "recurs"
+  ],
+  "reduciendose": [
+   "reduciendos"
+  ],
+  "reemplazo": [
+   "reemplaz"
+  ],
+  "referencia": [
+   "refer"
+  ],
+  "referida": [
+   "referid"
+  ],
+  "referidas": [
+   "referid"
+  ],
+  "referido": [
+   "referid"
+  ],
+  "refiere": [
+   "refier"
+  ],
+  "refieren": [
+   "refieren"
+  ],
+  "regidos": [
+   "regid"
+  ],
+  "regimen": [
+   "regimen"
+  ],
+  "region": [
+   "region"
+  ],
+  "regira": [
+   "regir"
+  ],
+  "regiran": [
+   "regiran"
+  ],
+  "registrar": [
+   "registrar"
+  ],
+  "registro": [
+   "registr"
+  ],
+  "reglamento": [
+   "reglament"
+  ],
+  "regreso": [
+   "regres"
+  ],
+  "regulados": [
+   "regulad"
+  ],
+  "regularan": [
+   "regularan"
+  ],
+  "reiteracion": [
+   "reiter"
+  ],
+  "relacion": [
+   "relacion"
+  ],
+  "relaciones": [
+   "relacion"
+  ],
+  "relevados": [
+   "relevad"
+  ],
+  "remitir": [
+   "remitir"
+  ],
+  "remitira": [
+   "remitir"
+  ],
+  "remitirse": [
+   "remitirs"
+  ],
+  "remuneracion": [
+   "remuner"
+  ],
+  "remuneraciones": [
+   "remuner"
+  ],
+  "remunerar": [
+   "remunerar"
+  ],
+  "remunerarse": [
+   "remunerars"
+  ],
+  "rendida": [
+   "rendid"
+  ],
+  "renovables": [
+   "renov"
+  ],
+  "reponer": [
+   "reponer"
+  ],
+  "reposo": [
+   "repos"
+  ],
+  "representacion": [
+   "represent"
+  ],
+  "representante": [
+   "representant"
+  ],
+  "republica": [
+   "republic"
+  ],
+  "reputara": [
+   "reputar"
+  ],
+  "requerida": [
+   "requerid"
+  ],
+  "requerir": [
+   "requerir"
+  ],
+  "requerira": [
+   "requerir"
+  ],
+  "requiera": [
+   "requier"
+  ],
+  "requisitos": [
+   "requisit"
+  ],
+  "resguardar": [
+   "resguardar"
+  ],
+  "resguardos": [
+   "resguard"
+  ],
+  "resolucion": [
+   "resol"
+  ],
+  "resoluciones": [
+   "resol"
+  ],
+  "respectiva": [
+   "respect"
+  ],
+  "respectivamente": [
+   "respectiva"
+  ],
+  "respectivo": [
+   "respect"
+  ],
+  "respectivos": [
+   "respect"
+  ],
+  "respecto": [
+   "respect"
+  ],
+  "respeto": [
+   "respet"
+  ],
+  "responsabilidades": [
+   "responsabil"
+  ],
+  "responsable": [
+   "respons"
+  ],
+  "respuesta": [
+   "respuest"
+  ],
+  "restaurantes": [
+   "restaurant"
+  ],
+  "restitucion": [
+   "restit"
+  ],
+  "restituido": [
+   "restituid"
+  ],
+  "restituir": [
+   "restituir"
+  ],
+  "resulte": [
+   "result"
+  ],
+  "revestido": [
+   "revestid"
+  ],
+  "revista": [
+   "revist"
+  ],
+  "riesgo": [
+   "riesg"
+  ],
+  "rijan": [
+   "rijan"
+  ],
+  "rio": [
+   "rio"
+  ],
+  "rios": [
+   "rio"
+  ],
+  "romeral": [
+   "romeral"
+  ],
+  "salud": [
+   "salud"
+  ],
+  "san": [
+   "san"
+  ],
+  "sancionada": [
+   "sancionad"
+  ],
+  "sancionado": [
+   "sancionad"
+  ],
+  "santa": [
+   "sant"
+  ],
+  "santiago": [
+   "santiag"
+  ],
+  "satisfactoria": [
+   "satisfactori"
+  ],
+  "se": [],
+  "sea": [],
+  "sean": [],
+  "secciones": [
+   "seccion"
+  ],
+  "seguimiento": [
+   "segu"
+  ],
+  "segun": [],
+  "segunda": [
+   "segund"
+  ],
+  "segundo": [
+   "segund"
+  ],
+  "segura": [
+   "segur"
+  ],
+  "seguridad": [
+   "segur"
+  ],
+  "seguro": [
+   "segur"
+  ],
+  "seis": [
+   "sei"
+  ],
+  "semanales": [
+   "semanal"
+  ],
+  "senalada": [
+   "senalad"
+  ],
+  "senaladas": [
+   "senalad"
+  ],
+  "senalado": [
+   "senalad"
+  ],
+  "senalados": [
+   "senalad"
+  ],
+  "senalan": [
+   "senalan"
+  ],
+  "senalar": [
+   "senalar"
+  ],
+  "sentencia": [
+   "sent"
+  ],
+  "separadamente": [
+   "separada"
+  ],
+  "septima": [
+   "septim"
+  ],
+  "ser": [],
+  "sera": [
+   "sera"
+  ],
+  "seran": [
+   "seran"
+  ],
+  "serena": [
+   "seren"
+  ],
+  "servicio": [
+   "servici"
+  ],
+  "servicios": [
+   "servici"
+  ],
+  "servido": [
+   "servid"
+  ],
+  "severa": [
+   "sever"
+  ],
+  "sexta": [
+   "sext"
+  ],
+  "si": [],
+  "sido": [],
+  "siempre": [
+   "siempr"
+  ],
+  "siendo": [
+   "siend"
+  ],
+  "sierra": [
+   "sierr"
+  ],
+  "siete": [
+   "siet"
+  ],
+  "siguiente": [
+   "siguient"
+  ],
+  "siguientes": [
+   "siguient"
+  ],
+  "similar": [
+   "similar"
+  ],
+  "sin": [],
+  "sindical": [
+   "sindical"
+  ],
+  "sindicales": [
+   "sindical"
+  ],
+  "sindicato": [
+   "sindicat"
+  ],
+  "sintesis": [
+   "sintesi"
+  ],
+  "sistema": [
+   "sistem"
+  ],
+  "situad": [
+   "situad"
+  ],
+  "sobre": [],
+  "sobrepasar": [
+   "sobrepasar"
+  ],
+  "sobrepase": [
+   "sobrepas"
+  ],
+  "social": [
+   "social"
+  ],
+  "socios": [
+   "soci"
+  ],
+  "solamente": [
+   "sola"
+  ],
+  "solicitar": [
+   "solicitar"
+  ],
+  "solicitud": [
+   "solicitud"
+  ],
+  "solo": [
+   "solo"
+  ],
+  "sometidas": [
+   "sometid"
+  ],
+  "sometidos": [
+   "sometid"
+  ],
+  "son": [],
+  "su": [],
+  "subcontratacion": [
+   "subcontrat"
+  ],
+  "subcontratista": [
+   "subcontrat"
+  ],
+  "subordinacion": [
+   "subordin"
+  ],
+  "sugerir": [
+   "sugerir"
+  ],
+  "sujetaran": [
+   "sujetaran"
+  ],
+  "sujetarse": [
+   "sujetars"
+  ],
+  "suma": [
+   "suma"
+  ],
+  "sumas": [
+   "suma"
+  ],
+  "superintendencia": [
+   "superintend"
+  ],
+  "superior": [
+   "superior"
+  ],
+  "supervision": [
+   "supervision"
+  ],
+  "supremo": [
+   "suprem"
+  ],
+  "sus": [],
+  "tabla": [
+   "tabl"
+  ],
+  "talca": [
+   "talc"
+  ],
+  "talcahuano": [
+   "talcahuan"
+  ],
+  "tales": [
+   "tal"
+  ],
+  "tampoco": [
+   "tampoc"
+  ],
+  "tango": [
+   "tang"
+  ],
+  "tanto": [],
+  "tarapaca": [
+   "tarapac"
+  ],
+  "tardar": [
+   "tardar"
+  ],
+  "tecnica": [
+   "tecnic"
+  ],
+  "tecnicos": [
+   "tecnic"
+  ],
+  "teletrabajo": [
+   "teletrabaj"
+  ],
+  "temuco": [
+   "temuc"
+  ],
+  "tendra": [
+   "tendr"
+  ],
+  "tendran": [
+   "tendran"
+  ],
+  "tenga": [
+   "teng"
+  ],
+  "tengan": [
+   "tengan"
+  ],
+  "teniendo": [
+   "teniend"
+  ],
+  "teno": [
+   "teno"
+  ],
+  "ter": [
+   "ter"
+  ],
+  "tercer": [
+   "tercer"
+  ],
+  "tercera": [
+   "tercer"
+  ],
+  "tercero": [
+   "tercer"
+  ],
+  "tercio": [
+   "terci"
+  ],
+  "termina": [
+   "termin"
+  ],
+  "terminada": [
+   "terminad"
+  ],
+  "terminal": [
+   "terminal"
+  ],
+  "termino": [
+   "termin"
+  ],
+  "terminos": [
+   "termin"
+  ],
+  "territorio": [
+   "territori"
+  ],
+  "testimonio": [
+   "testimoni"
+  ],
+  "tiempo": [
+   "tiemp"
+  ],
+  "tiempos": [
+   "tiemp"
+  ],
+  "tierra": [
+   "tierr"
+  ],
+  "titulo": [
+   "titul"
+  ],
+  "toda": [],
+  "todo": [],
+  "todos": [],
+  "tomara": [
+   "tomar"
+  ],
+  "total": [
+   "total"
+  ],
+  "trabajadas": [
+   "trabajad"
+  ],
+  "trabajado": [
+   "trabajad"
+  ],
+  "trabajador": [
+   "trabaj"
+  ],
+  "trabajadora": [
+   "trabaj"
+  ],
+  "trabajadoras": [
+   "trabaj"
+  ],
+  "trabajadores": [
+   "trabaj"
+  ],
+  "trabajados": [
+   "trabajad"
+  ],
+  "trabajar": [
+   "trabajar"
+  ],
+  "trabajo": [
+   "trabaj"
+  ],
+  "trabajos": [
+   "trabaj"
+  ],
+  "tramites": [
+   "tramit"
+  ],
+  "tramo": [
+   "tram"
+  ],
+  "transigir": [
+   "transigir"
+  ],
+  "transitoria": [
+   "transitori"
+  ],
+  "transitorios": [
+   "transitori"
+  ],
+  "transporte": [
+   "transport"
+  ],
+  "trata": [
+   "trat"
+  ],
+  "tratados": [
+   "tratad"
+  ],
+  "tratandose": [
+   "tratandos"
+  ],
+  "tratante": [
+   "tratant"
+  ],
+  "trate": [
+   "trat"
+  ],
+  "traves": [
+   "trav"
+  ],
+  "treinta": [
+   "treint"
+  ],
+  "tres": [
+   "tre"
+  ],
+  "tribunal": [
+   "tribunal"
+  ],
+  "tribunales": [
+   "tribunal"
+  ],
+  "tributarias": [
+   "tributari"
+  ],
+  "tributarios": [
+   "tributari"
+  ],
+  "trigesimo": [
+   "trigesim"
+  ],
+  "tripulantes": [
+   "tripulant"
+  ],
+  "tuviere": [
+   "tuvier"
+  ],
+  "ultimo": [
+   "ultim"
+  ],
+  "ultimos": [
+   "ultim"
+  ],
+  "un": [],
+  "una": [],
+  "unico": [
+   "unic"
+  ],
+  "unidades": [
+   "unidad"
+  ],
+  "uno": [],
+  "urbano": [
+   "urban"
+  ],
+  "usar": [
+   "usar"
+  ],
+  "uso": [
+   "uso"
+  ],
+  "usuaria": [
+   "usuari"
+  ],
+  "utilicen": [
+   "utilicen"
+  ],
+  "utilidades": [
+   "util"
+  ],
+  "utilizar": [
+   "utilizar"
+  ],
+  "valdivia": [
+   "valdivi"
+  ],
+  "valor": [
+   "valor"
+  ],
+  "valparaiso": [
+   "valparais"
+  ],
+  "varios": [
+   "vari"
+  ],
+  "veinte": [
+   "veint"
+  ],
+  "velara": [
+   "velar"
+  ],
+  "vencida": [
+   "vencid"
+  ],
+  "vencido": [
+   "vencid"
+  ],
+  "vencimiento": [
+   "venc"
+  ],
+  "verificar": [
+   "verificar"
+  ],
+  "vez": [
+   "vez"
+  ],
+  "vida": [
+   "vida"
+  ],
+  "viejo": [
+   "viej"
+  ],
+  "vigencia": [
+   "vigenci"
+  ],
+  "vigente": [
+   "vigent"
+  ],
+  "vigentes": [
+   "vigent"
+  ],
+  "vilcun": [
+   "vilcun"
+  ],
+  "vina": [
+   "vina"
+  ],
+  "vinculo": [
+   "vincul"
+  ],
+  "virtud": [
+   "virtud"
+  ],
+  "visible": [
+   "visibl"
+  ],
+  "visitas": [
+   "visit"
+  ],
+  "vista": [
+   "vist"
+  ],
+  "voluntaria": [
+   "voluntari"
+  ],
+  "votar": [
+   "votar"
+  ],
+  "voto": [
+   "voto"
+  ],
+  "vuelo": [
+   "vuel"
+  ],
+  "y": [],
+  "ya": []
+ }
+}

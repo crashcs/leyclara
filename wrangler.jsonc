@@ -1,0 +1,38 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "leyclara",
+  "main": "worker/src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": { "directory": "./web", "binding": "ASSETS", "run_worker_first": ["/api/*", "/admin/*"] },
+  "observability": { "enabled": true },
+  "vars": { "SEARCH_MODE": "hybrid", "CONTEXT_K": "8" },
+
+  // D1: local en `wrangler dev`. Para producción, reemplazar database_id por el de `wrangler d1 create leyclara`.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "leyclara",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // Workers AI y Vectorize no tienen simulador local: siempre remotos (requiere `wrangler login`).
+  "ai": { "binding": "AI", "remote": true },
+  "vectorize": [{ "binding": "VECTORIZE", "index_name": "leyclara-chunks", "remote": true }],
+
+  "env": {
+    // `wrangler dev --env offline`: solo D1 local, búsqueda FTS. No necesita cuenta de Cloudflare.
+    "offline": {
+      "vars": { "SEARCH_MODE": "fts", "CONTEXT_K": "8" },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "leyclara",
+          "database_id": "00000000-0000-0000-0000-000000000000",
+          "migrations_dir": "migrations"
+        }
+      ]
+    }
+  }
+}

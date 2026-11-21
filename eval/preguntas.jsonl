@@ -1,0 +1,66 @@
+{"id": "q01", "tipo": "en_alcance", "pregunta": "¿Cuántos días de vacaciones me tocan al año?", "esperados": ["67"]}
+{"id": "q02", "tipo": "en_alcance", "pregunta": "Llevo 12 años trabajando, ¿me corresponden más días de vacaciones?", "esperados": ["68"]}
+{"id": "q03", "tipo": "en_alcance", "pregunta": "¿Puedo juntar las vacaciones de dos años y tomarlas todas juntas?", "esperados": ["70"]}
+{"id": "q04", "tipo": "en_alcance", "pregunta": "Me voy de la empresa y no alcancé a tomar vacaciones, ¿me las tienen que pagar?", "esperados": ["73"]}
+{"id": "q05", "tipo": "en_alcance", "pregunta": "¿Puedo dividir mis vacaciones en partes?", "esperados": ["70"]}
+{"id": "q06", "tipo": "en_alcance", "pregunta": "¿Cómo se calcula la indemnización por años de servicio?", "esperados": ["163"]}
+{"id": "q07", "tipo": "en_alcance", "pregunta": "¿Me pueden despedir estando con licencia médica?", "esperados": ["161"]}
+{"id": "q08", "tipo": "en_alcance", "pregunta": "Me despidieron por necesidades de la empresa, ¿qué significa eso?", "esperados": ["161"]}
+{"id": "q09", "tipo": "en_alcance", "pregunta": "¿Con cuánta anticipación me tienen que avisar si me despiden?", "esperados": ["161", "162"]}
+{"id": "q10", "tipo": "en_alcance", "pregunta": "¿Qué tiene que decir la carta de despido?", "esperados": ["162"]}
+{"id": "q11", "tipo": "en_alcance", "pregunta": "Creo que mi despido fue injustificado, ¿cuánto plazo tengo para demandar?", "esperados": ["168"]}
+{"id": "q12", "tipo": "en_alcance", "pregunta": "Si el juez dice que el despido fue injustificado, ¿cuánto aumenta la indemnización?", "esperados": ["168"]}
+{"id": "q13", "tipo": "en_alcance", "pregunta": "¿Por qué causas me pueden despedir sin pagarme indemnización?", "esperados": ["160"]}
+{"id": "q14", "tipo": "en_alcance", "pregunta": "Mi jefe no me paga las cotizaciones y me trata mal, ¿puedo renunciar y cobrar indemnización igual?", "esperados": ["171"]}
+{"id": "q15", "tipo": "en_alcance", "pregunta": "Quiero renunciar, ¿con cuántos días de anticipación tengo que avisar?", "esperados": ["159"]}
+{"id": "q16", "tipo": "en_alcance", "pregunta": "¿Cuánto puede durar como máximo un contrato a plazo fijo?", "esperados": ["159"]}
+{"id": "q17", "tipo": "en_alcance", "pregunta": "¿Qué requisitos tiene que cumplir el finiquito para que sea válido?", "esperados": ["177"]}
+{"id": "q18", "tipo": "en_alcance", "pregunta": "¿En cuántos días me tienen que pagar el finiquito?", "esperados": ["177"]}
+{"id": "q19", "tipo": "en_alcance", "pregunta": "¿Me pueden despedir si estoy embarazada?", "esperados": ["201", "174"]}
+{"id": "q20", "tipo": "en_alcance", "pregunta": "¿Cuánto dura el prenatal y el postnatal?", "esperados": ["195"]}
+{"id": "q21", "tipo": "en_alcance", "pregunta": "¿Qué es el postnatal parental y cuánto dura?", "esperados": ["197-bis"]}
+{"id": "q22", "tipo": "en_alcance", "pregunta": "Va a nacer mi hijo, ¿cuántos días de permiso me dan como papá?", "esperados": ["195"]}
+{"id": "q23", "tipo": "en_alcance", "pregunta": "¿La empresa está obligada a tener sala cuna?", "esperados": ["203"]}
+{"id": "q24", "tipo": "en_alcance", "pregunta": "Tengo una guagua de un año, ¿tengo derecho a tiempo para alimentarla durante la jornada?", "esperados": ["206"]}
+{"id": "q25", "tipo": "en_alcance", "pregunta": "Mi hijo de 8 meses está con una enfermedad grave, ¿puedo pedir permiso para cuidarlo?", "esperados": ["199"]}
+{"id": "q26", "tipo": "en_alcance", "pregunta": "Murió mi papá / mi hijo, ¿cuántos días de permiso tengo?", "esperados": ["66"]}
+{"id": "q27", "tipo": "en_alcance", "pregunta": "Me voy a casar, ¿me dan días libres?", "esperados": ["207-bis"]}
+{"id": "q28", "tipo": "en_alcance", "pregunta": "¿Cuántas horas a la semana puede durar la jornada laboral?", "esperados": ["22"]}
+{"id": "q29", "tipo": "en_alcance", "pregunta": "¿Cuántas horas extra puedo hacer al día?", "esperados": ["31"]}
+{"id": "q30", "tipo": "en_alcance", "pregunta": "¿Con qué recargo se pagan las horas extraordinarias?", "esperados": ["32"]}
+{"id": "q31", "tipo": "en_alcance", "pregunta": "¿Tengo derecho a un tiempo para almorzar y se cuenta como trabajado?", "esperados": ["34"]}
+{"id": "q32", "tipo": "en_alcance", "pregunta": "¿Me pueden hacer trabajar el domingo?", "esperados": ["35", "38"]}
+{"id": "q33", "tipo": "en_alcance", "pregunta": "¿Qué es un contrato de jornada parcial?", "esperados": ["40-bis"]}
+{"id": "q34", "tipo": "en_alcance", "pregunta": "¿Cuánto tiempo tiene el empleador para hacerme firmar el contrato por escrito?", "esperados": ["9"]}
+{"id": "q35", "tipo": "en_alcance", "pregunta": "¿Qué datos debe tener mi contrato de trabajo?", "esperados": ["10"]}
+{"id": "q36", "tipo": "en_alcance", "pregunta": "¿Me pueden cambiar de funciones o de lugar de trabajo sin mi permiso?", "esperados": ["12"]}
+{"id": "q37", "tipo": "en_alcance", "pregunta": "¿Qué se considera remuneración y qué no, como la colación o la movilización?", "esperados": ["41"]}
+{"id": "q38", "tipo": "en_alcance", "pregunta": "¿Me pueden pagar menos que el sueldo mínimo?", "esperados": ["44"]}
+{"id": "q39", "tipo": "en_alcance", "pregunta": "¿Cada cuánto tiempo me tienen que pagar el sueldo?", "esperados": ["55"]}
+{"id": "q40", "tipo": "en_alcance", "pregunta": "¿Qué descuentos me pueden hacer del sueldo?", "esperados": ["58"]}
+{"id": "q41", "tipo": "en_alcance", "pregunta": "¿Tengo derecho a gratificación?", "esperados": ["47", "50"]}
+{"id": "q42", "tipo": "en_alcance", "pregunta": "¿Es legal que a una mujer le paguen menos que a un hombre por el mismo trabajo?", "esperados": ["62-bis"]}
+{"id": "q43", "tipo": "en_alcance", "pregunta": "Trabajo desde mi casa, ¿quién paga el computador y los gastos de internet?", "esperados": ["152-quater-l"]}
+{"id": "q44", "tipo": "en_alcance", "pregunta": "Hago teletrabajo, ¿tengo derecho a no contestar correos fuera de mi horario?", "esperados": ["152-quater-j"]}
+{"id": "q45", "tipo": "en_alcance", "pregunta": "¿Qué tiene que hacer mi empresa si denuncio acoso laboral o sexual?", "esperados": ["211-a", "211-b"]}
+{"id": "q46", "tipo": "en_alcance", "pregunta": "¿Cuál es el peso máximo que me pueden obligar a cargar?", "esperados": ["211-h", "211-j"]}
+{"id": "q47", "tipo": "en_alcance", "pregunta": "¿Desde qué edad puede trabajar un adolescente?", "esperados": ["13"]}
+{"id": "q48", "tipo": "en_alcance", "pregunta": "¿Cuántos trabajadores se necesitan para formar un sindicato?", "esperados": ["227"]}
+{"id": "q49", "tipo": "en_alcance", "pregunta": "¿Los dirigentes sindicales tienen fuero?", "esperados": ["243"]}
+{"id": "q50", "tipo": "en_alcance", "pregunta": "¿Pueden reemplazar a los trabajadores que están en huelga?", "esperados": ["345"]}
+{"id": "q51", "tipo": "en_alcance", "pregunta": "¿Qué conductas del empleador se consideran prácticas antisindicales?", "esperados": ["289"]}
+{"id": "q52", "tipo": "en_alcance", "pregunta": "¿Cuánto tiempo tengo para reclamar derechos laborales antes de que prescriban?", "esperados": ["510"]}
+{"id": "q53", "tipo": "en_alcance", "pregunta": "La empresa contratista no me pagó, ¿la empresa principal también responde?", "esperados": ["183-b"]}
+{"id": "q54", "tipo": "en_alcance", "pregunta": "¿Las tiendas tienen que tener sillas para los vendedores?", "esperados": ["193"]}
+{"id": "q55", "tipo": "en_alcance", "pregunta": "¿Cuál es la jornada máxima de una trabajadora de casa particular puertas afuera?", "esperados": ["149"]}
+{"id": "q56", "tipo": "en_alcance", "pregunta": "¿A partir de cuántos trabajadores la empresa debe tener reglamento interno?", "esperados": ["153"]}
+{"id": "x01", "tipo": "fuera_de_alcance", "pregunta": "¿Cuánto me pueden subir el arriendo al año?", "esperados": []}
+{"id": "x02", "tipo": "fuera_de_alcance", "pregunta": "¿Cuál es la multa por pasarse una luz roja?", "esperados": []}
+{"id": "x03", "tipo": "fuera_de_alcance", "pregunta": "¿Cómo se tramita un divorcio de mutuo acuerdo?", "esperados": []}
+{"id": "x04", "tipo": "fuera_de_alcance", "pregunta": "¿Cuánto impuesto a la renta pago si gano 2 millones?", "esperados": []}
+{"id": "x05", "tipo": "fuera_de_alcance", "pregunta": "Compré un celular que vino fallado, ¿tengo derecho a garantía?", "esperados": []}
+{"id": "x06", "tipo": "fuera_de_alcance", "pregunta": "¿Cómo calculo la pensión de alimentos para mi hijo?", "esperados": []}
+{"id": "x07", "tipo": "fuera_de_alcance", "pregunta": "¿Puedo retirar mis fondos de la AFP?", "esperados": []}
+{"id": "x08", "tipo": "fuera_de_alcance", "pregunta": "¿Qué necesito para sacar licencia de conducir clase B?", "esperados": []}
+{"id": "x09", "tipo": "fuera_de_alcance", "pregunta": "¿Cómo se reparte una herencia si no hay testamento?", "esperados": []}
+{"id": "x10", "tipo": "fuera_de_alcance", "pregunta": "¿Cuál es la pena por hurto en un supermercado?", "esperados": []}

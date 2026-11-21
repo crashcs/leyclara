@@ -1,0 +1,31 @@
+{
+  "name": "leyclara",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "db:migrate:local": "wrangler d1 migrations apply leyclara --local",
+    "db:seed:local": "wrangler d1 execute leyclara --local --file data/build/seed.sql",
+    "eval:retrieval": "node eval/run_retrieval.mjs",
+    "eval:answers": "node eval/run_answers.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261121.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1",
+    "wrangler": "^4.166.0"
+  },
+  "allowScripts": {
+    "workerd@1.20261119.1": true,
+    "esbuild@0.28.2": true,
+    "sharp@0.35.5": true
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.12.0",
+    "zod": "^4.6.7"
+  }
+}

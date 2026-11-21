@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Norma xmlns="http://www.leychile.cl/esquemas" normaId="207436" fechaVersion="2026-07-23" derogado="no derogado">
+  <Metadatos><TituloNorma>CODIGO DE PRUEBA</TituloNorma></Metadatos>
+  <EstructurasFuncionales>
+    <EstructuraFuncional tipoParte="Título" idParte="10" fechaVersion="2003-01-16" derogado="no derogado" transitorio="no transitorio">
+      <Texto>TITULO PRELIMINAR</Texto>
+      <Metadatos><NombreParte presente="no"></NombreParte><TituloParte presente="si">TITULO PRELIMINAR</TituloParte></Metadatos>
+      <EstructurasFuncionales>
+        <EstructuraFuncional tipoParte="Artículo" idParte="100" fechaVersion="2004-05-25" derogado="no derogado" transitorio="no transitorio">
+          <Texto>     Artículo 1.o Las relaciones laborales.</Texto>
+          <Metadatos><NombreParte presente="si">1</NombreParte></Metadatos>
+        </EstructuraFuncional>
+      </EstructurasFuncionales>
+    </EstructuraFuncional>
+    <EstructuraFuncional tipoParte="Libro" idParte="11" fechaVersion="2003-01-16" derogado="no derogado" transitorio="no transitorio">
+      <Texto>     LIBRO I</Texto>
+      <Metadatos><TituloParte presente="si">LIBRO I DEL CONTRATO INDIVIDUAL</TituloParte></Metadatos>
+      <EstructurasFuncionales>
+        <EstructuraFuncional tipoParte="Título" idParte="12" fechaVersion="2003-01-16" derogado="no derogado" transitorio="no transitorio">
+          <Metadatos><TituloParte presente="si">Título I DEL CONTRATO</TituloParte></Metadatos>
+          <EstructurasFuncionales>
+            <EstructuraFuncional tipoParte="Capítulo" idParte="13" fechaVersion="2003-01-16" derogado="no derogado" transitorio="no transitorio">
+              <Metadatos><TituloParte presente="si">Capítulo I NORMAS GENERALES</TituloParte></Metadatos>
+              <EstructurasFuncionales>
+                <EstructuraFuncional tipoParte="Artículo" idParte="111" fechaVersion="2003-01-16" derogado="no derogado" transitorio="no transitorio">
+                  <Texto>     Art. 7.o Contrato individual de trabajo es una convención.</Texto>
+                  <Metadatos><NombreParte presente="si">7 </NombreParte></Metadatos>
+                </EstructuraFuncional>
+              </EstructurasFuncionales>
+            </EstructuraFuncional>
+          </EstructurasFuncionales>
+        </EstructuraFuncional>
+      </EstructurasFuncionales>
+    </EstructuraFuncional>
+    <EstructuraFuncional tipoParte="Artículo Transitorio" idParte="14" fechaVersion="2003-01-16" derogado="no derogado" transitorio="transitorio">
+      <Texto>     ARTICULOS TRANSITORIOS</Texto>
+      <Metadatos><TituloParte presente="no"></TituloParte></Metadatos>
+      <EstructurasFuncionales>
+        <EstructuraFuncional tipoParte="Artículo" idParte="200" fechaVersion="2018-11-28" derogado="no derogado" transitorio="transitorio">
+          <Texto>     Artículo 1.- Norma transitoria.</Texto>
+          <Metadatos><NombreParte presente="si">1</NombreParte></Metadatos>
+        </EstructuraFuncional>
+      </EstructurasFuncionales>
+    </EstructuraFuncional>
+  </EstructurasFuncionales>
+</Norma>
