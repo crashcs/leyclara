@@ -22,7 +22,7 @@
     {
       "binding": "DB",
       "database_name": "leyclara",
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "7a384612-effa-4244-82d3-0b6646a5e103",
       "migrations_dir": "migrations"
     }
   ],

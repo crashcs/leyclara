@@ -99,9 +99,12 @@ Tests: `cd ingest && uv run pytest` (parser y stemming) y `npx vitest run` (vali
 Un solo Worker sirve la API y la página (Workers Static Assets), así que no hace falta un proyecto de Pages aparte.
 
 ```bash
-npx wrangler secret put ANTHROPIC_API_KEY   # una vez
-npm run deploy                              # scripts/deploy.sh
+npm run deploy        # scripts/deploy.sh
 ```
+
+Publicado en **https://leyclara.venuxgaming.workers.dev** (mientras se configura `ley.manuel.ac`).
+
+Si la key no está en Cloudflare, el script sube la de `.dev.vars` junto con el deploy. Para cambiarla después: `powershell -ExecutionPolicy Bypass -File scripts\set-api-key.ps1` (la pide oculta).
 
 El script crea la D1 remota si no existe (y anota su `database_id` en `wrangler.jsonc`), aplica la migración, carga `seed.sql`, verifica el secreto, hace el deploy y prueba `/api/meta` y `/api/search`. Usa el mismo índice Vectorize que el desarrollo local.
 

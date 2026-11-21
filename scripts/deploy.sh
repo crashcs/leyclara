@@ -6,7 +6,8 @@
 #
 # Requisitos: `npx wrangler login`, el índice Vectorize `leyclara-chunks` ya poblado
 # (ver README) y data/build/seed.sql generado con `python -m leyclara.build`.
-# El secreto ANTHROPIC_API_KEY se carga a mano, una vez: npx wrangler secret put ANTHROPIC_API_KEY
+# ANTHROPIC_API_KEY: si no está en Cloudflare, se sube la de .dev.vars con el deploy
+# (o se carga después con scripts/set-api-key.ps1).
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -42,14 +43,22 @@ $W d1 execute leyclara --remote --env="" --json --command "SELECT (SELECT count(
 [ "${1:-}" = "--solo-datos" ] && exit 0
 
 paso "3. Secreto ANTHROPIC_API_KEY"
-if ! $W secret list --env="" 2>/dev/null | grep -q ANTHROPIC_API_KEY; then
-  echo "Falta el secreto. Ejecuta:  npx wrangler secret put ANTHROPIC_API_KEY   (y vuelve a correr este script)"
-  exit 1
+secretos=()
+if $W secret list --env="" 2>/dev/null | grep -q ANTHROPIC_API_KEY; then
+  echo "ya está en Cloudflare"
+elif grep -q '^ANTHROPIC_API_KEY=.' .dev.vars 2>/dev/null; then
+  # Sube solo la key de .dev.vars (no ADMIN_TOKEN: /admin/index queda cerrado en producción).
+  tmp=$(mktemp); trap 'rm -f "$tmp"' EXIT
+  grep '^ANTHROPIC_API_KEY=' .dev.vars | tr -d '
+' > "$tmp"
+  secretos=(--secrets-file "$tmp")
+  echo "se subirá desde .dev.vars junto con el deploy"
+else
+  echo "Falta la key: ejecuta  powershell -ExecutionPolicy Bypass -File scripts\set-api-key.ps1  después del deploy"
 fi
-echo "ok"
 
 paso "4. Deploy del Worker + página"
-salida=$($W deploy --env="" 2>&1 | tee /dev/stderr)
+salida=$($W deploy --env="" "${secretos[@]}" 2>&1 | tee /dev/stderr)
 url=$(echo "$salida" | grep -oE 'https://[a-z0-9.-]+\.workers\.dev' | head -1 || true)
 
 paso "5. Prueba"
