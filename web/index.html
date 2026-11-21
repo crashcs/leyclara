@@ -2,70 +2,118 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Ley Clara</title>
   <meta name="description" content="Dudas sobre el Código del Trabajo de Chile, respondidas en lenguaje simple y siempre con el artículo exacto." />
+  <meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1f1d1a" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f1d1a'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23f7f6f3' text-anchor='middle'%3E§%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter+Tight:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <header class="top">
-    <div class="marca">
-      <span class="logo" aria-hidden="true">§</span>
-      <div>
-        <h1>Ley Clara</h1>
-        <p class="sub">Código del Trabajo de Chile, en simple y con el artículo exacto.</p>
+  <div class="app">
+    <!-- Barra lateral oscura (en móvil, barra superior) -->
+    <aside class="side" aria-label="Navegación">
+      <div class="side-top">
+        <a href="/" class="marca" id="inicio">Ley Clara</a>
+        <button type="button" class="btn-nueva" id="nueva">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" /></svg>
+          Nueva consulta
+        </button>
       </div>
-    </div>
-    <p class="version" id="version">Cargando versión de la ley…</p>
-  </header>
 
-  <div class="aviso" role="note">
-    <strong>No es asesoría legal.</strong> Ley Clara explica lo que dice el texto de la ley y puede equivocarse.
-    Para tu caso concreto consulta a la <a href="https://www.dt.gob.cl" target="_blank" rel="noopener">Dirección del Trabajo</a> o a un abogado laboral.
-  </div>
+      <nav class="side-grupo" aria-labelledby="t-temas">
+        <p class="side-titulo" id="t-temas">Temas frecuentes</p>
+        <ul class="temas">
+          <li><button type="button" data-q="¿Cuántos días de vacaciones me corresponden y cómo aumentan con los años?">Feriado y vacaciones</button></li>
+          <li><button type="button" data-q="¿Cómo se calcula la indemnización por años de servicio?">Despido e indemnización</button></li>
+          <li><button type="button" data-q="¿Cuántas horas a la semana puede durar la jornada y cómo se pagan las horas extra?">Jornada y horas extra</button></li>
+          <li><button type="button" data-q="¿Qué derechos tengo si estoy embarazada o voy a ser papá?">Maternidad y paternidad</button></li>
+          <li><button type="button" data-q="¿Qué descuentos me pueden hacer del sueldo y cada cuánto me tienen que pagar?">Remuneraciones</button></li>
+          <li><button type="button" data-q="Trabajo desde mi casa, ¿quién paga el computador y el internet?">Teletrabajo</button></li>
+          <li><button type="button" data-q="¿Cuántos trabajadores se necesitan para formar un sindicato?">Sindicatos</button></li>
+        </ul>
+      </nav>
 
-  <main class="layout">
-    <section class="chat" aria-label="Conversación">
-      <div id="mensajes" class="mensajes" aria-live="polite">
-        <div class="vacio" id="vacio">
-          <p>Pregunta lo que quieras sobre tus derechos laborales. Por ejemplo:</p>
-          <div class="ejemplos">
-            <button type="button" class="ejemplo">¿Cuántos días de vacaciones me tocan si llevo 12 años trabajando?</button>
-            <button type="button" class="ejemplo">¿Me pueden despedir estando con licencia médica?</button>
-            <button type="button" class="ejemplo">¿Cómo se calcula la indemnización por años de servicio?</button>
-            <button type="button" class="ejemplo">Trabajo desde mi casa, ¿quién paga el internet?</button>
+      <div class="side-grupo" id="recientes-wrap" hidden>
+        <p class="side-titulo">Recientes</p>
+        <ul class="recientes" id="recientes"></ul>
+      </div>
+
+      <div class="side-pie">
+        <p class="version" id="version">Código del Trabajo</p>
+        <p class="aviso-mini">No es asesoría legal.</p>
+      </div>
+    </aside>
+
+    <main class="main" id="main">
+      <!-- Portada -->
+      <section class="portada" id="portada">
+        <div class="portada-txt">
+          <h1>Tus derechos laborales, con la ley en la mano.</h1>
+          <p class="bajada">Pregunta en tus palabras. Ley Clara busca en los 737 artículos del Código del Trabajo de Chile, te responde en simple y cita el artículo exacto. Si la ley no lo dice, te lo dice.</p>
+        </div>
+
+        <div class="lienzo">
+          <form class="caja" id="form-portada" data-form>
+            <label for="q-portada" class="sr">Tu pregunta</label>
+            <textarea id="q-portada" rows="3" maxlength="500" placeholder="Ej.: ¿Me pueden despedir estando con licencia médica?" required></textarea>
+            <div class="caja-pie">
+              <label class="toggle"><input type="checkbox" id="preciso-portada" data-preciso /> <span>Modo preciso</span></label>
+              <button type="submit" class="btn-enviar">Preguntar <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
+            </div>
+          </form>
+          <div class="sugerencias" aria-label="Preguntas de ejemplo">
+            <button type="button" data-q="Llevo 12 años trabajando, ¿cuántos días de vacaciones me tocan?">12 años trabajando, ¿cuántas vacaciones?</button>
+            <button type="button" data-q="¿Me pueden despedir estando con licencia médica?">¿Despido con licencia médica?</button>
+            <button type="button" data-q="¿Con cuánta anticipación me tienen que avisar si me despiden?">¿Con cuánto aviso me despiden?</button>
           </div>
         </div>
-      </div>
-      <form id="form" class="form">
-        <label for="pregunta" class="sr">Tu pregunta</label>
-        <textarea id="pregunta" rows="2" maxlength="500" placeholder="Escribe tu pregunta…" required></textarea>
-        <div class="acciones">
-          <label class="preciso"><input type="checkbox" id="preciso" /> Modo preciso</label>
-          <button type="submit" id="enviar">Preguntar</button>
+
+        <dl class="datos">
+          <div><dt>Artículos indexados</dt><dd id="d-articulos">737</dd></div>
+          <div><dt>Versión de la ley</dt><dd id="d-version">—</dd></div>
+          <div><dt>Respuestas con cita verificada</dt><dd>100 %</dd></div>
+        </dl>
+
+        <p class="aviso"><strong>No es asesoría legal.</strong> Ley Clara explica lo que dice el texto de la ley y puede equivocarse. Para tu caso concreto consulta a la <a href="https://www.dt.gob.cl" target="_blank" rel="noopener">Dirección del Trabajo</a> o a un abogado laboral.</p>
+      </section>
+
+      <!-- Conversación -->
+      <section class="hilo" id="hilo" hidden aria-live="polite"></section>
+
+      <form class="caja caja-fija" id="form-hilo" data-form hidden>
+        <label for="q-hilo" class="sr">Otra pregunta</label>
+        <textarea id="q-hilo" rows="1" maxlength="500" placeholder="Haz otra pregunta…" required></textarea>
+        <div class="caja-pie">
+          <label class="toggle"><input type="checkbox" id="preciso-hilo" data-preciso /> <span>Modo preciso</span></label>
+          <button type="submit" class="btn-enviar" aria-label="Preguntar"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg></button>
         </div>
       </form>
-    </section>
+    </main>
 
-    <aside class="panel" id="panel" aria-label="Artículo citado">
-      <div class="panel-vacio" id="panel-vacio">
-        <p>Toca una cita como <span class="chip estatico">Art. 67</span> para leer el artículo completo aquí.</p>
+    <!-- Lector de artículos -->
+    <aside class="lector" id="lector" aria-label="Artículo citado" aria-hidden="true">
+      <div class="lector-barra">
+        <span class="lector-etq" id="lector-etq">Código del Trabajo</span>
+        <button type="button" class="cerrar" id="cerrar" aria-label="Cerrar artículo">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" /></svg>
+        </button>
       </div>
-      <article id="articulo" hidden>
-        <button type="button" class="cerrar" id="cerrar" aria-label="Cerrar artículo">×</button>
+      <article class="lector-cuerpo" id="articulo">
         <p class="ruta" id="art-ruta"></p>
         <h2 id="art-titulo"></h2>
         <p class="meta" id="art-meta"></p>
         <div class="texto" id="art-texto"></div>
-        <a id="art-link" class="fuente" target="_blank" rel="noopener">Ver en Ley Chile (BCN) ↗</a>
+        <a id="art-link" class="fuente" target="_blank" rel="noopener">Ver en Ley Chile (BCN) <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 4h6v6M12 4l-7 7" /></svg></a>
       </article>
     </aside>
-  </main>
+    <div class="velo" id="velo" hidden></div>
+  </div>
 
-  <footer class="pie">
-    Texto legal: <a href="https://www.bcn.cl/leychile/navegar?idNorma=207436" target="_blank" rel="noopener">Ley Chile, Biblioteca del Congreso Nacional</a> (DFL 1, 2002).
-    Código abierto bajo licencia MIT.
-  </footer>
   <script src="/app.js" type="module"></script>
 </body>
 </html>

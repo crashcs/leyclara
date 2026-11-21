@@ -9,8 +9,8 @@
     "deploy": "bash scripts/deploy.sh",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "db:migrate:local": "wrangler d1 migrations apply leyclara --local",
-    "db:seed:local": "wrangler d1 execute leyclara --local --file data/build/seed.sql",
+    "db:migrate:local": "wrangler d1 migrations apply leyclara --local --env=\"\"",
+    "db:seed:local": "wrangler d1 execute leyclara --local --env=\"\" --file data/build/seed.sql",
     "eval:retrieval": "node eval/run_retrieval.mjs",
     "eval:answers": "node eval/run_answers.mjs"
   },

@@ -28,18 +28,20 @@ Lo que mostró la medición: la búsqueda por palabras falla porque la gente dic
 
 | Métrica | Haiku 5.5 (por defecto) | Sonnet 5.5 (modo preciso) |
 |---|---|---|
-| Exactitud de citas mostradas¹ | 100 % (171/171) | 100 % (132/132) |
-| Validación de citas al primer intento | 81,8 % | 87,9 % |
+| Exactitud de citas mostradas¹ | 100 % (169/169) | 100 % (132/132) |
+| Validación de citas al primer intento | 84,8 % | 87,9 % |
 | Respuestas que citan un artículo correcto | 94,6 % | 94,6 % |
 | … cuando la búsqueda trajo el artículo correcto | 98,1 % | 98,1 % |
-| Abstención correcta (fuera de alcance) | 90 % (9/10) | 90 % (9/10) |
+| Abstención correcta (fuera de alcance) | 80 % (8/10) | 90 % (9/10) |
 | Abstención indebida (en alcance) | 3,6 % (2/56) | 1,8 % (1/56) |
-| Latencia mediana | 2,8 s | 4,0 s |
-| Tokens por pregunta (entrada / salida) | ~6.100 / ~560 | ~6.000 / ~450 |
+| Latencia mediana | 2,6 s | 4,0 s |
+| Tokens por pregunta (entrada / salida) | ~5.950 / ~490 | ~6.000 / ~450 |
 
 ¹ Una cita es válida si (a) el artículo estaba entre los recuperados y (b) el fragmento citado aparece **textualmente** en ese artículo (comparando sin tildes ni mayúsculas). Si una respuesta falla la validación, se reintenta una vez con el detalle del error. Si sigue sin una cita verificable, se reemplaza por "no encontré base legal". Por eso las citas que llegan al usuario son 100 % verificables. La tasa al primer intento indica cuánto trabajo hace la validación.
 
-Las 2 abstenciones indebidas de Haiku (q05, q15) ocurren justo cuando la búsqueda no trajo el artículo correcto: el modelo dijo que no tenía base en vez de inventar. El falso positivo fuera de alcance (x07, retiro de fondos AFP) cita el art. 165 sobre la cuenta de indemnización sustitutiva, que es tangencial.
+Las 2 abstenciones indebidas de Haiku (q05, q15) ocurren justo cuando la búsqueda no trajo el artículo correcto: el modelo dijo que no tenía base en vez de inventar. Los 2 falsos positivos fuera de alcance citan artículos tangenciales: x04 (impuesto a la renta) cita el art. 58 sobre el descuento de impuestos y x07 (retiro de fondos AFP) cita el art. 165 sobre la cuenta de indemnización sustitutiva.
+
+La columna de Haiku corresponde al prompt actual (21-nov-2026, que pide tutear y no mencionar el proceso de búsqueda); la de Sonnet, a la versión anterior del prompt. Un primer ajuste del prompt bajó la abstención correcta a 50 % porque el modelo agregaba datos tangenciales; la regla 4 ahora lo prohíbe explícitamente. Para evaluar, `wrangler dev --var CACHE_HORAS:0`, o la caché de 24 h devuelve respuestas viejas.
 
 **Límites de esta evaluación**: 56 preguntas es poco. Las escribí yo con mis artículos de referencia, así que pueden tener sesgo y no reemplazan preguntas de usuarios reales. "Respalda lo que se afirma" se verifica por fragmento textual por artículo, no por cada frase de la respuesta.
 

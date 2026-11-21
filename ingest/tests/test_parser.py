@@ -103,3 +103,11 @@ def test_sin_notas_al_margen(norma):
         # patrones típicos de notas: "L. 18.620", "D.O. 01.01.1990"
         assert not re.search(r"\s{3,}L\. ?\d{2}\.?\d{3}", a.texto), a.id
         assert "  " not in a.texto, a.id
+
+
+def test_seed_sin_crlf():
+    # En Windows, write_text sin newline="\n" metía \r\n dentro de los textos legales.
+    seed = Path(__file__).resolve().parents[2] / "data" / "build" / "seed.sql"
+    if not seed.exists():
+        pytest.skip("ejecuta `python -m leyclara.build` primero")
+    assert b"\r" not in seed.read_bytes()

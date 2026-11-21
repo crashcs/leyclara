@@ -114,11 +114,13 @@ def build() -> dict:
             indent=1,
         ),
         encoding="utf-8",
+        newline="\n",
     )
     (BUILD / "chunks.json").write_text(
-        json.dumps([c.__dict__ for c in chunks], ensure_ascii=False, indent=1), encoding="utf-8"
+        json.dumps([c.__dict__ for c in chunks], ensure_ascii=False, indent=1), encoding="utf-8", newline="\n"
     )
-    (BUILD / "seed.sql").write_text(generar_sql(norma, chunks), encoding="utf-8")
+    # newline="\n": en Windows, write_text convertiría los saltos de línea de los textos legales en CRLF.
+    (BUILD / "seed.sql").write_text(generar_sql(norma, chunks), encoding="utf-8", newline="\n")
     stats = {
         "fecha_version": norma.fecha_version,
         "articulos": len(norma.articulos),

@@ -33,6 +33,13 @@ async function preguntar(pregunta) {
       body: JSON.stringify({ pregunta, modelo: MODELO }),
     });
     if (r.ok) return r.json();
+    if (r.status === 429) {
+      // límite por IP del Worker: esperar lo que indique retry-after
+      const s = parseInt(r.headers.get("retry-after") || "60", 10);
+      await new Promise((res) => setTimeout(res, (s + 1) * 1000));
+      intento--;
+      continue;
+    }
     if (r.status < 500) throw new Error(`${r.status} ${await r.text()}`);
     await new Promise((res) => setTimeout(res, 2000 * (intento + 1)));
   }
