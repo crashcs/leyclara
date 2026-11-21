@@ -175,9 +175,31 @@ async function handleIndex(req: Request, url: URL, env: Env): Promise<Response> 
   return json({ indexados: results.length, dim: vectores[0]?.length, siguiente: offset + results.length });
 }
 
+const ES_LOCAL = new Set(["localhost", "127.0.0.1", "[::1]"]);
+
+/** Encabezados de seguridad para todas las respuestas en producción. */
+function conSeguridad(res: Response): Response {
+  const r = new Response(res.body, res);
+  r.headers.set("Strict-Transport-Security", "max-age=31536000");
+  r.headers.set("X-Content-Type-Options", "nosniff");
+  r.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  return r;
+}
+
 export default {
   async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(req.url);
+    if (ES_LOCAL.has(url.hostname)) return manejar(req, url, env, ctx);
+    // Fuera de local, todo va por HTTPS (si no, el navegador marca el sitio como "no seguro").
+    if (url.protocol === "http:") {
+      url.protocol = "https:";
+      return Response.redirect(url.toString(), 301);
+    }
+    return conSeguridad(await manejar(req, url, env, ctx));
+  },
+} satisfies ExportedHandler<Env>;
+
+async function manejar(req: Request, url: URL, env: Env, ctx: ExecutionContext): Promise<Response> {
     try {
       if (url.pathname === "/api/meta" && req.method === "GET") return json(await meta(env));
       if (url.pathname === "/api/search" && req.method === "GET") return await handleSearch(req, url, env);
@@ -194,5 +216,4 @@ export default {
       return json({ error: "Error interno", detalle: e instanceof Error ? e.message : String(e) }, 500);
     }
     return env.ASSETS ? env.ASSETS.fetch(req) : new Response("Ley Clara API", { status: 200 });
-  },
-} satisfies ExportedHandler<Env>;
+}
