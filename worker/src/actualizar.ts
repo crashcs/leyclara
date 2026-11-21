@@ -1,21 +1,26 @@
 // Revisión diaria de Ley Chile (Cron Trigger del Worker).
 //
-// 1. Descarga el XML de cada norma y compara su fechaVersion con la guardada en D1.
-// 2. Si cambió, la parsea (parser.ts), detecta artículos nuevos, modificados o
-//    eliminados, y actualiza solo esos: D1 (artículos, chunks, FTS, relaciones)
-//    y Vectorize (embeddings bge-m3 de los chunks afectados).
+// 1. Consulta la fecha de versión vigente de cada norma en la API JSON de Ley Chile
+//    (metadatos.vigencia.inicio_vigencia, igual al fechaVersion del XML) y la compara
+//    con la guardada en D1. Si no cambió (lo normal), termina ahí.
+// 2. Si cambió, descarga el XML, lo parsea (parser.ts), detecta artículos nuevos,
+//    modificados o eliminados, y actualiza solo esos: D1 (artículos, chunks, FTS,
+//    relaciones) y Vectorize (embeddings bge-m3 de los chunks afectados).
 // 3. Guarda en meta la fecha de la última revisión y el resultado.
 //
-// Si nada cambió (lo normal), solo cuesta una descarga y una comparación.
+// Por qué dos endpoints: el XML está detrás de CloudFront, que responde 429/401
+// ("Service limit has been reached") a las IP compartidas de Cloudflare cuando el
+// documento no está en su caché. La API JSON sí responde. Si el XML falla, la norma
+// queda "pendiente" y la revisión del día siguiente vuelve a intentarlo.
 
-import { NORMAS, URL_NORMA, URL_XML, USER_AGENT, type NormaConfig } from "./normas";
+import { NORMAS, URL_JSON, URL_NORMA, URL_XML, USER_AGENT, type NormaConfig } from "./normas";
 import { articulosDeNorma, chunkArticulo, fechaVersionXml, parseNorma, referenciasAlCodigo, rutaStr, type Articulo } from "./parser";
 import { embed, type SearchEnv } from "./search";
 import { tokens } from "./textnorm";
 
 export interface InformeNorma {
   norma: string;
-  estado: "sin_cambios" | "actualizada" | "error";
+  estado: "sin_cambios" | "actualizada" | "pendiente" | "error";
   fecha_version?: string;
   anterior?: string;
   nuevos?: number;
@@ -45,12 +50,30 @@ async function leerMeta(db: D1Database): Promise<Record<string, string>> {
   return Object.fromEntries(results.map((r) => [r.key, r.value]));
 }
 
-async function descargar(id: string): Promise<string> {
-  const r = await fetch(URL_XML(id), { headers: { "User-Agent": USER_AGENT } });
-  if (!r.ok) throw new Error(`Ley Chile respondió ${r.status} para idNorma=${id}`);
-  const xml = await r.text();
-  if (!xml.trimStart().startsWith("<?xml")) throw new Error(`La respuesta para idNorma=${id} no es XML`);
-  return xml;
+class XmlNoDisponible extends Error {}
+
+const esperar = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** Fecha de versión vigente según la API JSON (sin parsear el JSON entero, que pesa ~1,5 MB). */
+async function fechaVigente(id: string): Promise<string> {
+  const r = await fetch(URL_JSON(id), { headers: { "User-Agent": USER_AGENT, Accept: "application/json" } });
+  if (!r.ok) throw new Error(`La API de Ley Chile respondió ${r.status} para idNorma=${id}`);
+  const t = await r.text();
+  const m = /"vigencia"\s*:\s*\{\s*"inicio_vigencia"\s*:\s*"(\d{4}-\d{2}-\d{2})"/.exec(t);
+  if (!m) throw new Error(`No encontré metadatos.vigencia en la API para idNorma=${id}`);
+  return m[1];
+}
+
+async function descargar(id: string, intentos = 3): Promise<string> {
+  let ultimo = "";
+  for (let i = 0; i < intentos; i++) {
+    if (i) await esperar(4000 * i);
+    const r = await fetch(URL_XML(id), { headers: { "User-Agent": USER_AGENT } });
+    const cuerpo = await r.text();
+    if (r.ok && cuerpo.trimStart().startsWith("<?xml")) return cuerpo;
+    ultimo = `${r.status} ${cuerpo.slice(0, 80).replace(/\s+/g, " ")}`;
+  }
+  throw new XmlNoDisponible(`Ley Chile no entregó el XML de idNorma=${id} (${ultimo})`);
 }
 
 /** Inserta embeddings de chunks en Vectorize, en lotes. */
@@ -172,12 +195,13 @@ export async function revisarNormas(env: SearchEnv, opciones: { forzar?: boolean
   for (const cfg of NORMAS) {
     const guardada = metaNormas.find((n) => n.id === cfg.id);
     try {
-      const xml = await descargar(cfg.id);
-      const fecha = fechaVersionXml(xml.slice(0, 4000));
-      if (!fecha) throw new Error("No encontré fechaVersion en el XML");
-      if (guardada && guardada.fecha_version === fecha && !opciones.forzar) {
-        informe.normas.push({ norma: cfg.nombre, estado: "sin_cambios", fecha_version: fecha });
+      const vigente = await fechaVigente(cfg.id);
+      if (guardada && guardada.fecha_version === vigente && !opciones.forzar) {
+        informe.normas.push({ norma: cfg.nombre, estado: "sin_cambios", fecha_version: vigente });
       } else {
+        const xml = await descargar(cfg.id);
+        const fecha = fechaVersionXml(xml.slice(0, 4000));
+        if (!fecha) throw new Error("No encontré fechaVersion en el XML");
         const r = await sincronizarNorma(env, cfg, xml, ordenBase);
         const norma = parseNorma(xml);
         const nueva: MetaNorma = { id: cfg.id, nombre: cfg.nombre, titulo: norma.titulo, fecha_version: fecha, fuente: URL_NORMA(cfg.id) };
@@ -194,7 +218,12 @@ export async function revisarNormas(env: SearchEnv, opciones: { forzar?: boolean
         informe.normas.push({ norma: cfg.nombre, estado: "actualizada", fecha_version: fecha, anterior: guardada?.fecha_version, ...r });
       }
     } catch (e) {
-      informe.normas.push({ norma: cfg.nombre, estado: "error", anterior: guardada?.fecha_version, error: e instanceof Error ? e.message : String(e) });
+      informe.normas.push({
+        norma: cfg.nombre,
+        estado: e instanceof XmlNoDisponible ? "pendiente" : "error",
+        anterior: guardada?.fecha_version,
+        error: e instanceof Error ? e.message : String(e),
+      });
     }
     ordenBase += 10000;
   }

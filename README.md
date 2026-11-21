@@ -84,10 +84,12 @@ Resultado: a "¿cuántas horas a la semana puede durar la jornada?" responde "Ho
 
 Un **Cron Trigger** del Worker ([worker/src/actualizar.ts](worker/src/actualizar.ts)) revisa Ley Chile todos los días a las 10:00 UTC:
 
-1. Descarga el XML de cada norma y compara su `fechaVersion` con la guardada en D1. Si no cambió (lo normal), termina ahí.
-2. Si cambió, la parsea con un puerto a TypeScript del parser de Python. Un test de paridad compara ambos sobre los 746 artículos reales: textos, rutas, chunks y relaciones idénticos.
+1. Consulta la fecha de versión vigente en la API JSON de Ley Chile (`metadatos.vigencia.inicio_vigencia`) y la compara con la guardada en D1. Si no cambió (lo normal), termina ahí: en producción usa unos 8 ms de CPU.
+2. Si cambió, descarga el XML y lo parsea con un puerto a TypeScript del parser de Python. Un test de paridad compara ambos sobre los 746 artículos reales: textos, rutas, chunks y relaciones idénticos.
 3. Actualiza solo lo que cambió (artículos nuevos, modificados y eliminados) en D1, FTS, relaciones y Vectorize (borra los vectores viejos y genera embeddings nuevos).
 4. Guarda el resultado en `meta.ultima_revision`. La barra lateral muestra "Revisado en Ley Chile: hoy, 07:00".
+
+Por qué dos endpoints: el XML está detrás de CloudFront, que responde 429/401 ("Service limit has been reached") a las IP compartidas de Cloudflare cuando el documento no está en su caché. La API JSON sí responde. Si el XML no se puede descargar, la norma queda `pendiente` y la revisión del día siguiente lo vuelve a intentar; mientras tanto se sigue usando la versión anterior. La sincronización compara contra D1, así que es idempotente: una ejecución cortada a la mitad se completa en la siguiente. Si una actualización grande excede el límite de CPU del plan gratuito de Workers, la alternativa es correr `npm run deploy` en local (ingesta en Python y recarga de D1).
 
 Para forzarla en local: `curl "localhost:8787/__scheduled?cron=0+10+*+*+*"` (con `wrangler dev --test-scheduled`), o `POST /admin/revisar?forzar=1` con `ADMIN_TOKEN`.
 
@@ -135,7 +137,7 @@ Si la key no está en Cloudflare, el script sube la de `.dev.vars` junto con el 
 
 El script crea la D1 remota si no existe (y anota su `database_id` en `wrangler.jsonc`), aplica la migración, carga `seed.sql`, verifica el secreto, hace el deploy y prueba `/api/meta` y `/api/search`. Usa el mismo índice Vectorize que el desarrollo local.
 
-Protecciones activas en producción: 10 solicitudes por minuto por IP a `/api/ask` y a `/api/search` (binding `ratelimits`), caché de 24 h para preguntas repetidas (la clave incluye la versión de la ley y el modelo) y preguntas de 500 caracteres como máximo.
+Protecciones activas en producción: 10 solicitudes por minuto por IP a `/api/ask` y a `/api/search` (binding `ratelimits`; es aproximado y con consistencia eventual: en una ráfaga de 60 búsquedas se bloquearon las últimas 6), caché de 24 h para preguntas repetidas (la clave incluye la versión de la ley y el modelo) y preguntas de 500 caracteres como máximo.
 
 El dominio se declara en `routes` de `wrangler.jsonc` como custom domain; Cloudflare crea el DNS y el certificado en el deploy. La caché de respuestas solo opera en el dominio propio, no en `*.workers.dev`.
 
