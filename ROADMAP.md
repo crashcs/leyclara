@@ -15,9 +15,9 @@ Estado al 21 de noviembre de 2026. Detalle técnico y métricas en el [README](R
 ## Antes del release público
 
 ### Costos y abuso
-- [x] Cloudflare Turnstile en `/api/ask` (código listo; falta crear el widget y configurar las claves).
+- [x] Cloudflare Turnstile en `/api/ask`: widget creado y clave pública configurada; se activa al cargar `TURNSTILE_SECRET`.
 - [x] Tope global de preguntas por día (`MAX_PREGUNTAS_DIA`), contado en D1.
-- [ ] Límite mensual de gasto en la consola de Anthropic (configuración manual).
+- [x] Límite de US$10/mes en un workspace propio de Anthropic ("Ley Clara"); falta mover la API key a ese workspace.
 
 ### Privacidad
 - [x] Página `/privacidad` (qué se guarda, a quién se envía, cuánto tiempo).
